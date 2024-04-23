@@ -8,5 +8,4 @@ module github.alfonsojaen {
     opens github.alfonsojaen.model.connection to java.xml.bind;
 
     exports github.alfonsojaen;
-
 }

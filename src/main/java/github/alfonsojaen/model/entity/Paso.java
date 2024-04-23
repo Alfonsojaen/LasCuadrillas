@@ -1,12 +1,14 @@
 package github.alfonsojaen.model.entity;
 
 public class Paso {
-    private String hermandad;
+    private int id;
+    private String brotherhood;
     private int capacity;
     private Cuadrilla cuadrilla;
 
-    public Paso(String hermandad, int capacity, Cuadrilla cuadrilla) {
-        this.hermandad = hermandad;
+    public Paso(int id,String brotherhood, int capacity, Cuadrilla cuadrilla) {
+        this.id = id;
+        this.brotherhood = brotherhood;
         this.capacity = capacity;
         this.cuadrilla = cuadrilla;
     }
@@ -15,14 +17,21 @@ public class Paso {
 
     }
 
-    public String getHermandad() {
-        return hermandad;
+    public int getId() {
+        return id;
     }
 
-    public void setHermandad(String hermandad) {
-        this.hermandad = hermandad;
+    public void setId(int id) {
+        this.id = id;
     }
 
+    public String getBrotherhood() {
+        return brotherhood;
+    }
+
+    public void setBrotherhood(String brotherhood) {
+        this.brotherhood = brotherhood;
+    }
     public int getCapacity() {
         return capacity;
     }

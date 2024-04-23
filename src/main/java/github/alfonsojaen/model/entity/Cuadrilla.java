@@ -49,8 +49,8 @@ public class Cuadrilla {
         this.overseer = overseer;
     }
 
-    public String getDescription() {
-        return description;
+    public String getDescription(String description) {
+        return this.description;
     }
 
     public void setDescription(String description) {
