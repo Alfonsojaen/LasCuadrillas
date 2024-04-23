@@ -5,16 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="af7f30ad-2f81-4f53-b035-ccfdeef794b2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/model/dao/DAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/test/test1insert.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/model/dao/CostaleroDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/model/dao/CostaleroDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/model/dao/CuadrillaDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/model/dao/CuadrillaDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/model/dao/PasoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/model/dao/PasoDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/model/entity/Costalero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/model/entity/Costalero.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/model/entity/Cuadrilla.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/model/entity/Cuadrilla.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/model/entity/Paso.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/model/entity/Paso.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/model/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/model/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +76,7 @@
       <workItem from="1713860653642" duration="2884000" />
       <workItem from="1713864190144" duration="960000" />
       <workItem from="1713867675418" duration="47000" />
-      <workItem from="1713877140875" duration="7221000" />
+      <workItem from="1713877140875" duration="18588000" />
     </task>
     <servers />
   </component>

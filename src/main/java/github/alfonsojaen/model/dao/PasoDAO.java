@@ -14,12 +14,12 @@ import java.util.List;
 
 public class PasoDAO implements DAO<Paso>{
 
-    private static final String FINDALL ="SELECT b.id,b.brotherhood,b.capacity,b.id_cuadrilla FROM paso AS b";
-    private static final String FINDBYID ="SELECT b.id,b.brotherhood,b.capacity,b.id_cuadrilla FROM paso AS b WHERE b.id=?";
+    private static final String FINDALL ="SELECT a.id,a.brotherhood,a.capacity,a.id_cuadrilla FROM paso AS a";
+    private static final String FINDBYID ="SELECT a.id,a.brotherhood,a.capacity,a.id_cuadrilla FROM paso AS a WHERE a.id=?";
     private static final String INSERT ="INSERT INTO paso (id,brotherhood,capacity,id_cuadrilla) VALUES (?,?,?,?)";
     private static final String UPDATE ="UPDATE paso SET brotherhood=?,capacity=? WHERE id=?";
     private static final String DELETE ="DELETE FROM paso WHERE id=?";
-    private static final String FINDBYPASO ="SELECT b.id,b.brotherhood,b.capacity,b.id_cuadrilla FROM book AS b WHERE b.id_cuadrilla=?";
+    private static final String FINDBYCUADRILLA ="SELECT a.id,a.brotherhood,a.capacity,a.id_cuadrilla FROM book AS a WHERE a.id_cuadrilla=?";
 
 
     private Connection conn;
@@ -116,10 +116,10 @@ public class PasoDAO implements DAO<Paso>{
         return result;
     }
 
-    public List<Paso> findByPaso(Cuadrilla c){
+    public List<Paso> findByCuadrilla(Cuadrilla c){
         List<Paso> result = new ArrayList<>();
         if(c==null || c.getId()==0) return result;
-        try(PreparedStatement pst = conn.prepareStatement(FINDBYPASO)){
+        try(PreparedStatement pst = conn.prepareStatement(FINDBYCUADRILLA)){
             pst.setInt(1,c.getId());
             try(ResultSet res = pst.executeQuery()){
                 while(res.next()){

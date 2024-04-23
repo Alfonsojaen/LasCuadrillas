@@ -4,7 +4,7 @@ package github.alfonsojaen.model.entity;
 import java.util.List;
 import java.util.Objects;
 
-public class Costalero {
+public  class Costalero {
     private int id;
     private String nickname;
     private int height;
@@ -18,7 +18,8 @@ public class Costalero {
         this.age = age;
         this.cuadrillas = cuadrillas;
     }
-    public Costalero(){
+
+    public Costalero() {
 
     }
 
@@ -54,11 +55,11 @@ public class Costalero {
         this.age = age;
     }
 
-    public List<Cuadrilla> getCuadrilla() {
+    public List<Cuadrilla> getCuadrillas() {
         return cuadrillas;
     }
 
-    public void setCuadrilla(List<Cuadrilla> cuadrillas) {
+    public void setCuadrillas(List<Cuadrilla> cuadrillas) {
         this.cuadrillas = cuadrillas;
     }
 
@@ -85,5 +86,6 @@ public class Costalero {
                 ", cuadrillas=" + cuadrillas +
                 '}';
     }
+
 }
 
