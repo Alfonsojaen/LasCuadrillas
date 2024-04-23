@@ -54,11 +54,11 @@ public class Costalero {
         this.age = age;
     }
 
-    public List<Cuadrilla> getCuadrillas() {
+    public List<Cuadrilla> getCuadrilla() {
         return cuadrillas;
     }
 
-    public void setCuadrillas(List<Cuadrilla> cuadrillas) {
+    public void setCuadrilla(List<Cuadrilla> cuadrillas) {
         this.cuadrillas = cuadrillas;
     }
 
