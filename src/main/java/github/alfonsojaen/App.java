@@ -17,22 +17,43 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("primary"), 640, 480);
+
+       /* FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("pantallaInsertCuadrilla.fxml"));
+        Parent root = fxmlLoader.load();
+        ControllerInsertCuadrilla controller = fxmlLoader.getController();
+
+        // Configurar cualquier otra cosa en el controlador si es necesario
+
+        // Crear la escena y establecerla en la ventana
+        Scene scene = new Scene(root, 640, 480);
+        stage.setScene(scene);
+        stage.show();*/
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("pantallaLoginUser.fxml"));
+        Parent root = fxmlLoader.load();
+
+        // Configurar cualquier otra cosa en el controlador si es necesario
+
+        // Crear la escena y establecerla en la ventana
+        scene = new Scene(root, 640, 480);
         stage.setScene(scene);
         stage.show();
+
     }
 
+
     static void setRoot(String fxml) throws IOException {
-        scene.setRoot(loadFXML(fxml));
+        //scene.setRoot(loadFXML(fxml));
     }
 
     private static Parent loadFXML(String fxml) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
-        return fxmlLoader.load();
+      //  FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
+       //return fxmlLoader.load();
+        return null;
     }
 
     public static void main(String[] args) {
-        launch();
+        //launch();
+        launch(args);
     }
 
 }

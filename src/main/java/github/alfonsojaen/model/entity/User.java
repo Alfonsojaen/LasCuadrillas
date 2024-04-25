@@ -13,7 +13,7 @@ public class User  {
 
     public User(String nameUser, String password, String gmail, String name) {
         this.nameUser = nameUser;
-        setPassword(password);
+        this.password = password;
         this.gmail = gmail;
         this.name = name;
     }
@@ -34,8 +34,7 @@ public class User  {
         return password;
     }
 
-    public void setPassword(String password) {
-    }
+    public void setPassword(String password){this.password = password; }
 
     public String getGmail() {
         return gmail;

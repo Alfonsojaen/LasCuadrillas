@@ -5,21 +5,17 @@ import github.alfonsojaen.model.entity.Cuadrilla;
 import github.alfonsojaen.model.entity.Paso;
 
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class PasoDAO implements DAO<Paso>{
 
-    private static final String FINDALL ="SELECT b.id,b.brotherhood,b.capacity,b.id_cuadrilla FROM paso AS b";
-    private static final String FINDBYID ="SELECT b.id,b.brotherhood,b.capacity,b.id_cuadrilla FROM paso AS b WHERE b.id=?";
-    private static final String INSERT ="INSERT INTO paso (id,brotherhood,capacity,id_cuadrilla) VALUES (?,?,?,?)";
+    private static final String FINDALL ="SELECT a.id,a.brotherhood,a.capacity FROM paso AS a";
+    private static final String FINDBYID ="SELECT a.id,a.brotherhood,a.capacity FROM paso AS a WHERE a.id=?";
+    private static final String INSERT ="INSERT INTO paso (id,brotherhood,capacity) VALUES (?,?,?)";
     private static final String UPDATE ="UPDATE paso SET brotherhood=?,capacity=? WHERE id=?";
     private static final String DELETE ="DELETE FROM paso WHERE id=?";
-    private static final String FINDBYPASO ="SELECT b.id,b.brotherhood,b.capacity,b.id_cuadrilla FROM book AS b WHERE b.id_cuadrilla=?";
 
 
     private Connection conn;
@@ -27,38 +23,45 @@ public class PasoDAO implements DAO<Paso>{
         conn = ConnectionMariaDB.getConnection();
     }
     @Override
-    public Paso save(Paso entity)  {
-        Paso result=entity;
-        if(entity!=null){
-            int id = entity.getId();
-            if(id != 0){
-                Paso isInDataBase = findById(id);
-                if(isInDataBase ==null) {
-                    //INSERT
-                    try (PreparedStatement pst = conn.prepareStatement(INSERT)) {
-                        pst.setInt(1, entity.getId());
-                        pst.setString(2, entity.getBrotherhood());
-                        pst.setInt(3, entity.getCapacity());
-                        pst.setString(4, entity.getCuadrilla().getName());
+    public Paso save(Paso entity) {
+        Paso result = entity;
+        if (entity == null) return result;
+        Paso p = findById(entity.getId());
+        if (p.getId() == 0) {
+            //INSERT
+            try (PreparedStatement pst = conn.prepareStatement(INSERT, Statement.RETURN_GENERATED_KEYS)) {
+                pst.setInt(1, entity.getId());
+                pst.setString(2, entity.getBrotherhood());
+                pst.setInt(3, entity.getCapacity());
+                pst.setInt(4, entity.getCuadrilla().getId());
+                pst.executeUpdate();
+                try (ResultSet generatedKeys = pst.getGeneratedKeys()) {
+                    if (generatedKeys.next()) {
+                        int generatedId = generatedKeys.getInt(1);
+                        entity.setId(generatedId);
+                        result = entity;
+                    }
 
-                        pst.executeUpdate();
-                    } catch (SQLException e) {
-                        e.printStackTrace();
-                    }
-                }else{
-                    //UPDATE
-                    try(PreparedStatement pst = conn.prepareStatement(UPDATE)){
-                        pst.setInt(1, entity.getId());
-                        pst.setString(2, entity.getBrotherhood());
-                        pst.setInt(3, entity.getCapacity());
-                        pst.setString(4, entity.getCuadrilla().getName());
-                        pst.executeUpdate();
-                    } catch (SQLException e) {
-                        e.printStackTrace();
-                    }
                 }
+
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+        } else {
+            //UPDATE
+            try (PreparedStatement pst = conn.prepareStatement(UPDATE)) {
+                pst.setInt(1, entity.getId());
+                pst.setString(2, entity.getBrotherhood());
+                pst.setInt(3, entity.getCapacity());
+                pst.setString(4, entity.getCuadrilla().getName());
+                pst.executeUpdate();
+
+            } catch (SQLException e) {
+                e.printStackTrace();
             }
         }
+
+
         return result;
     }
 
@@ -78,21 +81,22 @@ public class PasoDAO implements DAO<Paso>{
 
     @Override
     public Paso findById(int key) {
-        Paso result = null;
-        try(PreparedStatement pst = conn.prepareStatement(FINDBYID)){
+        Paso result = new Paso();
+        if(key == 0) return result;
+
+        try(PreparedStatement pst = ConnectionMariaDB.getConnection().prepareStatement(FINDBYID)){
             pst.setInt(1,key);
-            try(ResultSet res = pst.executeQuery()){
+            ResultSet res = pst.executeQuery();
                 if(res.next()){
-                    Paso p = new Paso();
-                    p.setId(res.getInt(1));
-                    //p.setCuadrilla(CuadrillaDAO.build().findById(res.getInt()));
-                    p.setBrotherhood(res.getString("brotherhood"));
-                    p.setCapacity(res.getInt(2));
-                    result=p;
+                    result.setId(res.getInt(1));
+                    result.setBrotherhood(res.getString("brotherhood"));
+                    result.setCapacity(res.getInt(1));
+
                 }
-            }
-        } catch (SQLException e) {
+                res.close();
+            } catch (SQLException e) {
             e.printStackTrace();
+
         }
         return result;
     }
@@ -116,27 +120,6 @@ public class PasoDAO implements DAO<Paso>{
         return result;
     }
 
-    public List<Paso> findByPaso(Cuadrilla c){
-        List<Paso> result = new ArrayList<>();
-        if(c==null || c.getId()==0) return result;
-        try(PreparedStatement pst = conn.prepareStatement(FINDBYPASO)){
-            pst.setInt(1,c.getId());
-            try(ResultSet res = pst.executeQuery()){
-                while(res.next()){
-                    Paso paso = new Paso();
-                    paso.setId(res.getInt(1));
-                    paso.setBrotherhood(res.getString("brotherhood"));
-                    paso.setCuadrilla(c);
-                    paso.setCapacity(res.getInt(2));
-                    result.add(paso);
-
-                }
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return result;
-    }
     @Override
     public void close() throws IOException {
 

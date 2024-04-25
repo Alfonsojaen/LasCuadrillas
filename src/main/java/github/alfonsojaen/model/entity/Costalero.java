@@ -4,21 +4,22 @@ package github.alfonsojaen.model.entity;
 import java.util.List;
 import java.util.Objects;
 
-public class Costalero {
+public  class Costalero {
     private int id;
     private String nickname;
     private int height;
     private int age;
-    private List<Cuadrilla> cuadrillas;
+    private List<Cuadrilla> cuadrilla;
 
-    public Costalero(int id, String nickname, int height, int age, List<Cuadrilla> cuadrillas) {
+    public Costalero(int id, String nickname, int height, int age, List<Cuadrilla> cuadrilla) {
         this.id = id;
         this.nickname = nickname;
         this.height = height;
         this.age = age;
-        this.cuadrillas = cuadrillas;
+        this.cuadrilla = cuadrilla;
     }
-    public Costalero(){
+
+    public Costalero() {
 
     }
 
@@ -55,11 +56,11 @@ public class Costalero {
     }
 
     public List<Cuadrilla> getCuadrilla() {
-        return cuadrillas;
+        return cuadrilla;
     }
 
-    public void setCuadrilla(List<Cuadrilla> cuadrillas) {
-        this.cuadrillas = cuadrillas;
+    public void setCuadrillas(List<Cuadrilla> cuadrilla) {
+        this.cuadrilla= cuadrilla;
     }
 
     @Override
@@ -82,8 +83,9 @@ public class Costalero {
                 ", nickname='" + nickname + '\'' +
                 ", height=" + height +
                 ", age=" + age +
-                ", cuadrillas=" + cuadrillas +
+                ", cuadrillas=" + cuadrilla +
                 '}';
     }
+
 }
 
