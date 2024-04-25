@@ -21,6 +21,13 @@ public class Cuadrilla {
         this.pasos = pasos;
     }
 
+    public Cuadrilla( int id,String name, String overseer,String description) {
+        this.id = id;
+        this.name = name;
+        this.overseer = overseer;
+        this.description = description;
+    }
+
     public Cuadrilla(){
 
     }

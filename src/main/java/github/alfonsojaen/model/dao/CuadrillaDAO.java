@@ -11,11 +11,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CuadrillaDAO implements DAO<Cuadrilla> {
-    private final static String INSERT = "INSERT INTO cuadrilla (id,name,overseer,description) VALUES (?,?,?,?)";
+    private final static String INSERTCUADRILLA = "INSERT INTO cuadrilla (id,name,overseer,description) VALUES (?,?,?,?)";
     private final static String UPDATE = "UPDATE cuadrilla SET name=?, overseer=?,description=? WHERE id=?";
     private final static String FINDALL ="SELECT  a.id,a.name,a.overseer,a.description FROM cuadrilla AS a";
-    private final static String FINDBYID="SELECT a.id,a.name,a.overseer,a.description FROM author AS a WHERE a.id=?";
-    private final static String DELETE="DELETE FROM cuadrilla AS a WHERE a.id=?";
+    private final static String FINDBYID="SELECT a.id,a.name,a.overseer,a.description FROM cuadrilla AS a WHERE a.id=?";
+    private final static String DELETE="DELETE FROM cuadrilla  WHERE id=?";
+    private final static String FINDBYNAME="SELECT a.id,a.name,a.overseer,a.description FROM cuadrilla AS a WHERE a.name=?";
+
 
     private Connection conn;
     public CuadrillaDAO(){
@@ -25,11 +27,11 @@ public class CuadrillaDAO implements DAO<Cuadrilla> {
     @Override
     public Cuadrilla save(Cuadrilla entity) throws SQLException {
         Cuadrilla result = entity;
-        if (entity != null || entity.getId() == 0) return result;
+        if (entity == null ) return result;
         Cuadrilla c = findById(entity.getId());
         if (c.getId() == 0) {
             //INSERT
-            try (PreparedStatement pst = this.conn.prepareStatement(INSERT, Statement.RETURN_GENERATED_KEYS)) {
+            try (PreparedStatement pst = this.conn.prepareStatement(INSERTCUADRILLA, Statement.RETURN_GENERATED_KEYS)) {
                 pst.setInt(1, entity.getId());
                 pst.setString(2, entity.getName());
                 pst.setString(3, entity.getOverseer());
@@ -80,11 +82,31 @@ public class CuadrillaDAO implements DAO<Cuadrilla> {
 
     @Override
     public Cuadrilla findById(int key) {
-        Cuadrilla result = new CuadrillaLazy();
+        Cuadrilla result = new Cuadrilla();
         if (key == 0) return result;
 
         try (PreparedStatement pst = ConnectionMariaDB.getConnection().prepareStatement(FINDBYID)) {
             pst.setInt(1, key);
+            ResultSet res = pst.executeQuery();
+            if (res.next()) {
+                result.setId(res.getInt(1));
+                result.setName(res.getString("name"));
+                result.setOverseer(res.getString("overseer"));
+                result.setDescription(res.getString("description"));
+            }
+            res.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return result;
+    }
+
+    public Cuadrilla findByName(String name) {
+        Cuadrilla result = new CuadrillaLazy();
+        if (name == null || name.isEmpty()) return result;
+
+        try (PreparedStatement pst = ConnectionMariaDB.getConnection().prepareStatement(FINDBYNAME)) {
+            pst.setString(1, name);
             ResultSet res = pst.executeQuery();
             if (res.next()) {
                 result.setId(res.getInt(1));
@@ -133,7 +155,7 @@ public class CuadrillaDAO implements DAO<Cuadrilla> {
         @Override
         public List<Costalero> getCostaleros() {
             if (super.getCostaleros() == null) {
-                setCostaleros(CostaleroDAO.build().findByCuadrilla(this));
+               // setCostaleros(CostaleroDAO.build().findByCuadrilla(this));
             }
             return super.getCostaleros();
         }

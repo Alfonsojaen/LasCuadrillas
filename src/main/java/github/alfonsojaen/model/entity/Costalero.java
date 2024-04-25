@@ -9,14 +9,14 @@ public  class Costalero {
     private String nickname;
     private int height;
     private int age;
-    private List<Cuadrilla> cuadrillas;
+    private List<Cuadrilla> cuadrilla;
 
-    public Costalero(int id, String nickname, int height, int age, List<Cuadrilla> cuadrillas) {
+    public Costalero(int id, String nickname, int height, int age, List<Cuadrilla> cuadrilla) {
         this.id = id;
         this.nickname = nickname;
         this.height = height;
         this.age = age;
-        this.cuadrillas = cuadrillas;
+        this.cuadrilla = cuadrilla;
     }
 
     public Costalero() {
@@ -55,12 +55,12 @@ public  class Costalero {
         this.age = age;
     }
 
-    public List<Cuadrilla> getCuadrillas() {
-        return cuadrillas;
+    public List<Cuadrilla> getCuadrilla() {
+        return cuadrilla;
     }
 
-    public void setCuadrillas(List<Cuadrilla> cuadrillas) {
-        this.cuadrillas = cuadrillas;
+    public void setCuadrillas(List<Cuadrilla> cuadrilla) {
+        this.cuadrilla= cuadrilla;
     }
 
     @Override
@@ -83,7 +83,7 @@ public  class Costalero {
                 ", nickname='" + nickname + '\'' +
                 ", height=" + height +
                 ", age=" + age +
-                ", cuadrillas=" + cuadrillas +
+                ", cuadrillas=" + cuadrilla +
                 '}';
     }
 
