@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="github.alfonsojaen.view.ControllerMenu">
+   <children>
+      <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-min-width: 100%;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox fillHeight="false" style="-fx-background-color: white; -fx-min-width: 100 %;">
+               <children>
+                  <ImageView fitHeight="27.0" fitWidth="28.0" onMouseClicked="#MenuLogin" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../icons/LetsIconsBack.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="94.0" fitWidth="100.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../../../icons/Logo%20oficial.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="93.0" fitWidth="472.0" pickOnBounds="true" style="-fx-scale-x: 100%;">
+                     <image>
+                        <Image url="@../../../icons/Menu.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox style="-fx-min-width: 100%;" VBox.vgrow="ALWAYS">
+               <children>
+                  <VBox alignment="CENTER" minWidth="200.0" prefHeight="306.0" prefWidth="250.0" style="-fx-background-color: black;" HBox.hgrow="NEVER">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#MenuCuadrilla" style="-fx-background-color: PURPLE;" text="MENU CUADRILLA" textFill="WHITE">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <VBox.margin>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="126.0" style="-fx-background-color: PURPLE;" text="MENU COSTALERO" textFill="WHITE" textOverrun="CLIP">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <VBox.margin>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="88.0" style="-fx-background-color: PURPLE;" text="MENU PASO" textFill="WHITE" textOverrun="CLIP">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <VBox.margin>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <ImageView fx:id="imagen" fitHeight="369.0" fitWidth="451.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../icons/menucuadrilla2.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

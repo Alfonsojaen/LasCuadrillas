@@ -1,13 +1,16 @@
-package github.alfonsojaen;
+package github.alfonsojaen.view;
 
+import github.alfonsojaen.App;
 import github.alfonsojaen.model.dao.CuadrillaDAO;
 import github.alfonsojaen.model.entity.Cuadrilla;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
 
-import java.sql.SQLException;
+import java.io.IOException;
+
 
 public class ControllerInsertCuadrilla {
     @FXML
@@ -20,29 +23,41 @@ public class ControllerInsertCuadrilla {
     private TextField Description;
 
     @FXML
+    private ImageView boton;
+
+    @FXML
     private Button botonInsertar;
 
     @FXML
     public void handleInsertarCuadrilla(ActionEvent event) {
          CuadrillaDAO cuadrillaDAO = CuadrillaDAO.build();
-        // Obtener los valores de los campos de texto
         String name = Name.getText();
         String overseer = Overseer.getText();
         String description = Description.getText();
 
-        // Crear una instancia de Cuadrilla con los valores ingresados
         Cuadrilla cuadrilla = new Cuadrilla(0, name, overseer, description, null, null);
 
-        // Guardar los datos utilizando CuadrillaDAO
-        try {
-            cuadrillaDAO.save(cuadrilla);
-            Name.setText("");
-            Overseer.setText("");
-            Description.setText("");
-        } catch (SQLException e) {
-            // Manejar la excepción de SQL
-        }
+        cuadrillaDAO.save(cuadrilla);
+        Name.setText("");
+        Overseer.setText("");
+        Description.setText("");
     }
+    @FXML
+    private void overButton(){
+        boton.setOpacity(0.5);
+    }
+    @FXML
+    private void offButton(){
+        boton.setOpacity(1.0);
+    }
+    @FXML
+    private void switchToMenuCuadrilla() {
+        try {
+            App.setRoot("pantallaMenuCuadrilla");
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
+        }
 
     }
 

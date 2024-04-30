@@ -4,6 +4,8 @@ import github.alfonsojaen.model.dao.PasoDAO;
 import github.alfonsojaen.model.entity.Cuadrilla;
 import github.alfonsojaen.model.entity.Paso;
 
+import java.sql.SQLException;
+
 
 public class testInsertPaso {
     public static void main(String[] args) {
@@ -12,29 +14,24 @@ public class testInsertPaso {
 
         // Crear un objeto Paso para guardar
         Paso paso = new Paso();
-        paso.setBrotherhood("Test5 ");
+        paso.setBrotherhood("Test7 ");
         paso.setCapacity(10);
         Cuadrilla cuadrilla = new Cuadrilla();
-        paso.setCuadrilla(cuadrilla);
 
-        // Guardar el paso
-        Paso savedPaso = pasoDAO.save(paso);
+        try {
+            // Guardar la cuadrilla
+            Paso savedPaso = pasoDAO.save(paso);
 
-        // Verificar si el paso se guardó correctamente
-        if (savedPaso != null) {
-            System.out.println("Paso guardado correctamente:");
-            System.out.println("ID: " + savedPaso.getId());
-            System.out.println("Hermandad: " + savedPaso.getBrotherhood());
-            System.out.println("Capacidad: " + savedPaso.getCapacity());
-            System.out.println("Cuadrilla: " + savedPaso.getCuadrilla().getName());
-        } else {
-            System.out.println("Error al guardar el paso.");
+            // Verificar que se ha guardado correctamente buscando la cuadrilla por su nombre
+            Paso foundPaso = pasoDAO.findById(savedPaso.getId());
+
+            // Imprimir información sobre la cuadrilla encontrada
+            System.out.println("Cuadrilla encontrada: " + foundPaso);
+
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
-
-        // Cerrar la conexión a la base de datos (opcional)
-        // No se muestra en tu implementación, pero es una buena práctica cerrar la conexión después de usarla.
-        // pasoDAO.close();
+    }
 
 
     }
-}

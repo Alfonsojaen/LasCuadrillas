@@ -14,11 +14,11 @@ public class testInsertCostalero {
         CostaleroDAO costaleroDAO = new CostaleroDAO();
         Costalero costalero = new Costalero();
 
-        costalero.setNickname("fran14");
+        costalero.setNickname("fran55");
         costalero.setHeight(180);
         costalero.setAge(20);
         List<Cuadrilla> cuadrillas = new ArrayList<>();
-        cuadrillas.add(new Cuadrilla(19, "cuadrilla 1", "overseer 1", "description 1"));
+        cuadrillas.add(new Cuadrilla(20, "cuadrilla 1", "overseer 1", "description 1"));
         costalero.setCuadrillas(cuadrillas);
         try {
             Costalero savedCostalero = costaleroDAO.save(costalero);

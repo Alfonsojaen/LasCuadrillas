@@ -8,4 +8,6 @@ module github.alfonsojaen {
     opens github.alfonsojaen.model.connection to java.xml.bind;
 
     exports github.alfonsojaen;
+    exports github.alfonsojaen.view;
+    opens github.alfonsojaen.view to javafx.fxml;
 }

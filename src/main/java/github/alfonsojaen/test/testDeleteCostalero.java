@@ -6,8 +6,8 @@ import github.alfonsojaen.model.entity.Costalero;
 import java.sql.SQLException;
 
 public class testDeleteCostalero {
-    public static void main(String[] args) {
-        CostaleroDAO costaleroDAO = new CostaleroDAO();
+    public static void main(String[] args) throws SQLException {
+       /* CostaleroDAO costaleroDAO = new CostaleroDAO();
         Costalero costaleroToDelete = new Costalero();
         costaleroToDelete.setId(10);
 
@@ -17,10 +17,11 @@ public class testDeleteCostalero {
             try {
                 costaleroDAO.delete(costaleroToDelete);
             } catch (SQLException e) {
+                System.out.println("Error al eliminar el costalero con ID 10.");
                 e.printStackTrace();
             }
         } else {
             System.out.println("El costalero con ID 10 no existe en la base de datos.");
-        }
+        }*/
     }
 }

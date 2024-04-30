@@ -1,28 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="github.alfonsojaen.ControllerInsertCuadrilla">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="github.alfonsojaen.view.ControllerInsertCostalero">
    <children>
       <SplitPane dividerPositions="0.2796116504854369" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-        <items>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="135.0" prefWidth="598.0" style="-fx-background-color: white;">
+         <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="135.0" prefWidth="598.0" style="-fx-background-color: white;">
                <children>
-                  <ImageView fitHeight="108.0" fitWidth="540.0" layoutX="58.4" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="58.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                     <image>
-                        <Image url="@../../icons/FotoCrearCuadrilla.png" />
-                     </image>
-                  </ImageView>
+                  <Text layoutX="86.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CREAR COSTALERO" textAlignment="CENTER" wrappingWidth="425.30511474609375">
+                     <font>
+                        <Font size="48.0" />
+                     </font>
+                  </Text>
                </children></AnchorPane>
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="235.0" prefWidth="598.0">
                <children>
@@ -43,44 +44,40 @@
                                  <children>
                                     <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="3">
                                        <children>
-                                          <Button fx:id="botonInsertar" mnemonicParsing="false" onAction="#handleInsertarCuadrilla" text="CREAR" textOverrun="CLIP" />
+                                          <Button fx:id="botonInsertar" mnemonicParsing="false" onAction="#handleInsertarCostalero" text="CREAR" textOverrun="CLIP">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor></Button>
                                        </children>
                                     </HBox>
                                     <HBox alignment="CENTER" prefHeight="80.0" prefWidth="290.0">
                                        <children>
-                                          <Label prefHeight="18.0" prefWidth="96.0" text="NOMBRE" />
-                                          <TextField fx:id="Name" />
+                                          <Label prefHeight="18.0" prefWidth="96.0" text="APODO" />
+                                          <TextField fx:id="Nickname" />
                                        </children>
                                     </HBox>
                                     <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
                                        <children>
-                                          <Label prefHeight="18.0" prefWidth="98.0" text="CAPATAZ" />
-                                          <TextField fx:id="Overseer" prefHeight="26.0" prefWidth="150.0" />
+                                          <Label prefHeight="18.0" prefWidth="98.0" text="ALTURA" />
+                                          <TextField fx:id="Height" prefHeight="26.0" prefWidth="150.0" />
                                        </children>
                                     </HBox>
                                     <HBox alignment="CENTER" prefHeight="66.0" prefWidth="290.0" GridPane.rowIndex="2">
                                        <children>
-                                          <Label prefHeight="18.0" prefWidth="99.0" text="DESCRIPCIÓN" />
-                                          <TextField fx:id="Description" prefHeight="26.0" prefWidth="146.0" />
+                                          <Label prefHeight="18.0" prefWidth="99.0" text="AÑOS" />
+                                          <TextField fx:id="Age" prefHeight="26.0" prefWidth="146.0" />
                                        </children>
                                     </HBox>
                                  </children>
                               </GridPane>
                            </children>
                         </AnchorPane>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
-                           <children>
-                              <ImageView fitHeight="282.0" fitWidth="290.0" layoutX="5.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.39999999999997726" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.800000000000011" AnchorPane.topAnchor="0.0">
-                                 <image>
-                                    <Image url="@../../icons/fotoCuadrilla.jpg" />
-                                 </image>
-                              </ImageView>
-                           </children></AnchorPane>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
                      </items>
                   </SplitPane>
                </children>
             </AnchorPane>
-        </items>
+         </items>
       </SplitPane>
    </children>
 </AnchorPane>

@@ -60,7 +60,7 @@
                     </descriptorRefs>
                     <archive>
                         <manifest>
-                            <mainClass>github.alfonsojaen.Executable</mainClass>
+                            <mainClass>github.alfonsojaen.view.Executable</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
