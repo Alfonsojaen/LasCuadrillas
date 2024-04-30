@@ -1,12 +1,14 @@
 package github.alfonsojaen.model.entity;
 
+import java.util.List;
+
 public class Paso {
     private int id;
     private String brotherhood;
     private int capacity;
-    private Cuadrilla cuadrilla;
+    private List<Cuadrilla> cuadrilla;
 
-    public Paso(int id,String brotherhood, int capacity, Cuadrilla cuadrilla) {
+    public Paso(int id,String brotherhood, int capacity, List<Cuadrilla> cuadrilla) {
         this.id = id;
         this.brotherhood = brotherhood;
         this.capacity = capacity;
@@ -40,11 +42,11 @@ public class Paso {
         this.capacity = capacity;
     }
 
-    public Cuadrilla getCuadrilla() {
+    public List<Cuadrilla> getCuadrilla() {
         return cuadrilla;
     }
 
-    public void setCuadrilla(Cuadrilla cuadrilla) {
+    public void setCuadrilla(List<Cuadrilla> cuadrilla) {
         this.cuadrilla = cuadrilla;
     }
 }

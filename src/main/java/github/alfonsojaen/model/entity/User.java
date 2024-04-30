@@ -3,18 +3,21 @@ package github.alfonsojaen.model.entity;
 import java.io.Serializable;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.List;
 import java.util.Objects;
 
 public class User  {
-    private String nameUser;
+    private String username;
     private String password;
-    private String gmail;
+    private String email;
     private String name;
+    private List<Cuadrilla> Cuadrilla;
 
-    public User(String nameUser, String password, String gmail, String name) {
-        this.nameUser = nameUser;
+
+    public User(String nameUser, String password, String email, String name) {
+        this.username = nameUser;
         this.password = password;
-        this.gmail = gmail;
+        this.email = email;
         this.name = name;
     }
 
@@ -22,12 +25,12 @@ public class User  {
         this("", "", "", "");
     }
 
-    public String getNameUser() {
-        return nameUser;
+    public String getUsername() {
+            return username;
     }
 
-    public void setNameUser(String nameUser) {
-        this.nameUser = nameUser;
+    public void setUsername(String nameUser) {
+        this.username = nameUser;
     }
 
     public String getPassword() {
@@ -36,12 +39,12 @@ public class User  {
 
     public void setPassword(String password){this.password = password; }
 
-    public String getGmail() {
-        return gmail;
+    public String getEmail() {
+        return email;
     }
 
-    public void setGmail(String gmail) {
-        this.gmail = gmail;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getName() {
@@ -52,14 +55,21 @@ public class User  {
         this.name = name;
     }
 
+    public List<Cuadrilla> getCuadrilla() {
+        return Cuadrilla;
+    }
+
+    public void setCuadrilla(List<Cuadrilla> cuadrilla) {
+        Cuadrilla = cuadrilla;
+    }
 
     @Override
     public String toString() {
         String hiddenPassword = password.replaceAll(".", "*");
         return "Usuario -> " + name + '\'' +
-                "Nombre del usuario : " + nameUser + '\'' +
+                "Nombre del usuario : " + username + '\'' +
                 "Contraseña : " + hiddenPassword + '\'' +
-                "Gmail del usuario : " + gmail;
+                "Gmail del usuario : " + email;
     }
 
 }

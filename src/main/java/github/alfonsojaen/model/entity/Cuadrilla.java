@@ -10,15 +10,15 @@ public class Cuadrilla {
     private String overseer;
     private String description;
     private List<Costalero> costaleros;
-    private List<Paso> pasos;
+    private List<Paso> paso;
 
-    public Cuadrilla( int id,String name, String overseer,String description, List<Costalero> costaleros, List<Paso> pasos) {
+    public Cuadrilla( int id,String name, String overseer,String description, List<Costalero> costaleros, List<Paso> paso) {
         this.id = id;
         this.name = name;
         this.overseer = overseer;
         this.description = description;
         this.costaleros = costaleros;
-        this.pasos = pasos;
+        this.paso = paso;
     }
 
     public Cuadrilla( int id,String name, String overseer,String description) {
@@ -72,58 +72,14 @@ public class Cuadrilla {
         this.costaleros = costaleros;
     }
 
-    public List<Paso> getPasos() {
-        return pasos;
+    public List<Paso> getPaso() {
+        return paso;
     }
 
-    public void setPasos(List<Paso> pasos) {
-        this.pasos = pasos;
+    public void setPaso(List<Paso> paso) {
+        this.paso= paso;
     }
 
-    public void addCostalero(Costalero costalero){
-    if(costaleros==null){
-        costaleros = new ArrayList<>();
-    }
-    if(!costaleros.contains(costalero)){
-        costaleros.add(costalero);
-        }
-    }
-
-    public void removeCostalero( Costalero costalero){
-        if(costaleros!=null){
-            costaleros.remove(costalero);
-        }
-    }
-    public Costalero getCostalero(Costalero costalero){
-        Costalero result=null;
-        if(costaleros!=null){
-            int i=costaleros.indexOf(costalero);
-            result = costaleros.get(i);
-        }
-        return result;
-    }
-    public void addPaso(Paso paso){
-        if(pasos==null){
-            pasos = new ArrayList<>();
-        }
-        if(!pasos.contains(paso)){
-            pasos.add(paso);
-        }
-    }
-
-    public void removePaso( Paso paso){
-        if(pasos!=null){
-            pasos.remove(paso);
-        }
-    }
-    public Paso getPaso(Paso paso){
-        Paso result=null;
-        if(pasos!=null){
-            int i=pasos.indexOf(paso);
-            result = pasos.get(i);
-        }
-        return result;
-    }
 
     @Override
     public boolean equals(Object o) {
@@ -146,7 +102,7 @@ public class Cuadrilla {
                 ", overseer='" + overseer + '\'' +
                 ", description='" + description + '\'' +
                 ", costaleros=" + costaleros +
-                ", pasos=" + pasos +
+                ", pasos=" + paso +
                 '}';
     }
 }

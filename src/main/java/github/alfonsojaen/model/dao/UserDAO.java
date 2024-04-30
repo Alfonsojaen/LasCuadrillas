@@ -9,11 +9,11 @@ import java.util.List;
 
 public class UserDAO implements DAO<User> {
 
-    private final static String INSERT = "INSERT INTO user (nameUser,password,gmail,name) VALUES (?,?,?,?)";
-    private final static String UPDATE = "UPDATE user SET  password=?, gmail=?, name=? WHERE nameUser=?";
-    private final static String DELETE = "DELETE FROM user WHERE nameUser=?";
-    private final static String FINDBYUSERNAME = "SELECT a.nameUser,a.password,a.gmail,a.name FROM user AS a WHERE a.userName=?";
-    private final static String QUERY = "SELECT userName FROM user WHERE gmail=? AND password=?";
+    private final static String INSERT = "INSERT INTO user (username,password,email,name) VALUES (?,?,?,?)";
+    private final static String UPDATE = "UPDATE user SET  password=?, email=?, name=? WHERE username=?";
+    private final static String DELETE = "DELETE FROM user WHERE username=?";
+    private final static String FINDBYUSERNAME = "SELECT a.username,a.password,a.email,a.name FROM user AS a WHERE a.username=?";
+    private final static String QUERY = "SELECT username FROM user WHERE email=? AND password=?";
 
     private Connection conn;
 
@@ -22,49 +22,45 @@ public class UserDAO implements DAO<User> {
     }
 
     @Override
-    public User save(User entity) throws SQLException {
-        User result = entity;
-        if (entity == null ) return result;
-        User u = findByUserName(entity.getNameUser());
-        if (u.getNameUser() == null) {
+    public User save(User user) throws SQLException {
+        User result = new User();
+        User u = findByUserName(user.getUsername());
+        if (u == null) {
             //INSERT
-            try (PreparedStatement pst = this.conn.prepareStatement(INSERT, Statement.RETURN_GENERATED_KEYS)) {
-                pst.setString(1, entity.getNameUser());
-                pst.setString(2, entity.getPassword());
-                pst.setString(3, entity.getGmail());
-                pst.setString(4, entity.getName());
-                pst.executeUpdate();
-                try (ResultSet generatedKeys = pst.getGeneratedKeys()) {
-                    if (generatedKeys.next()) {
-                        String generatedNameUser = generatedKeys.getString("nameUser");
-                        entity.setNameUser(generatedNameUser);
-                        result = entity;
-                    }
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-            }
-            }else {
-                //UPDATE
-                try (PreparedStatement pst = this.conn.prepareStatement(UPDATE)) {
-                    pst.setString(1, entity.getPassword());
-                    pst.setString(2, entity.getGmail());
-                    pst.setString(3, entity.getName());
-                    pst.setString(4, entity.getNameUser());
-                    pst.executeUpdate();
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-            }
+            try (PreparedStatement ps = ConnectionMariaDB.getConnection().prepareStatement(INSERT)) {
+                ps.setString(1, user.getUsername());
+                ps.setString(2, user.getPassword());
+                ps.setString(3, user.getEmail());
+                ps.setString(4, user.getName());
+                ps.executeUpdate();
 
-                    return result;
-                }
+
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+    } else {
+        try (PreparedStatement ps = ConnectionMariaDB.getConnection().prepareStatement(UPDATE)) {
+            ps.setString(1, user.getUsername());
+            ps.setString(2, user.getPassword());
+            ps.setString(3, user.getEmail());
+            ps.setString(4, user.getName());
+            ps.executeUpdate();
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        }
+
+        return user;
+
+}
 
     @Override
     public User delete(User entity) throws SQLException {
-        if (entity == null || entity.getNameUser() == null) return entity;
+        if (entity == null || entity.getUsername() == null) return entity;
         try (PreparedStatement pst = ConnectionMariaDB.getConnection().prepareStatement(DELETE)) {
-            pst.setString(1, entity.getNameUser());
+            pst.setString(1, entity.getUsername());
             pst.executeUpdate();
         }
         return entity;
@@ -75,24 +71,27 @@ public class UserDAO implements DAO<User> {
         return null;
     }
 
-    public User findByUserName(String userName)  {
-        User result = new User();
-        if (userName ==null) return result;
-        try(PreparedStatement pst = ConnectionMariaDB.getConnection().prepareStatement(FINDBYUSERNAME)) {
-            pst.setString(1, userName);
-            ResultSet res = pst.executeQuery();
-            if (res.next()) {
-                String nameUser = res.getString("nameUser");
-                String password = res.getString("password");
-                String gmail = res.getString("gmail");
-                String name = res.getString("name");
+    public User findByUserName(String username) throws SQLException {
+            User result = null;
+            if (username != null) {
+                try (PreparedStatement pst = ConnectionMariaDB.getConnection().prepareStatement(FINDBYUSERNAME)) {
+                    pst.setString(1, username);
+                    ResultSet res = pst.executeQuery();
+                    if (res.next()) {
+                        result = new User();
+                        result.setUsername(res.getString("username"));
+                        result.setName(res.getString("name"));
+                    }
+                    res.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            return result;
         }
-            res.close();
-        }catch (SQLException e) {
-        e.printStackTrace();
-        }
-        return result;
-    }
+
+
 
     public String checkLogin(String gmail, String password) throws SQLException {
     try (PreparedStatement pst = ConnectionMariaDB.getConnection().prepareStatement(QUERY)) {

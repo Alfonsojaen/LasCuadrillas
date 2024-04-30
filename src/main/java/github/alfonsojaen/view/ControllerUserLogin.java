@@ -1,29 +1,35 @@
-package github.alfonsojaen;
+package github.alfonsojaen.view;
 
+import github.alfonsojaen.App;
 import github.alfonsojaen.model.dao.UserDAO;
 import github.alfonsojaen.model.singleton.UserSession;
 import github.alfonsojaen.utils.Utils;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Hyperlink;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
 import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.sql.SQLException;
 
-public class ControllerUserLogin {
+public class ControllerUserLogin  extends AppController {
 
     @FXML
-    private TextField tfGmail;
+    private TextField tGmail;
     @FXML
-    private PasswordField tfPass;
-
+    private PasswordField tPass;
+    @FXML
+    private Hyperlink hyperlink;
 
     @FXML
     private void login() throws SQLException, IOException {
 
-        String gmail = tfGmail.getText().trim();
-        String password = tfPass.getText().trim();
+        String gmail = tGmail.getText().trim();
+        String password = tPass.getText().trim();
         password = Utils.encryptSHA256(password);
 
 
@@ -58,15 +64,13 @@ public class ControllerUserLogin {
 
     }
 
-
-
     @FXML
     private void switchToUserPage() throws IOException {
-        App.setRoot("menu");
+       App.setRoot("pantallaMenu");
     }
     @FXML
     private void switchToRegister() throws IOException {
-        App.setRoot("register");
+        App.setRoot("pantallaRegisterUser");
     }
 }
 

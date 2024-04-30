@@ -13,7 +13,7 @@ public class PasoDAO implements DAO<Paso>{
 
     private static final String FINDALL ="SELECT a.id,a.brotherhood,a.capacity FROM paso AS a";
     private static final String FINDBYID ="SELECT a.id,a.brotherhood,a.capacity FROM paso AS a WHERE a.id=?";
-    private static final String INSERT ="INSERT INTO paso (id,brotherhood,capacity) VALUES (?,?,?)";
+    private static final String INSERT ="INSERT INTO paso (brotherhood,capacity) VALUES (?,?)";
     private static final String UPDATE ="UPDATE paso SET brotherhood=?,capacity=? WHERE id=?";
     private static final String DELETE ="DELETE FROM paso WHERE id=?";
 
@@ -23,37 +23,32 @@ public class PasoDAO implements DAO<Paso>{
         conn = ConnectionMariaDB.getConnection();
     }
     @Override
-    public Paso save(Paso entity) {
-        Paso result = entity;
-        if (entity == null) return result;
-        Paso p = findById(entity.getId());
+    public Paso save(Paso paso) throws SQLException{
+        if (paso != null ) {
+        Paso p = findById(paso.getId());
         if (p.getId() == 0) {
             //INSERT
             try (PreparedStatement pst = conn.prepareStatement(INSERT, Statement.RETURN_GENERATED_KEYS)) {
-                pst.setInt(1, entity.getId());
-                pst.setString(2, entity.getBrotherhood());
-                pst.setInt(3, entity.getCapacity());
-                pst.setInt(4, entity.getCuadrilla().getId());
+                pst.setString(1, paso.getBrotherhood());
+                pst.setInt(2, paso.getCapacity());
                 pst.executeUpdate();
-                try (ResultSet generatedKeys = pst.getGeneratedKeys()) {
-                    if (generatedKeys.next()) {
-                        int generatedId = generatedKeys.getInt(1);
-                        entity.setId(generatedId);
-                        result = entity;
-                    }
-
+                ResultSet r = pst.getGeneratedKeys();
+                if (r.next()) {
+                    int generatedId = r.getInt(1);
+                    paso.setId(generatedId);
                 }
 
             } catch (SQLException e) {
-                throw new RuntimeException(e);
+                e.printStackTrace();
+                paso = null;
+            }
             }
         } else {
             //UPDATE
-            try (PreparedStatement pst = conn.prepareStatement(UPDATE)) {
-                pst.setInt(1, entity.getId());
-                pst.setString(2, entity.getBrotherhood());
-                pst.setInt(3, entity.getCapacity());
-                pst.setString(4, entity.getCuadrilla().getName());
+            try (PreparedStatement pst = ConnectionMariaDB.getConnection().prepareStatement(UPDATE)) {
+                pst.setInt(1, paso.getId());
+                pst.setString(2, paso.getBrotherhood());
+                pst.setInt(3, paso.getCapacity());
                 pst.executeUpdate();
 
             } catch (SQLException e) {
@@ -62,27 +57,27 @@ public class PasoDAO implements DAO<Paso>{
         }
 
 
-        return result;
+        return paso;
     }
 
     @Override
-    public Paso delete(Paso entity)  {
-        if(entity!=null){
+    public Paso delete(Paso paso)  {
+        if(paso!=null){
             try (PreparedStatement pst = conn.prepareStatement(DELETE)){
-                pst.setInt(1,entity.getId());
+                pst.setInt(1,paso.getId());
                 pst.executeUpdate();
             } catch (SQLException e) {
                 e.printStackTrace();
-                entity=null;
+                paso=null;
             }
         }
-        return entity;
+        return paso;
     }
 
     @Override
     public Paso findById(int key) {
         Paso result = new Paso();
-        if(key == 0) return result;
+        if(key != 0){
 
         try(PreparedStatement pst = ConnectionMariaDB.getConnection().prepareStatement(FINDBYID)){
             pst.setInt(1,key);
@@ -96,7 +91,7 @@ public class PasoDAO implements DAO<Paso>{
                 res.close();
             } catch (SQLException e) {
             e.printStackTrace();
-
+        }
         }
         return result;
     }
