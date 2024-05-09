@@ -1,24 +1,22 @@
 
-p
-java:S1604D"(Make this anonymous inner class a lambda(õ¸Áîşÿÿÿÿ8´ˆ¾õ1J$a68f9990-6941-43fc-a846-73e6ad2e473b
-k
-java:S1604K"(Make this anonymous inner class a lambda(–¢Ù†8´ˆ¾õ1J$653575a9-4f21-4641-b1dd-a680b9a1d7f4
-¡
-java:S1450""YRemove the "cuadrillas" field and declare it as a local variable in the relevant methods.(àÙ‘Öúÿÿÿÿ8Èˆ¾õ1J$cb4ca424-cf3b-4237-96b1-f4ec395bb933
-m	java:S106O"+Replace this use of System.out by a logger.(é¾™8Öˆ¾õ1J$c79322f1-94e9-4a28-924a-7fab514374b4
-m	java:S106P"+Replace this use of System.out by a logger.(¨Ã€‚8•±Œ¾õ1J$2c047822-29e1-4c35-863c-48ac0690b5c0
+¤
+java:S1488C"\Immediately return this expression instead of assigning it to the temporary variable "cell".(Œüİ˜şÿÿÿÿ8ÃøŠèõ1J$0b53c09c-97d4-41d3-bbff-a61a2280efe0
+ 
+java:S1450"XRemove the "costalero" field and declare it as a local variable in the relevant methods.(·²ñØûÿÿÿÿ8üËúçõ1J$4f353b4e-7734-4ad7-b860-9b9f6e16f96d
+†
+java:S18541">Remove this useless assignment to local variable "tableView2".(ÅÆş»şÿÿÿÿ8İøŠèõ1J$318aec05-8425-4251-8093-c8856335711d
+w
+java:S14811"/Remove this unused "tableView2" local variable.(ÅÆş»şÿÿÿÿ8ŞøŠèõ1J$dd48d9d5-118d-475f-8f03-15f6739dc8ac
+t
+java:S1602<",Remove useless curly braces around statement(›ÎĞ¹øÿÿÿÿ8çØ‡èõ1J$3b6ecef5-b412-48f9-b7b2-cbb640144f2f
+l	java:S106="+Replace this use of System.out by a logger.(”ÒÀ8„Ìúçõ1J$af5a3b4f-ece2-4540-8c3c-b60e6ed2f46e
+~	java:S125E"<This block of commented-out lines of code should be removed.(ö—Šÿ8‡Ìúçõ1J$040b2864-ef82-4948-a361-cd2e17493bf5
 q
-java:S1481Y")Remove this unused "item" local variable.(µ×Êñúÿÿÿÿ8Ôˆ¾õ1J$c80dcbaa-bba1-455b-986b-a8871279ddbc
-m	java:S106]"+Replace this use of System.out by a logger.(†È¼´8Ùª‘¾õ1J$4a8027aa-7322-4f5b-b6fe-f02142dd8710
-ƒ	java:S125d"<This block of commented-out lines of code should be removed.(Úßù£ùÿÿÿÿ8Õˆ¾õ1J$80a9ea74-75f1-44ad-85b4-fa7dd11e9e37
-m	java:S106k"+Replace this use of System.out by a logger.(‚™Éá8øœ–¾õ1J$83146610-03b6-4a3b-a175-2c4107947802
-
-java:S1128"FRemove this unused import 'github.alfonsojaen.model.dao.CostaleroDAO'.(Ù†Âşÿÿÿÿ8×ˆ¾õ1J$f032c234-ce7b-4857-b9ea-a6253dda0d5e
-‚
-java:S1128":Remove this unused import 'javafx.scene.control.CheckBox'.(¸şıÿÿÿÿ8×ˆ¾õ1J$2c2f18fb-0598-4c33-b971-24b64001eef7
-
-java:S1128"KRemove this unused import 'javafx.scene.control.cell.PropertyValueFactory'.(àÎ¬õ8×ˆ¾õ1J$cdab42fa-4c69-4c37-8466-ba89b4362b95
-~
-java:S1128";Remove this unused import 'javafx.scene.layout.AnchorPane'.(Ø µ8×ˆ¾õ1J$4bb5eb47-8dca-47c7-a9bc-2fab904fa6b6
+java:S1481\")Remove this unused "item" local variable.(µ×Êñúÿÿÿÿ8‰Ìúçõ1J$fd5dace0-ef86-4382-82ff-abb4650bc04a
+m	java:S106`"+Replace this use of System.out by a logger.(†È¼´8‹Ìúçõ1J$27bf0589-0fd6-451b-9ef2-5063758d5fb6
+r	java:S106n"+Replace this use of System.out by a logger.(‘¿†ôûÿÿÿÿ8‹Ìúçõ1J$45ce6bc5-5366-4f38-ab60-e5a1a20b0c51
+m	java:S106o"+Replace this use of System.out by a logger.(åâ—±8óØ‡èõ1J$9c6a10a5-8881-4215-9147-36c43cd68b08
+u
+java:S1068"-Remove this unused "costalero" private field.(·²ñØûÿÿÿÿ8‹Ìúçõ1J$0350354f-28a4-4bcc-ac73-7cefcb52cfeb
 y
-java:S1068!"1Remove this unused "seleccionados" private field.(Ã­øüüÿÿÿÿ8Øˆ¾õ1J$b4279c2a-02e6-4aa4-b707-5a8ab594c066
+java:S1068"1Remove this unused "seleccionados" private field.(Ã­øüüÿÿÿÿ8‹Ìúçõ1J$c2c619b9-60a6-4721-97f4-49c7470e9a95

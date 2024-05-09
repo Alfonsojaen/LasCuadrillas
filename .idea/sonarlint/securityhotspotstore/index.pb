@@ -49,3 +49,11 @@ m
 =src/main/java/github/alfonsojaen/view/ControllerMenuPaso.java,b\6\b67c62dfed7a5ba94dbf6f71ec6a4f16ecafce57
 c
 3src/main/java/github/alfonsojaen/model/dao/DAO.java,1\f\1fcdff3ddd346e63337246ed83568da8685d913a
+o
+?src/main/java/github/alfonsojaen/view/ControllerDeletePaso.java,8\e\8e19aa757b24e239a68858c80d3e93596ab2d257
+g
+7src/main/java/github/alfonsojaen/model/entity/Paso.java,7\2\728906cae3ed62e6f5c0d61df5e0066229f8c2d6
+g
+7src/main/java/github/alfonsojaen/model/dao/PasoDAO.java,6\2\620f69b5ac29987e71bf5039a39fa66ad860da80
+l
+<src/main/java/github/alfonsojaen/model/entity/Cuadrilla.java,d\2\d221436e761a802d3c975c297d23cb354649db3f

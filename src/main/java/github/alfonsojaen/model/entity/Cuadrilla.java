@@ -9,6 +9,7 @@ public class Cuadrilla {
     private String name;
     private String overseer;
     private String description;
+    private boolean selected;
     private List<Costalero> costaleros;
     private List<Paso> paso;
 
@@ -17,6 +18,7 @@ public class Cuadrilla {
         this.name = name;
         this.overseer = overseer;
         this.description = description;
+        this.selected = false;
         this.costaleros = costaleros;
         this.paso = paso;
     }
@@ -64,6 +66,14 @@ public class Cuadrilla {
         this.description = description;
     }
 
+    public boolean isSelected() {
+        return selected;
+    }
+
+    public void setSelected(boolean selected) {
+        this.selected = selected;
+    }
+
     public List<Costalero> getCostaleros() {
         return costaleros;
     }
@@ -101,6 +111,7 @@ public class Cuadrilla {
                 ", name='" + name + '\'' +
                 ", overseer='" + overseer + '\'' +
                 ", description='" + description + '\'' +
+                ", selected=" + selected +
                 ", costaleros=" + costaleros +
                 ", pasos=" + paso +
                 '}';

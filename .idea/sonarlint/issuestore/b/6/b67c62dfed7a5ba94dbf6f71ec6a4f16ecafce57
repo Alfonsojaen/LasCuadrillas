@@ -1,15 +1,15 @@
 
 w
-java:S4973;"<Strings and Boxed types should be compared using "equals()".(ûŞÏCJ$8d905bdc-4faa-4bda-9166-b2c96c09245c
+java:S4973?"<Strings and Boxed types should be compared using "equals()".(ûŞÏCJ$23f9a948-d9e0-4e7b-9fcc-29525a8d5784
 w
-java:S4973J"<Strings and Boxed types should be compared using "equals()".(ûŞÏCJ$31f1900b-b498-4d9e-9dc5-0a027a7a6c52
+java:S4973N"<Strings and Boxed types should be compared using "equals()".(ûŞÏCJ$0779b31a-2346-4141-8e9a-07b85c936835
 •
-java:S1450#"TRemove the "pasos" field and declare it as a local variable in the relevant methods.(ŞÕ‘óşÿÿÿÿJ$ba7c4fe7-4de3-4674-8c11-866ad947e919
+java:S1450#"TRemove the "pasos" field and declare it as a local variable in the relevant methods.(ŞÕ‘óşÿÿÿÿJ$73270470-97db-49fe-b5f5-0ff2046e24df
 z
-java:S1117/"9Rename "pasos" which hides the field declared at line 35.(¹µ®»ıÿÿÿÿJ$2ba04c8b-ecae-49ed-a079-b111b1c2a8ff
-U
-java:S1128"3Remove this unused import 'github.alfonsojaen.App'.(óÀ‹–ûÿÿÿÿ8·’ºÁõ1
-c
-java:S1128"FRemove this unused import 'github.alfonsojaen.model.dao.CuadrillaDAO'.(ú³ıß8·’ºÁõ1
-c
-java:S1128"FRemove this unused import 'github.alfonsojaen.model.entity.Cuadrilla'.(à º¤8¸’ºÁõ1
+java:S11173"9Rename "pasos" which hides the field declared at line 35.(¹µ®»ıÿÿÿÿJ$c894fca7-930d-4e7c-87f5-85877a295b47
+{
+java:S1128"3Remove this unused import 'github.alfonsojaen.App'.(óÀ‹–ûÿÿÿÿ8¥ô€åõ1J$a020c830-fcbe-43b0-aa05-d8596f4c2366
+‰
+java:S1128"FRemove this unused import 'github.alfonsojaen.model.dao.CuadrillaDAO'.(ú³ıß8¥ô€åõ1J$929e0270-1652-46b2-b11b-9bbcb34a3181
+‰
+java:S1128"FRemove this unused import 'github.alfonsojaen.model.entity.Cuadrilla'.(à º¤8¥ô€åõ1J$ee8968ab-3759-401b-a682-6ac435e28b69
