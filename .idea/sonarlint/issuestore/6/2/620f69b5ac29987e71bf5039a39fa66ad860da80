@@ -1,0 +1,10 @@
+
+”
+java:S1192V"LDefine a constant instead of duplicating this literal "brotherhood" 3 times.(§Ώ°θωÿÿÿÿ8Ηΐεδυ1J$b075c6c6-bf52-46c7-a3e4-96b11ef5e070
+Γ
+java:S1186‰"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ζΤ«χώÿÿÿÿJ$535055a7-4e4b-44db-b318-91fda5f93e98
+
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(ψΊΟÿÿÿÿÿ8Φ΄αδυ1J$ba7d1720-03bb-41fb-87c1-51738c82bb74
+d	java:S108;")Either remove or fill this block of code.(ε¥‡J$6abd9baf-5fdb-44b5-8e07-bc66342083c3
+c
+java:S1128"FRemove this unused import 'github.alfonsojaen.model.entity.Cuadrilla'.(ΰ Ί¤8όΊζδυ1

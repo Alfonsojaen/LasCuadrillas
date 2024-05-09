@@ -16,6 +16,7 @@ public class PasoDAO implements DAO<Paso>{
     private static final String INSERT ="INSERT INTO paso (brotherhood,capacity) VALUES (?,?)";
     private static final String UPDATE ="UPDATE paso SET brotherhood=?,capacity=? WHERE id=?";
     private static final String DELETE ="DELETE FROM paso WHERE id=?";
+    private final static String FINDBYNAME="SELECT a.id,a.brotherhood,a.capacity FROM paso AS a WHERE a.brotherhood=?";
 
 
     private Connection conn;
@@ -74,7 +75,23 @@ public void update(Paso paso){
         }
         return paso;
     }
-
+    public Paso findByName(String name) {
+        Paso result = new Paso();
+        if(name != null) {
+            try (PreparedStatement pst = ConnectionMariaDB.getConnection().prepareStatement(FINDBYNAME)) {
+                pst.setString(1, name);
+                ResultSet res = pst.executeQuery();
+                if (res.next()) {
+                    result.setId(res.getInt(1));
+                    result.setBrotherhood(res.getString("brotherhood"));
+                }
+                res.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        return result;
+    }
     @Override
     public Paso findById(int key) {
         Paso result = new Paso();

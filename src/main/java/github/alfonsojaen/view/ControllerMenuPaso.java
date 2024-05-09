@@ -42,6 +42,10 @@ public class ControllerMenuPaso implements Initializable {
     private void switchToInsertPaso() throws IOException {
         Scenes.setRoot("pantallaInsertPaso",null);
     }
+    @FXML
+    private void switchToDeletePaso() throws IOException {
+        Scenes.setRoot("pantallaDeletePaso",null);
+    }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         List<Paso> pasos = PasoDAO.build().findAll();
