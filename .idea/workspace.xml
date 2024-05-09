@@ -5,56 +5,49 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="af7f30ad-2f81-4f53-b035-ccfdeef794b2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/test/testinsertUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/view/AboutController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/view/AppController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/view/Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/view/ControllerInsertCostalero.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/view/ControllerMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/view/ControllerMenuCuadrilla.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/view/ControllerUserRegister.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/view/Scenes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/view/View.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/github/alfonsojaen/view/pantallaMenu.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/github/alfonsojaen/view/pantallaMenuCuadrilla.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/github/alfonsojaen/view/pantallaRegisterUser.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons/FluentEmojiHighContrastBackArrow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons/FotoCrearCostalero.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons/FotoCrearPaso.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons/FotoCuadrilla.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons/LetsIconsBack.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons/Menu.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons/menucuadrilla2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/view/ControllerAssignCuadrilla.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/view/ControllerDeleteCostalero.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/view/ControllerDeleteCuadrilla.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/view/ControllerDeletePaso.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/view/ControllerInsertPaso.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/view/ControllerMenuCostalero.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/view/ControllerMenuPaso.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/github/alfonsojaen/view/pantallaAssignCuadrilla.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/github/alfonsojaen/view/pantallaDeleteCostalero.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/github/alfonsojaen/view/pantallaDeleteCuadrilla.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/github/alfonsojaen/view/pantallaInsertPaso.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/github/alfonsojaen/view/pantallaMenuCostalero.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/github/alfonsojaen/view/pantallaMenuPaso.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/icons/FotoMenuCostalero.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/icons/FotoMenuPaso.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/ControllerCostalero.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/ControllerInsertCuadrilla.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/view/ControllerInsertCuadrilla.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/ControllerUserLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/view/ControllerUserLogin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/Executable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/PrimaryController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/SecondaryController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/model/dao/CostaleroDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/model/dao/CostaleroDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/model/dao/CuadrillaDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/model/dao/CuadrillaDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/model/dao/PasoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/model/dao/PasoDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/model/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/model/dao/UserDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/model/entity/Cuadrilla.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/model/entity/Cuadrilla.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/model/entity/Paso.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/model/entity/Paso.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/model/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/model/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/test/testDeleteCostalero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/test/testDeleteCostalero.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/test/testDeleteCuadrilla.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/test/testDeleteCuadrilla.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/test/testInsertCostalero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/test/testInsertCostalero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/test/testInsertCuadrilla.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/test/testInsertCuadrilla.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/test/testInsertPaso.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/test/testInsertPaso.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/utils/Utils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/github/alfonsojaen/pantallaEditCostaleros.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/github/alfonsojaen/view/pantallaEditCostaleros.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/github/alfonsojaen/pantallaInsertCostalero.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/github/alfonsojaen/view/pantallaInsertCostalero.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/github/alfonsojaen/pantallaInsertCuadrilla.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/github/alfonsojaen/view/pantallaInsertCuadrilla.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/github/alfonsojaen/pantallaLoginUser.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/github/alfonsojaen/view/pantallaLoginUser.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/github/alfonsojaen/primary.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/github/alfonsojaen/secondary.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/icons/fotoCuadrilla.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/view/AboutController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/view/AppController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/view/ControllerInsertCostalero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/view/ControllerInsertCostalero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/view/ControllerInsertCuadrilla.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/view/ControllerInsertCuadrilla.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/view/ControllerMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/view/ControllerMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/view/ControllerMenuCuadrilla.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/view/ControllerMenuCuadrilla.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/view/ControllerUserLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/view/ControllerUserLogin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/view/ControllerUserRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/view/ControllerUserRegister.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/view/Scenes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/view/Scenes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/github/alfonsojaen/view/View.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/github/alfonsojaen/view/pantallaEditCostaleros.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/github/alfonsojaen/view/pantallaInsertCostalero.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/github/alfonsojaen/view/pantallaInsertCostalero.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/github/alfonsojaen/view/pantallaInsertCuadrilla.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/github/alfonsojaen/view/pantallaInsertCuadrilla.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/github/alfonsojaen/view/pantallaMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/github/alfonsojaen/view/pantallaMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/github/alfonsojaen/view/pantallaMenuCuadrilla.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/github/alfonsojaen/view/pantallaMenuCuadrilla.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/icons/FotoCrearCostalero.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/icons/FotoCrearCuadrilla.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/icons/FotoCrearPaso.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/icons/FotoCuadrilla.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/icons/FotoMenuCuadrilla.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/icons/Menu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/icons/menucuadrilla2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/icons/menu.jpg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,6 +88,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -102,8 +96,8 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\alfon\IdeaProjects\LasCuadrillas\src\main\resources\github\alfonsojaen\view" />
-      <recent name="C:\Users\alfon\IdeaProjects\LasCuadrillas\src\main\resources\github\alfonsojaen" />
       <recent name="C:\Users\alfon\IdeaProjects\LasCuadrillas\src\main\resources\icons" />
+      <recent name="C:\Users\alfon\IdeaProjects\LasCuadrillas\src\main\resources\github\alfonsojaen" />
       <recent name="C:\Users\alfon\IdeaProjects\LasCuadrillas" />
       <recent name="C:\Users\alfon\IdeaProjects\LasCuadrillas\src\main\java\github\alfonsojaen" />
     </key>
@@ -163,6 +157,31 @@
       <workItem from="1714458896496" duration="9562000" />
       <workItem from="1714469141148" duration="1360000" />
       <workItem from="1714474895921" duration="535000" />
+      <workItem from="1714476622018" duration="779000" />
+      <workItem from="1714585279973" duration="3733000" />
+      <workItem from="1714591073074" duration="1710000" />
+      <workItem from="1714593246304" duration="4261000" />
+      <workItem from="1714597726346" duration="1876000" />
+      <workItem from="1714638990218" duration="6469000" />
+      <workItem from="1714648302988" duration="3808000" />
+      <workItem from="1714657668808" duration="4378000" />
+      <workItem from="1714662090202" duration="9212000" />
+      <workItem from="1714984456623" duration="763000" />
+      <workItem from="1714991642845" duration="1464000" />
+      <workItem from="1715063864974" duration="613000" />
+      <workItem from="1715064507198" duration="600000" />
+      <workItem from="1715066479076" duration="1489000" />
+      <workItem from="1715068195200" duration="4756000" />
+      <workItem from="1715072988140" duration="1452000" />
+      <workItem from="1715076838458" duration="1458000" />
+      <workItem from="1715078657746" duration="765000" />
+      <workItem from="1715088871182" duration="1397000" />
+      <workItem from="1715090408802" duration="3251000" />
+      <workItem from="1715150088227" duration="1158000" />
+      <workItem from="1715151263987" duration="10263000" />
+      <workItem from="1715170697718" duration="2218000" />
+      <workItem from="1715177478918" duration="5220000" />
+      <workItem from="1715237045076" duration="2702000" />
     </task>
     <servers />
   </component>

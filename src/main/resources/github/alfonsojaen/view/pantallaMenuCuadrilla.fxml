@@ -6,22 +6,56 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="github.alfonsojaen.view.ControllerMenuCuadrilla">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="github.alfonsojaen.view.ControllerMenuCuadrilla">
    <children>
-      <TableView fx:id="tableview" editable="true" layoutX="57.0" layoutY="100.0" prefHeight="200.0" prefWidth="486.0">
-        <columns>
-          <TableColumn fx:id="id" prefWidth="88.79998779296875" text="Id" />
-          <TableColumn fx:id="name" prefWidth="120.0" text="Nombre" />
-            <TableColumn fx:id="overseer" minWidth="0.0" prefWidth="111.20001220703125" text="Capataz" />
-            <TableColumn fx:id="description" prefWidth="167.20001220703125" text="Descripción" />
-        </columns>
-      </TableView>
-      <Button layoutX="428.0" layoutY="327.0" mnemonicParsing="false" onAction="#switchToInsertCuadrilla" text="Crear Cuadrilla" />
-      <ImageView fitHeight="26.0" fitWidth="30.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#switchToMenuCuadrilla" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../icons/LetsIconsBack.png" />
-         </image>
-      </ImageView>
+      <AnchorPane prefHeight="400.0" prefWidth="498.0" style="-fx-background-color: white;">
+         <children>
+            <TableView fx:id="tableview" editable="true" layoutX="15.0" layoutY="126.0" prefHeight="193.0" prefWidth="409.0">
+               <columns>
+                  <TableColumn fx:id="id" prefWidth="56.0" text="Id" />
+                  <TableColumn fx:id="name" prefWidth="109.5999755859375" text="Nombre" />
+                  <TableColumn fx:id="overseer" minWidth="0.0" prefWidth="112.0" text="Capataz" />
+                  <TableColumn fx:id="description" prefWidth="131.19997558593752" text="Descripción" />
+               </columns>
+            </TableView>
+            <Button layoutX="42.0" layoutY="332.0" mnemonicParsing="false" onAction="#switchToInsertCuadrilla" prefHeight="26.0" prefWidth="134.0" style="-fx-background-color: PURPLE;" text="CREAR CUADRILLA" textFill="WHITE" />
+            <Button layoutX="249.0" layoutY="333.0" mnemonicParsing="false" onAction="#switchToDeleteCuadrilla" style="-fx-background-color: PURPLE;" text="ELIMINAR CUADRILLA" textFill="WHITE" />
+            <Text layoutX="109.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MENU CUADRILLA">
+               <font>
+                  <Font name="Calibri Bold Italic" size="40.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="21.0" fitWidth="20.0" layoutX="5.0" layoutY="4.0" onMouseClicked="#switchToMenu" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../icons/LetsIconsBack.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="59.0" fitWidth="64.0" layoutX="25.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../icons/Logo%20oficial.jpg" />
+               </image>
+            </ImageView>
+            <Text layoutX="17.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LAS CUADRILLAS">
+               <font>
+                  <Font name="Calibri Bold" size="10.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="400.0" prefWidth="218.0" style="-fx-background-color: BLACK;">
+         <children>
+            <Text fill="WHITE" layoutX="25.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Si quieres asignar PASOS a una determinada cuadrilla pulsa dos veces sobre su Id." textAlignment="CENTER" wrappingWidth="119.20009765624991" />
+            <Text fill="RED" layoutX="30.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INFORMACIÓN">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="30.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Si quieres EDITAR algun campo que no se el ID de Cuadrilla, haz doble click sobre lo que quieras cambiar " textAlignment="CENTER" wrappingWidth="108.5546875" />
+         </children>
+      </AnchorPane>
    </children>
-</AnchorPane>
+</HBox>

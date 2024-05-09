@@ -1,0 +1,8 @@
+
+ï	java:S116"SRename this field "Nickname" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ø˘∂¨8…≠‘∆ı1J$bd60743e-1178-439b-b39e-c7ffa933fe8d
+ì	java:S116"QRename this field "Height" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(íÀ«¶8…≠‘∆ı1J$d109a9e5-6e4f-440f-9193-e999a31372b0
+ê	java:S116"NRename this field "Age" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(∞°ªç8…≠‘∆ı1J$de138e8f-29f9-437e-8c18-450249ffe7c5
+{
+java:S1128"3Remove this unused import 'github.alfonsojaen.App'.(Û¿ãñ˚ˇˇˇˇ8’≠‘∆ı1J$1dd44c52-5981-49ed-a59a-eb0a88b3c876
+â
+java:S1128"FRemove this unused import 'github.alfonsojaen.model.entity.Cuadrilla'.(‡†∫§8’≠‘∆ı1J$5fba07c3-d357-412a-b56c-745c1f11ebca

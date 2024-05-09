@@ -16,6 +16,8 @@ public class CostaleroDAO implements DAO<Costalero> {
     private final static String UPDATE = "UPDATE costalero SET nickname=?, height=?, age=? WHERE id=?";
     private final static String FINDBYID = "SELECT a.id,a.nickname,a.height,a.age FROM costalero AS a WHERE a.id=?";
     private final static String DELETE = "DELETE FROM costalero WHERE id=?";
+    private final static String FINDALL ="SELECT  a.id,a.nickname,a.height,a.age FROM costalero AS a";
+    private final static String FINDBYNAME="SELECT a.id,a.nickname,a.height,a.age FROM costalero AS a WHERE a.nickname=?";
 
 
     private Connection conn;
@@ -47,38 +49,44 @@ public class CostaleroDAO implements DAO<Costalero> {
                     costalero = null;
                 }
             }
-
-        } else {
-            try (PreparedStatement pst = ConnectionMariaDB.getConnection().prepareStatement(UPDATE)) {
-                pst.setInt(1, costalero.getId());
-                pst.setString(2, costalero.getNickname());
-                pst.setInt(3, costalero.getHeight());
-                pst.setInt(4, costalero.getAge());
-                pst.executeUpdate();
-
-
-            } catch (SQLException e) {
-                e.printStackTrace();
-
-            }
         }
         return costalero;
 
     }
-
-    public void update(Costalero costalero) throws SQLException{
-        try (PreparedStatement pst = ConnectionMariaDB.getConnection().prepareStatement(UPDATE)) {
-            pst.setInt(1, costalero.getId());
-            pst.setString(2, costalero.getNickname());
-            pst.setInt(3, costalero.getHeight());
-            pst.setInt(4, costalero.getAge());
+    public Costalero findByName(String name) {
+        Costalero result = new Costalero();
+        if(name != null) {
+            try (PreparedStatement pst = ConnectionMariaDB.getConnection().prepareStatement(FINDBYNAME)) {
+                pst.setString(1, name);
+                ResultSet res = pst.executeQuery();
+                if (res.next()) {
+                    result.setId(res.getInt(1));
+                    result.setNickname(res.getString("nickname"));
+                }
+                res.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        return result;
+    }
+    public void update(Costalero costalero) {
+        try (PreparedStatement pst = this.conn.prepareStatement(UPDATE)) {
+            if (costalero != null) {
+            pst.setString(1, costalero.getNickname());
+            pst.setInt(2, costalero.getHeight());
+            pst.setInt(3, costalero.getAge());
+            pst.setInt(4, costalero.getId());
             pst.executeUpdate();
-        } catch (SQLException e) {
+            } else {
+        }
+    } catch (SQLException e) {
             e.printStackTrace();
         }
     }
 
-    public void setCuadrilla(Costalero costalero) throws SQLException{
+
+        public void setCuadrilla(Costalero costalero) throws SQLException{
         try (PreparedStatement pst = this.conn.prepareStatement(DELETEIDCUADRILLA)) {
             pst.setInt(1, costalero.getId());
             pst.executeUpdate();
@@ -121,9 +129,9 @@ public class CostaleroDAO implements DAO<Costalero> {
                 ResultSet res = pst.executeQuery();
                 if (res.next()) {
                     result.setId(res.getInt(1));
-                    result.setNickname(res.getString("nikename"));
-                    result.setHeight(res.getInt(1));
-                    result.setAge(res.getInt(1));
+                    result.setNickname(res.getString("nickname"));
+                    result.setHeight(res.getInt(3));
+                    result.setAge(res.getInt(4));
                 }
                 res.close();
             } catch (SQLException e) {
@@ -134,9 +142,26 @@ public class CostaleroDAO implements DAO<Costalero> {
     }
         @Override
     public List<Costalero> findAll() {
+            List<Costalero> result = new ArrayList<>();
 
-        return null;
-    }
+            try(PreparedStatement pst = ConnectionMariaDB.getConnection().prepareStatement(FINDALL)) {
+
+                ResultSet res = pst.executeQuery();
+                while (res.next()){
+                    Costalero c = new Costalero();//LAZY
+                    c.setId(res.getInt(1));
+                    c.setNickname(res.getString("nickname"));
+                    c.setHeight(res.getInt(3));
+                    c.setAge(res.getInt(4));
+                    result.add(c);
+                }
+                res.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            return result;
+        }
+
 
     @Override
     public void close() throws IOException {

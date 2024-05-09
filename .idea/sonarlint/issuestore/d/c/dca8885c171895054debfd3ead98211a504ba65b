@@ -1,0 +1,15 @@
+
+†
+java:S2095+"EUse try-with-resources or close this "UserDAO" in a "finally" clause.(áô úÿÿÿÿJ$b5dde7b1-beb6-45c8-a814-add0a0a4cfe4
+}
+java:S1854-"<Remove this useless assignment to local variable "nameUser".(­„­­ûÿÿÿÿJ$cb298cb6-09e7-44ed-8f7d-cabb849c2f06
+n
+java:S1481,"-Remove this unused "nameUser" local variable.(Á­ ÀûÿÿÿÿJ$cebcd967-4beb-47b2-94ff-10d89c99e16f
+U
+java:S1128"3Remove this unused import 'github.alfonsojaen.App'.(óÀ‹–ûÿÿÿÿ8´öºÁõ1
+W
+java:S1128"5Remove this unused import 'javafx.event.ActionEvent'.(î•¯¼ıÿÿÿÿ8µöºÁõ1
+F
+java:S1128")Remove this unused import 'java.net.URI'.(Ö¦¨°8µöºÁõ1
+Z
+java:S1128"8Remove this unused import 'java.net.URISyntaxException'.(Ä®íÿÿÿÿÿ8µöºÁõ1

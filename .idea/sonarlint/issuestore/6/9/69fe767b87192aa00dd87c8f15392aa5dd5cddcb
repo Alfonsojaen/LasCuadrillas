@@ -1,0 +1,19 @@
+
+ª
+java:S1192M"iDefine a constant instead of duplicating this literal "Te has pasado del limtite de caracteres!" 3 times.(Âşç”øÿÿÿÿJ$46562afe-76fd-4d82-9d4c-0c2a541a8fa7
+w
+java:S4973D"<Strings and Boxed types should be compared using "equals()".(ûŞÏCJ$870cc815-eeeb-4a76-9712-fccf8c6d4e9c
+w
+java:S4973S"<Strings and Boxed types should be compared using "equals()".(ûŞÏCJ$44c16090-024b-435a-89b6-a136a9406871
+w
+java:S4973b"<Strings and Boxed types should be compared using "equals()".(ûŞÏCJ$ae37c5c0-9649-4cd0-a1e7-3ad8d532e7eb
+š
+java:S1450&"YRemove the "cuadrillas" field and declare it as a local variable in the relevant methods.(àÙ‘ÖúÿÿÿÿJ$82410038-0707-42dc-8b50-f76c05ce9e85
+
+java:S11176">Rename "cuadrillas" which hides the field declared at line 38.(ŠŒÖ£şÿÿÿÿJ$be84d129-a4d3-42d5-a4a6-60847d7e763e
+U
+java:S1128"3Remove this unused import 'github.alfonsojaen.App'.(óÀ‹–ûÿÿÿÿ8àÍ¹Áõ1
+b
+java:S1128"FRemove this unused import 'github.alfonsojaen.model.entity.Costalero'.(îÚÉ_8áÍ¹Áõ1
+\
+java:S1128":Remove this unused import 'javafx.scene.control.TableRow'.(ğ¼ãöúÿÿÿÿ8áÍ¹Áõ1

@@ -22,6 +22,8 @@ public class PasoDAO implements DAO<Paso>{
     public PasoDAO(){
         conn = ConnectionMariaDB.getConnection();
     }
+
+
     @Override
     public Paso save(Paso paso) throws SQLException{
         if (paso != null ) {
@@ -43,23 +45,22 @@ public class PasoDAO implements DAO<Paso>{
                 paso = null;
             }
             }
-        } else {
-            //UPDATE
-            try (PreparedStatement pst = ConnectionMariaDB.getConnection().prepareStatement(UPDATE)) {
-                pst.setInt(1, paso.getId());
-                pst.setString(2, paso.getBrotherhood());
-                pst.setInt(3, paso.getCapacity());
-                pst.executeUpdate();
-
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
         }
-
-
         return paso;
     }
-
+public void update(Paso paso){
+    try (PreparedStatement pst = conn.prepareStatement(UPDATE)) {
+        if(paso!=null){
+        pst.setString(1, paso.getBrotherhood());
+        pst.setInt(2, paso.getCapacity());
+        pst.setInt(3, paso.getId());
+        pst.executeUpdate();
+        } else {
+        }
+    } catch (SQLException e) {
+        e.printStackTrace();
+    }
+}
     @Override
     public Paso delete(Paso paso)  {
         if(paso!=null){
@@ -85,7 +86,7 @@ public class PasoDAO implements DAO<Paso>{
                 if(res.next()){
                     result.setId(res.getInt(1));
                     result.setBrotherhood(res.getString("brotherhood"));
-                    result.setCapacity(res.getInt(1));
+                    result.setCapacity(res.getInt(3));
 
                 }
                 res.close();
@@ -105,7 +106,7 @@ public class PasoDAO implements DAO<Paso>{
                     Paso p = new Paso();
                     p.setId(res.getInt(1));
                     p.setBrotherhood(res.getString("brotherhood"));
-                    p.setCapacity(res.getInt(2));
+                    p.setCapacity(res.getInt(3));
                     result.add(p);
                 }
             }

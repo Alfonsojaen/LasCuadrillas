@@ -1,0 +1,24 @@
+
+p
+java:S1604D"(Make this anonymous inner class a lambda(õ¸Áîşÿÿÿÿ8´ˆ¾õ1J$a68f9990-6941-43fc-a846-73e6ad2e473b
+k
+java:S1604K"(Make this anonymous inner class a lambda(–¢Ù†8´ˆ¾õ1J$653575a9-4f21-4641-b1dd-a680b9a1d7f4
+¡
+java:S1450""YRemove the "cuadrillas" field and declare it as a local variable in the relevant methods.(àÙ‘Öúÿÿÿÿ8Èˆ¾õ1J$cb4ca424-cf3b-4237-96b1-f4ec395bb933
+m	java:S106O"+Replace this use of System.out by a logger.(é¾™8Öˆ¾õ1J$c79322f1-94e9-4a28-924a-7fab514374b4
+m	java:S106P"+Replace this use of System.out by a logger.(¨Ã€‚8•±Œ¾õ1J$2c047822-29e1-4c35-863c-48ac0690b5c0
+q
+java:S1481Y")Remove this unused "item" local variable.(µ×Êñúÿÿÿÿ8Ôˆ¾õ1J$c80dcbaa-bba1-455b-986b-a8871279ddbc
+m	java:S106]"+Replace this use of System.out by a logger.(†È¼´8Ùª‘¾õ1J$4a8027aa-7322-4f5b-b6fe-f02142dd8710
+ƒ	java:S125d"<This block of commented-out lines of code should be removed.(Úßù£ùÿÿÿÿ8Õˆ¾õ1J$80a9ea74-75f1-44ad-85b4-fa7dd11e9e37
+m	java:S106k"+Replace this use of System.out by a logger.(‚™Éá8øœ–¾õ1J$83146610-03b6-4a3b-a175-2c4107947802
+
+java:S1128"FRemove this unused import 'github.alfonsojaen.model.dao.CostaleroDAO'.(Ù†Âşÿÿÿÿ8×ˆ¾õ1J$f032c234-ce7b-4857-b9ea-a6253dda0d5e
+‚
+java:S1128":Remove this unused import 'javafx.scene.control.CheckBox'.(¸şıÿÿÿÿ8×ˆ¾õ1J$2c2f18fb-0598-4c33-b971-24b64001eef7
+
+java:S1128"KRemove this unused import 'javafx.scene.control.cell.PropertyValueFactory'.(àÎ¬õ8×ˆ¾õ1J$cdab42fa-4c69-4c37-8466-ba89b4362b95
+~
+java:S1128";Remove this unused import 'javafx.scene.layout.AnchorPane'.(Ø µ8×ˆ¾õ1J$4bb5eb47-8dca-47c7-a9bc-2fab904fa6b6
+y
+java:S1068!"1Remove this unused "seleccionados" private field.(Ã­øüüÿÿÿÿ8Øˆ¾õ1J$b4279c2a-02e6-4aa4-b707-5a8ab594c066

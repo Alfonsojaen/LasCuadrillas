@@ -8,7 +8,6 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 import java.io.IOException;
@@ -46,20 +45,20 @@ public class ControllerUserRegister {
 
         if (username.isEmpty() || password.isEmpty() || gmail.isEmpty() || name.isEmpty()) {
 
-            Utils.showPopUp("Error", "Campos vacíos", "Por favor, complete todos los campos.", Alert.AlertType.ERROR);
+            Utils.Alert("Error", "Campos vacíos", "Por favor, complete todos los campos.", Alert.AlertType.ERROR);
         }else {
             try {
                 if (userDAO.findByUserName(username) != null) {
-                    Utils.showPopUp("Error", "USUARIO existente", "El USUARIO ya está en uso.\nPor favor, elija otro.", Alert.AlertType.ERROR);
+                    Utils.Alert("Error", "USUARIO existente", "El USUARIO ya está en uso.\nPor favor, elija otro.", Alert.AlertType.ERROR);
                 } else {
 
                     User user = new User(username, password, gmail, name);
                     userDAO.save(user);
 
-                    Utils.showPopUp("Registro de Usuario", "Registro exitoso", "Se ha registrado el Usuario correctamente.", Alert.AlertType.INFORMATION);
+                    Utils.Alert("Registro de Usuario", "Registro exitoso", "Se ha registrado el Usuario correctamente.", Alert.AlertType.INFORMATION);
                 }
             } catch (SQLException e) {
-                Utils.showPopUp("Error", "Error en la consulta", "Ocurrió un error al consultar la existencia del usuario ", Alert.AlertType.ERROR);
+                Utils.Alert("Error", "Error en la consulta", "Ocurrió un error al consultar la existencia del usuario ", Alert.AlertType.ERROR);
                 e.printStackTrace();
 
             }
@@ -76,7 +75,7 @@ public class ControllerUserRegister {
     @FXML
     private void switchToLoginUser() {
         try {
-            App.setRoot("pantallaLoginUser");
+            Scenes.setRoot("pantallaLoginUser", null);
         } catch (IOException e) {
             e.printStackTrace();
         }

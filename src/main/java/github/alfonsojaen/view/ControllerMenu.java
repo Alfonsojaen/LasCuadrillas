@@ -16,11 +16,19 @@ public class ControllerMenu {
 
     @FXML
     private void MenuCuadrilla() throws IOException {
-        App.setRoot("pantallaMenuCuadrilla");
+        Scenes.setRoot("pantallaMenuCuadrilla", null);
                 }
     @FXML
+    private void MenuCostalero() throws IOException {
+        Scenes.setRoot("pantallaMenuCostalero", null);
+    }
+    @FXML
+    private void MenuPaso() throws IOException {
+        Scenes.setRoot("pantallaMenuPaso", null);
+    }
+    @FXML
     private void MenuLogin() throws IOException {
-        App.setRoot("pantallaLoginUser");
+        Scenes.setRoot("pantallaLoginUser", null);
     }
 
     /*@Override
