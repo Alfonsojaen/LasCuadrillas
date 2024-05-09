@@ -1,0 +1,10 @@
+
+–	java:S116"ORename this field "Name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ì’Ú÷þÿÿÿÿ8³ÙÄÆõ1J$6913a7a7-026d-49ce-a98d-5544b4917992
+š	java:S116"SRename this field "Overseer" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÏÅ¦ºúÿÿÿÿ8´ÙÄÆõ1J$ee700af4-cdb5-41dd-b5b3-8d4cc126f0a9
+˜	java:S116"VRename this field "Description" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦¾ô½8´ÙÄÆõ1J$0ed7fc7f-f3bc-4909-a9a8-0201f05bdf92
+{
+java:S1128"3Remove this unused import 'github.alfonsojaen.App'.(óÀ‹–ûÿÿÿÿ8ÁÙÄÆõ1J$1b9c0b68-4ae4-4bcf-a67a-e699fea563b2
+y
+java:S1128"7Remove this unused import 'javafx.scene.control.Alert'.(ÊÇê:8îåÎÆõ1J$87102f0b-34a8-487a-8ebc-3d255d3ac5df
+€
+java:S1128	"8Remove this unused import 'javafx.scene.control.Button'.(Ë Í‹øÿÿÿÿ8ÁÙÄÆõ1J$24224a64-4b52-4868-862e-ad838fcd4c6e

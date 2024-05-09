@@ -1,0 +1,16 @@
+
+¥
+java:S1488("]Immediately return this expression instead of assigning it to the temporary variable "scene".(®°Ÿ‘úÿÿÿÿ8Ã›ÁÁõ1J$66d2486d-9e51-4911-b421-30d86691d044
+”
+java:S1104"QMake scene a static final constant or non-public and provide accessors if needed.(äõ8Ä›ÁÁõ1J$0abd27f5-1ff6-4d4d-9a71-ff5101424757
+ 
+java:S1104"XMake primaryStage a static final constant or non-public and provide accessors if needed.(¢Ñû¦ûÿÿÿÿ8‘ñÃÁõ1J$ca1b773b-ab52-4df9-a6f3-67055ba003b0
+n
+java:S1444"+Make this "public static scene" field final(äõ8Å›ÁÁõ1J$32e77ab3-b57e-4267-9e33-f5e31598e90a
+z
+java:S1444"2Make this "public static primaryStage" field final(¢Ñû¦ûÿÿÿÿ8’ñÃÁõ1J$c7062584-42d4-4e80-bb0c-d6b623bb80ce
+x
+java:S2696"6Make the enclosing method "static" or remove this set.(™·G8Ù›ÁÁõ1J$cf61a17e-1824-47dd-bd15-ebd87f496190
+~
+java:S2696"6Make the enclosing method "static" or remove this set.(Ì–ÜÄùÿÿÿÿ8Ù›ÁÁõ1J$51ff9319-ebda-4e61-9b01-a4e7feae2e6a
+r	java:S106$"+Replace this use of System.out by a logger.(«øİ„úÿÿÿÿ8ğ›ÁÁõ1J$f1d35bbb-b398-40c4-a26e-b556a4409aa4

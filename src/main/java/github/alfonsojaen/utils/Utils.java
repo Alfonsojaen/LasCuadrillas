@@ -24,7 +24,7 @@ public class Utils {
         return result;  // Se devuelve el resultado del hash en formato hexadecimal
     }
 
-    public static Alert showPopUp(String title, String header, String text, Alert.AlertType type) {
+    public static Alert Alert(String title, String header, String text, Alert.AlertType type) {
         Alert alertDialog = new Alert(type);
         alertDialog.setTitle(title);
         alertDialog.setHeaderText(header);

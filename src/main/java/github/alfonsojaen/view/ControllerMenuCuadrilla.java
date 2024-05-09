@@ -2,6 +2,7 @@ package github.alfonsojaen.view;
 
 import github.alfonsojaen.App;
 import github.alfonsojaen.model.dao.CuadrillaDAO;
+import github.alfonsojaen.model.entity.Costalero;
 import github.alfonsojaen.model.entity.Cuadrilla;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
@@ -10,6 +11,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableRow;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.TextFieldTableCell;
 
@@ -18,7 +20,7 @@ import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
 
-public class ControllerMenuCuadrilla extends Controller implements Initializable {
+public class ControllerMenuCuadrilla implements Initializable {
     @FXML
     private TableView<Cuadrilla> tableview;
 
@@ -35,22 +37,17 @@ public class ControllerMenuCuadrilla extends Controller implements Initializable
 
     private ObservableList<Cuadrilla> cuadrillas;
 
-    @Override
-    public void onOpen(Object input) throws IOException {
-
-    }
-
-    @Override
-    public void onClose(Object output) {
-
-    }
     @FXML
-    private void switchToMenuCuadrilla() throws IOException {
-        App.setRoot("pantallaMenu");
+    private void switchToMenu() throws IOException {
+        Scenes.setRoot("pantallaMenu",null);
     }
     @FXML
     private void switchToInsertCuadrilla() throws IOException {
-        App.setRoot("pantallaInsertCuadrilla");
+        Scenes.setRoot("pantallaInsertCuadrilla",null);
+    }
+    @FXML
+    private void switchToDeleteCuadrilla() throws IOException {
+        Scenes.setRoot("pantallaDeleteCuadrilla",null);
     }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -58,6 +55,7 @@ public class ControllerMenuCuadrilla extends Controller implements Initializable
         this.cuadrillas = FXCollections.observableArrayList(cuadrillas);
         tableview.setItems(this.cuadrillas);
         tableview.setEditable(true);
+
 
         id.setCellValueFactory(cuadrilla -> new SimpleStringProperty(String.valueOf(cuadrilla.getValue().getId())));
         name.setCellValueFactory(cuadrilla -> new SimpleStringProperty(cuadrilla.getValue().getName()));

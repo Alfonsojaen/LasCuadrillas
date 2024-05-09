@@ -16,7 +16,7 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.sql.SQLException;
 
-public class ControllerUserLogin  extends AppController {
+public class ControllerUserLogin  {
 
     @FXML
     private TextField tGmail;
@@ -66,11 +66,11 @@ public class ControllerUserLogin  extends AppController {
 
     @FXML
     private void switchToUserPage() throws IOException {
-       App.setRoot("pantallaMenu");
+       Scenes.setRoot("pantallaMenu",null);
     }
     @FXML
     private void switchToRegister() throws IOException {
-        App.setRoot("pantallaRegisterUser");
+        Scenes.setRoot("pantallaRegisterUser", null);
     }
 }
 
