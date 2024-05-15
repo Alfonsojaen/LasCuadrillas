@@ -19,6 +19,11 @@ public class ControllerDeletePaso {
     public void handleDeletePaso(ActionEvent event) {
         PasoDAO pasoDAO = PasoDAO.build();
         String nameBrotherhood = Brotherhood.getText();
+
+        if (nameBrotherhood.isEmpty()) {
+            Alert("Error", "Por favor ingrese el nombre del paso.");
+            return;
+        }
         Paso pasoDelete = pasoDAO.findByName(nameBrotherhood);
 
         if (pasoDelete != null) {
@@ -32,7 +37,7 @@ public class ControllerDeletePaso {
     }
     @FXML
     private void MenuPaso() throws IOException {
-        Scenes.setRoot("pantallaMenuPaso", null);
+        Scenes.setRoot("pantallaMenuPaso", null,null);
     }
     private void Alert(String titulo, String mensaje) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);

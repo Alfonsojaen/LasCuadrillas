@@ -38,15 +38,15 @@ public class ControllerMenuCostalero  implements Initializable {
 
     @FXML
     private void switchToMenu() throws IOException {
-        Scenes.setRoot("pantallaMenu", null);
+        Scenes.setRoot("pantallaMenu", null, null);
     }
     @FXML
     private void switchToInsertCostalero() throws IOException {
-        Scenes.setRoot("pantallaInsertCostalero", null);
+        Scenes.setRoot("pantallaInsertCostalero", null,null);
     }
     @FXML
     private void switchToDeleteCostalero() throws IOException {
-        Scenes.setRoot("pantallaDeleteCostalero", null);
+        Scenes.setRoot("pantallaDeleteCostalero", null,null);
     }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -61,7 +61,7 @@ public class ControllerMenuCostalero  implements Initializable {
                 if (event.getClickCount() == 3 && (! row.isEmpty()) ) {
                     Costalero rowCostalero = row.getItem();
                     try {
-                        Scenes.setRoot("pantallaAssignCuadrilla", rowCostalero);
+                        Scenes.setRoot("pantallaAssignCuadrilla", rowCostalero, null);
                     } catch (IOException e) {
                         throw new RuntimeException(e);
                     }

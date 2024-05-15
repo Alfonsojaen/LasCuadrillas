@@ -1,0 +1,10 @@
+
+ˆ	java:S101	"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(éº ÔJ$a562de50-eb72-41ba-9751-78dfbfef4195
+†
+java:S2095"JUse try-with-resources or close this "CuadrillaDAO" in a "finally" clause.(ôÈÃÙJ$ed03a9bb-36a2-4b85-893a-2e77a6076fab
+ª
+java:S1130
+"nRemove the declaration of thrown exception 'java.sql.SQLException', as it cannot be thrown from method's body.(Á¯¦þJ$6af916d6-9e51-4c5c-999e-5528d684cafb
+k	java:S106"+Replace this use of System.out by a logger.(¨©ÊéýÿÿÿÿJ$e735f655-3b61-40be-90ac-23ff2c1681d3
+k	java:S106"+Replace this use of System.out by a logger.(ÄëãÀÿÿÿÿÿJ$f58ae612-84ef-4d6a-bc85-e864fae1d226
+f	java:S106!"+Replace this use of System.out by a logger.(ë§­åJ$b013bd2a-cf92-4c97-991b-83a6cb582c29

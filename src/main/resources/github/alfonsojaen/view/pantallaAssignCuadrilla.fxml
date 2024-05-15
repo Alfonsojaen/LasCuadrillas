@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="github.alfonsojaen.view.ControllerAssignCuadrilla">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: TEXT;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="github.alfonsojaen.view.ControllerAssignCuadrilla">
    <children>
-      <TableView fx:id="tableview" editable="true" layoutX="37.0" layoutY="100.0" prefHeight="200.0" prefWidth="518.0">
+      <TableView fx:id="tableview" editable="true" layoutX="41.0" layoutY="114.0" prefHeight="200.0" prefWidth="518.0">
         <columns>
           <TableColumn fx:id="idColumn" prefWidth="56.0" text="Id" />
           <TableColumn fx:id="nameColumn" prefWidth="94.4000244140625" text="Nombre" />
@@ -15,5 +20,26 @@
             <TableColumn fx:id="selectionColumn" prefWidth="72.79998779296875" text="Seleccionar" />
         </columns>
       </TableView>
+      <Text layoutX="162.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ASIGNAR CUADRILLAS">
+         <font>
+            <Font name="Calibri Bold Italic" size="40.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="20.0" fitWidth="24.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#switchToMenuCostalero" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../icons/LetsIconsBack.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="63.0" fitWidth="96.0" layoutX="51.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../icons/Logo%20oficial.jpg" />
+         </image>
+      </ImageView>
+      <Text layoutX="41.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LAS CUADRILLAS">
+         <font>
+            <Font name="System Bold" size="10.0" />
+         </font>
+      </Text>
+      <Button layoutX="261.0" layoutY="326.0" mnemonicParsing="false" onAction="#assign" style="-fx-background-color: purple;" text="AÑADIR" textFill="WHITE" />
    </children>
 </AnchorPane>

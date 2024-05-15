@@ -9,6 +9,7 @@ import java.util.List;
 
 public class UserDAO implements DAO<User> {
 
+    // Consultas SQL
     private final static String INSERT = "INSERT INTO user (username,password,email,name) VALUES (?,?,?,?)";
     private final static String UPDATE = "UPDATE user SET  password=?, email=?, name=? WHERE username=?";
     private final static String DELETE = "DELETE FROM user WHERE username=?";
@@ -17,10 +18,19 @@ public class UserDAO implements DAO<User> {
 
     private Connection conn;
 
+    /**
+     * Constructor que inicializa la conexión a la base de datos.
+     */
     public UserDAO() {
         conn = ConnectionMariaDB.getConnection();
     }
 
+    /**
+     * Guarda un usuario en la base de datos.
+     * @param user El usuario que se va a guardar.
+     * @return El usuario guardado, o null si ocurrió un error.
+     * @throws SQLException Si ocurre un error al ejecutar la operación en la base de datos.
+     */
     @Override
     public User save(User user) throws SQLException {
         User result = new User();
@@ -56,6 +66,12 @@ public class UserDAO implements DAO<User> {
 
 }
 
+    /**
+     * Elimina un usuario de la base de datos.
+     * @param entity El usuario que se va a eliminar.
+     * @return El usuario eliminado, o null si ocurrió un error o el usuario no existe.
+     * @throws SQLException Si ocurre un error al ejecutar la operación en la base de datos.
+     */
     @Override
     public User delete(User entity) throws SQLException {
         if (entity == null || entity.getUsername() == null) return entity;
@@ -71,6 +87,12 @@ public class UserDAO implements DAO<User> {
         return null;
     }
 
+    /**
+     * Busca un usuario por su nombre de usuario en la base de datos.
+     * @param username El nombre de usuario del usuario a buscar.
+     * @return El usuario encontrado, o null si no se encuentra.
+     * @throws SQLException Si ocurre un error al ejecutar la operación en la base de datos.
+     */
     public User findByUserName(String username) throws SQLException {
             User result = null;
             if (username != null) {
@@ -92,10 +114,16 @@ public class UserDAO implements DAO<User> {
         }
 
 
-
-    public String checkLogin(String gmail, String password) throws SQLException {
+    /**
+     * Verifica las credenciales de inicio de sesión de un usuario.
+     * @param email El correo electrónico del usuario.
+     * @param password La contraseña del usuario.
+     * @return El nombre de usuario si las credenciales son válidas, o null si no lo son.
+     * @throws SQLException Si ocurre un error al ejecutar la operación en la base de datos.
+     */
+    public String checkLogin(String email, String password) throws SQLException {
     try (PreparedStatement pst = ConnectionMariaDB.getConnection().prepareStatement(QUERY)) {
-        pst.setString(1, gmail);
+        pst.setString(1, email);
         pst.setString(2, password);
         ResultSet res = pst.executeQuery();
         if (res.next()) {
@@ -105,6 +133,10 @@ public class UserDAO implements DAO<User> {
     return null;
     }
 
+    /**
+     * Obtiene todos los usuarios almacenados en la base de datos.
+     * @return Una lista de todos los usuarios almacenados en la base de datos.
+     */
     @Override
     public List<User> findAll() {
         return null;

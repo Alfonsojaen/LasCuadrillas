@@ -10,6 +10,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CostaleroDAO implements DAO<Costalero> {
+
+    // Consultas SQL
     private final static String INSERT = "INSERT INTO costalero (nickname,height,age) VALUES (?,?,?)";
     private final static String INSERTCUADRILLA = "INSERT INTO pertenece (cuadrillaId,costaleroId) VALUES (?,?)";
     private final static String DELETEIDCUADRILLA = "DELETE FROM pertenece WHERE costaleroId=?";
@@ -19,13 +21,21 @@ public class CostaleroDAO implements DAO<Costalero> {
     private final static String FINDALL ="SELECT  a.id,a.nickname,a.height,a.age FROM costalero AS a";
     private final static String FINDBYNAME="SELECT a.id,a.nickname,a.height,a.age FROM costalero AS a WHERE a.nickname=?";
 
-
     private Connection conn;
 
+    /**
+     * Constructor que inicializa la conexión a la base de datos.
+     */
     public CostaleroDAO() {
         conn = ConnectionMariaDB.getConnection();
     }
 
+    /**
+     * Guarda un costalero en la base de datos.
+     * @param costalero El costalero que se va a guardar.
+     * @return El costalero guardado, con su ID actualizado si se generó automáticamente, o null si ocurrió un error.
+     * @throws SQLException Si ocurre un error al ejecutar la operación en la base de datos.
+     */
     @Override
     public Costalero save(Costalero costalero)  throws SQLException{
         if (costalero != null ) {
@@ -53,6 +63,12 @@ public class CostaleroDAO implements DAO<Costalero> {
         return costalero;
 
     }
+
+    /**
+     * Busca un costalero por su nombre.
+     * @param name El nombre del costalero a buscar.
+     * @return El costalero encontrado o un objeto Costalero vacío si no se encuentra.
+     */
     public Costalero findByName(String name) {
         Costalero result = new Costalero();
         if(name != null) {
@@ -70,6 +86,11 @@ public class CostaleroDAO implements DAO<Costalero> {
         }
         return result;
     }
+
+    /**
+     * Actualiza la información de un costalero en la base de datos.
+     * @param costalero El costalero con la información actualizada.
+     */
     public void update(Costalero costalero) {
         try (PreparedStatement pst = this.conn.prepareStatement(UPDATE)) {
             if (costalero != null) {
@@ -85,7 +106,11 @@ public class CostaleroDAO implements DAO<Costalero> {
         }
     }
 
-
+    /**
+     * Asigna una cuadrilla al costalero en la base de datos.
+     * @param costalero El costalero al que se asigna la cuadrilla.
+     * @throws SQLException Si ocurre un error al ejecutar la operación en la base de datos.
+     */
         public void setCuadrilla(Costalero costalero) throws SQLException{
         try (PreparedStatement pst = this.conn.prepareStatement(DELETEIDCUADRILLA)) {
             pst.setInt(1, costalero.getId());
@@ -104,6 +129,11 @@ public class CostaleroDAO implements DAO<Costalero> {
 
     }
 
+    /**
+     * Elimina un costalero de la base de datos.
+     * @param costalero El costalero que se va a eliminar.
+     * @return El costalero eliminado, o null si ocurrió un error o el costalero no existe.
+     */
     @Override
     public Costalero delete(Costalero costalero) {
         if (costalero != null) {
@@ -119,6 +149,11 @@ public class CostaleroDAO implements DAO<Costalero> {
         return costalero;
     }
 
+    /**
+     * Busca un costalero por su ID en la base de datos.
+     * @param key El ID del costalero a buscar.
+     * @return El costalero encontrado, o un objeto Costalero vacío si no se encuentra.
+     */
     @Override
     public Costalero findById(int key) {
         Costalero result = new Costalero();
@@ -140,6 +175,11 @@ public class CostaleroDAO implements DAO<Costalero> {
         }
         return result;
     }
+
+    /**
+     * Obtiene todos los costaleros almacenados en la base de datos.
+     * @return Una lista de costaleros almacenados en la base de datos.
+     */
         @Override
     public List<Costalero> findAll() {
             List<Costalero> result = new ArrayList<>();
@@ -168,6 +208,10 @@ public class CostaleroDAO implements DAO<Costalero> {
 
     }
 
+    /**
+     * Construye una nueva instancia de CostaleroDAO.
+     * @return Una nueva instancia de CostaleroDAO.
+     */
     public static CostaleroDAO build() {
         return new CostaleroDAO();
     }

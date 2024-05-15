@@ -17,13 +17,18 @@ public class ControllerDeleteCostalero {
     public void handleDeleteCostalero(ActionEvent event) {
         CostaleroDAO costaleroDAO = CostaleroDAO.build();
         String nickNameCostalero = Nickname.getText();
+        if (nickNameCostalero.isEmpty()) {
+            Alert("Error", "Por favor ingrese el nombre del costalero.");
+            return;
+        }
+
         Costalero costaleroDelete = costaleroDAO.findByName(nickNameCostalero);
 
         if (costaleroDelete != null) {
             costaleroDAO.delete(costaleroDelete);
             Alert("Borrado exitoso", "El costalero ha sido borrado correctamente.");
         } else {
-            Alert("Error", "No se encontró ningun costalero con el nombre proporcionado.");
+            Alert("Error", "No se encontró ningún costalero con el nombre proporcionado.");
         }
 
         Nickname.setText("");
@@ -31,7 +36,7 @@ public class ControllerDeleteCostalero {
 
     @FXML
     private void MenuCostalero() throws IOException {
-        Scenes.setRoot("pantallaMenuCostalero", null);
+        Scenes.setRoot("pantallaMenuCostalero", null, null);
     }
     private void Alert(String titulo, String mensaje) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);

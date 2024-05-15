@@ -1,8 +1,6 @@
 
-•	java:S116"SRename this field "Nickname" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¿ù¶¬8É­ÔÆõ1J$bd60743e-1178-439b-b39e-c7ffa933fe8d
-“	java:S116"QRename this field "Height" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(’ËÇ¦8É­ÔÆõ1J$d109a9e5-6e4f-440f-9193-e999a31372b0
-	java:S116"NRename this field "Age" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°¡»8É­ÔÆõ1J$de138e8f-29f9-437e-8c18-450249ffe7c5
-{
-java:S1128"3Remove this unused import 'github.alfonsojaen.App'.(óÀ‹–ûÿÿÿÿ8Õ­ÔÆõ1J$1dd44c52-5981-49ed-a59a-eb0a88b3c876
 ‰
-java:S1128"FRemove this unused import 'github.alfonsojaen.model.entity.Cuadrilla'.(à º¤8Õ­ÔÆõ1J$5fba07c3-d357-412a-b56c-745c1f11ebca
+java:S1192#"FDefine a constant instead of duplicating this literal "ERROR" 3 times.(Ù”À8ç£Ü‰÷1J$b521332d-4cdb-4be9-b2c3-0620f382db50
+•	java:S116"SRename this field "Nickname" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¿ù¶¬8ƒ¤´‰÷1J$23fb9649-3cbd-475c-b9ab-c2fce6217413
+“	java:S116"QRename this field "Height" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(’ËÇ¦8„¤´‰÷1J$b7964ba9-593b-4fd1-96ed-a58dfa9ff5a8
+	java:S116"NRename this field "Age" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°¡»8„¤´‰÷1J$b1d1f988-b98c-4476-91d9-7432ba5a955c

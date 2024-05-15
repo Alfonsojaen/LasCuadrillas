@@ -1,24 +1,28 @@
 
+’
+java:S1192‹"IDefine a constant instead of duplicating this literal "overseer" 3 times.(ïÍøÎøÿÿÿÿ8æ—²Ü÷1J$f212314c-b7f0-4c84-b4f8-77a34c2d84d9
+•
+java:S1192Œ"LDefine a constant instead of duplicating this literal "description" 3 times.(™Á°¬üÿÿÿÿ8æ—²Ü÷1J$f44af56b-15a5-4aa1-82b6-57eca733a6d9
 Ê
-java:S1186 "€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(æÔ«÷şÿÿÿÿ8–ÜÁºõ1J$d9c38c52-137e-4734-a562-9e5c02112842
+java:S1186â"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(æÔ«÷şÿÿÿÿ8‹˜²Ü÷1J$6bbf1f7a-902d-4e35-a7e1-9f8469a37ede
 ˆ
-java:S1124"EReorder the modifiers to comply with the Java Language Specification.(ß±8šÜÁºõ1J$3cc75f6f-aa8a-425c-a5e0-d374e6700f3c
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(ß±8˜²Ü÷1J$960127c9-6993-4ace-80a8-9d57953f7d72
 ˆ
-java:S1124"EReorder the modifiers to comply with the Java Language Specification.(¡€ç8šÜÁºõ1J$c875267d-8339-46c8-b97c-bccabe648018
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(¡€ç8˜²Ü÷1J$6812befb-562d-43b2-ba44-c30a5d2a55f2
 
-java:S1124"EReorder the modifiers to comply with the Java Language Specification.(Ã”ß•şÿÿÿÿ8›ÜÁºõ1J$53048644-665b-4384-9d8a-a1c257498cf0
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(Ã”ß•şÿÿÿÿ8˜²Ü÷1J$7f8d1322-f758-4414-9eb6-0088c47bcd37
 ˆ
-java:S1124"EReorder the modifiers to comply with the Java Language Specification.(ö´ë8›ÜÁºõ1J$86b4849f-1b41-44ad-bc2e-b6f50439547f
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(ö´ë8˜²Ü÷1J$248e2466-cf5f-45cb-906e-1ba97f5961b9
 
-java:S1124"EReorder the modifiers to comply with the Java Language Specification.(‚çë„úÿÿÿÿ8›ÜÁºõ1J$d98e942c-f0ca-4468-ad45-6a50262351f2
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(‚çë„úÿÿÿÿ8˜²Ü÷1J$2c08ce2f-a745-43a6-9dbb-68c7cfca4c0e
 
-java:S1124"EReorder the modifiers to comply with the Java Language Specification.( Ø·ûÿÿÿÿ8›ÜÁºõ1J$60658384-280f-4e8c-b206-23f71e66bf5b
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.( Ø·ûÿÿÿÿ8˜²Ü÷1J$eb2bb311-6fed-4434-ba40-aae3ae2a9b2f
 
-java:S1124"EReorder the modifiers to comply with the Java Language Specification.(·×‹´ÿÿÿÿÿ8›ÜÁºõ1J$c0b54e0b-fbef-4e37-860c-a1a37c3556e5
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(µÌ²¨ùÿÿÿÿ8˜²Ü÷1J$15d254c4-d40b-4ea7-bbcf-c4c0d3cca340
 ˆ
-java:S1124"EReorder the modifiers to comply with the Java Language Specification.(—Êıâ8›ÜÁºõ1J$29c78300-5b67-4064-a479-8edcda60237c
-k	java:S108:")Either remove or fill this block of code.(å¥‡8¡ÜÁºõ1J$407f3fee-deae-4199-b935-386e98323d7b
-k	java:S108E")Either remove or fill this block of code.(É®£8¤ÜÁºõ1J$079ff6ea-75f9-4aaf-b9f2-b8e533189cda
-q
-java:S1481G")Remove this unused "paso" local variable.(ØÎâ²øÿÿÿÿ8¥ÜÁºõ1J$9f9439bc-ea83-4d00-a0e0-99eabfc1d7bc
-„	java:S125«"<This block of commented-out lines of code should be removed.(ãë¦ªüÿÿÿÿ8–ÎõÁõ1J$452b336f-5e51-443b-a66d-a1160e74c30c
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(šüéç8˜²Ü÷1J$0055e544-6c53-424e-8f74-9e678f57644d
+
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(£ñ¥šşÿÿÿÿ8˜²Ü÷1J$4a24f80d-90aa-4c79-941b-02d6d309a514
+k	java:S108J")Either remove or fill this block of code.(å¥‡8•˜²Ü÷1J$275d1203-45c9-49df-8c3f-563aec0fd827
+k	java:S108Z")Either remove or fill this block of code.(É®£8˜˜²Ü÷1J$2705fdaf-9562-4082-9a7a-bd674ba9c217
+„	java:S125ğ"<This block of commented-out lines of code should be removed.(ãë¦ªüÿÿÿÿ8ëç´Ü÷1J$42fce878-1ff6-4d74-9bce-64d7b3ea880c

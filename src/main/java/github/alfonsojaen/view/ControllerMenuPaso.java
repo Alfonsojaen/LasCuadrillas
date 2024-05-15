@@ -36,15 +36,15 @@ public class ControllerMenuPaso implements Initializable {
 
     @FXML
     private void switchToMenu() throws IOException {
-        Scenes.setRoot("pantallaMenu",null);
+        Scenes.setRoot("pantallaMenu",null, null);
     }
     @FXML
     private void switchToInsertPaso() throws IOException {
-        Scenes.setRoot("pantallaInsertPaso",null);
+        Scenes.setRoot("pantallaInsertPaso",null, null);
     }
     @FXML
     private void switchToDeletePaso() throws IOException {
-        Scenes.setRoot("pantallaDeletePaso",null);
+        Scenes.setRoot("pantallaDeletePaso",null, null);
     }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

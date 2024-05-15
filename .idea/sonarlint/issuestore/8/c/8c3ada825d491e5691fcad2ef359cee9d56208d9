@@ -1,9 +1,3 @@
 
-‘	java:S116"VRename this field "Brotherhood" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(øÅÌJ$aebf179a-75d5-47a8-9a9b-f6d06a4a08b7
-	java:S116"SRename this field "Capacity" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾ŞàîJ$62f4954b-1725-4276-a5d8-70159d52c576
-U
-java:S1128"3Remove this unused import 'github.alfonsojaen.App'.(óÀ‹–ûÿÿÿÿ8æ¶Áõ1
-c
-java:S1128"FRemove this unused import 'github.alfonsojaen.model.dao.CuadrillaDAO'.(ú³ıß8æ¶Áõ1
-c
-java:S1128"FRemove this unused import 'github.alfonsojaen.model.entity.Cuadrilla'.(à º¤8æ¶Áõ1
+‘	java:S116"VRename this field "Brotherhood" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(øÅÌJ$dea25d4b-d1ae-4429-a701-b4cf004c4ad4
+	java:S116"SRename this field "Capacity" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾ŞàîJ$ddba130a-2aca-4412-8565-013b2973a286

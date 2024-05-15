@@ -44,7 +44,7 @@ public class ControllerInsertCuadrilla {
     @FXML
     private void switchToMenuCuadrilla() {
         try {
-            Scenes.setRoot("pantallaMenuCuadrilla", null);
+            Scenes.setRoot("pantallaMenuCuadrilla", null, null);
     } catch (IOException e) {
         e.printStackTrace();
     }

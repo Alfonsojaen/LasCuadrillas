@@ -1,5 +1,6 @@
 package github.alfonsojaen.view;
 
+import github.alfonsojaen.model.dao.CostaleroDAO;
 import github.alfonsojaen.model.dao.CuadrillaDAO;
 import github.alfonsojaen.model.entity.Costalero;
 import github.alfonsojaen.model.entity.Cuadrilla;
@@ -9,21 +10,20 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.CheckBoxTableCell;
 
 
-import java.net.URL;
+import java.io.IOException;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.ResourceBundle;
 
-public class ControllerAssignCuadrilla implements Initializable {
+public class ControllerAssignCuadrilla {
 
     private Costalero costalero;
-    private List<Cuadrilla> seleccionados = new ArrayList<>();
+    private List<Cuadrilla> previas = new ArrayList<>();
     private ObservableList<Cuadrilla> cuadrillas;
 
     @FXML
@@ -43,10 +43,12 @@ public class ControllerAssignCuadrilla implements Initializable {
 
     @FXML
     TableColumn<Cuadrilla, Boolean> selectionColumn;
+    @FXML
+    private void switchToMenuCostalero() throws IOException {
+        Scenes.setRoot("pantallaMenuCostalero",null,null);
+    }
 
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        TableView<Cuadrilla> tableView2 = tableview;
+    public void start() {
         idColumn.setCellValueFactory(cuadrilla -> new SimpleStringProperty(String.valueOf(cuadrilla.getValue().getId())));
 
         nameColumn.setCellValueFactory(cuadrilla -> new SimpleStringProperty(String.valueOf(cuadrilla.getValue().getName())));
@@ -54,64 +56,48 @@ public class ControllerAssignCuadrilla implements Initializable {
         overseerColumn.setCellValueFactory(cuadrilla -> new SimpleStringProperty(String.valueOf(cuadrilla.getValue().getOverseer())));
 
         descriptionColumn.setCellValueFactory(cuadrilla -> new SimpleStringProperty(String.valueOf(cuadrilla.getValue().getDescription())));
-
-        selectionColumn.setCellValueFactory(cellData -> {
-            SimpleBooleanProperty selectedProperty = new SimpleBooleanProperty(cellData.getValue().isSelected());
-            selectedProperty.addListener((obs, oldValue, newValue) -> {
-                System.out.println("Selected state changed to: " + newValue);
-            });
-            return selectedProperty;
-        });
-
-        selectionColumn.setCellFactory(column -> {
-            CheckBoxTableCell<Cuadrilla, Boolean> cell = new CheckBoxTableCell<>();
-            /*
-            final BooleanProperty selected = new SimpleBooleanProperty();
-            cell.setSelectedStateCallback(new Callback<Integer, ObservableValue<Boolean>>() {
-
-                @Override
-                public ObservableValue<Boolean> call(Integer index) {
-                    return selected ;
-                }
-            });
-            selected.addListener(new ChangeListener<Boolean>() {
-                @Override
-                public void changed(ObservableValue<? extends Boolean> obs, Boolean wasSelected, Boolean isSelected) {
-                    int rowIndex = cell.getIndex();
-                    System.out.println("Índice de la fila: " + rowIndex);
-                    System.out.println(isSelected);
-                    //actuas sobre tu datos
-                }
-            });
-            */
-
-            return cell;
-        });
-
-        selectionColumn.setOnEditCommit((TableColumn.CellEditEvent<Cuadrilla, Boolean> event) -> {
-            Cuadrilla item = event.getRowValue();
-
-            Boolean nuevoValor = event.getNewValue();
-
-            System.out.println("Nuevo valor: " + nuevoValor);
+        selectionColumn.setCellFactory(CheckBoxTableCell.forTableColumn(
+                (Integer i) ->{
+                    SimpleBooleanProperty selectedProperty= new SimpleBooleanProperty(cuadrillas.get(i).isSelected());
+                    selectedProperty.addListener((obs, oldValue, newValue) -> {
+                        Cuadrilla cuadrilla = cuadrillas.get(i);
+                        cuadrilla.setSelected(newValue); // Actualiza el valor de setSelected de la cuadrículaa
+                        if(newValue){
+                            this.costalero.addCuadrilla(cuadrilla);
+                        }else{
+                            this.costalero.removeCuadrilla(cuadrilla);
+                        }
+                    });
+                    return selectedProperty;
+                } ));
 
 
-        });
         selectionColumn.setEditable(true);
         this.cuadrillas = FXCollections.observableArrayList(CuadrillaDAO.build().findAll());
+        CuadrillaDAO cdao = new CuadrillaDAO();
+        this.previas=cdao.findByCostalero(costalero);
+        for(Cuadrilla cuadrilla : this.cuadrillas){
+            if(this.previas.contains(cuadrilla)){
+                cuadrilla.setSelected(true);
+            }else{
+                cuadrilla.setSelected(false);
+            }
+        }
         tableview.setItems(this.cuadrillas);
-
     }
 
     public void setCostalero(Costalero costalero) {
-        for (Cuadrilla cuadrilla : cuadrillas) {
-            cuadrilla.setSelected(true);
-        }
-        System.out.println("Cuadrillas"+cuadrillas);
-        System.out.println("Costalero: "+costalero);
         this.costalero = costalero;
+        start();
 
 
+    }
+    public void assign() {
+        try {
+            CostaleroDAO.build().setCuadrilla(this.costalero);
+       } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }
 
