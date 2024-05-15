@@ -1,3 +1,7 @@
 
-l
-java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒJ$46183e0d-dd99-410b-8a2f-f582a8b79417
+¦
+java:S4165"cRemove this useless assignment; "pasos" already holds the assigned value along all execution paths.(†º—«8¸Šúö1J$86854226-2cb7-4c80-837e-8b5dd1aadcb5
+n
+java:S1172"+Remove this unused method parameter "paso".(ì¡ò8½Šúö1J$748c3695-1ce7-4cd8-92ed-f47193e89cbb
+r
+java:S1656"/Remove or correct this useless self-assignment.(†º—«8ÉŠúö1J$7fa71e59-771b-487b-8b4b-9905fa1ae3a6

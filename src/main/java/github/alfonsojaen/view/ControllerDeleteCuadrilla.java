@@ -19,6 +19,11 @@ public class ControllerDeleteCuadrilla {
     public void handleDeleteCuadrilla(ActionEvent event) {
         CuadrillaDAO cuadrillaDAO = CuadrillaDAO.build();
         String nameCuadrilla = Name.getText();
+
+        if (nameCuadrilla.isEmpty()) {
+            Alert("Error", "Por favor ingrese el nombre de la cuadrilla.");
+            return;
+        }
         Cuadrilla cuadrillaDelete = cuadrillaDAO.findByName(nameCuadrilla);
 
         if (cuadrillaDelete != null) {
@@ -32,7 +37,7 @@ public class ControllerDeleteCuadrilla {
     }
     @FXML
     private void MenuCuadrilla() throws IOException {
-        Scenes.setRoot("pantallaMenuCuadrilla", null);
+        Scenes.setRoot("pantallaMenuCuadrilla", null, null);
     }
     private void Alert(String titulo, String mensaje) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);

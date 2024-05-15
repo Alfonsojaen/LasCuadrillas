@@ -39,15 +39,15 @@ public class ControllerMenuCuadrilla implements Initializable {
 
     @FXML
     private void switchToMenu() throws IOException {
-        Scenes.setRoot("pantallaMenu",null);
+        Scenes.setRoot("pantallaMenu",null,null);
     }
     @FXML
     private void switchToInsertCuadrilla() throws IOException {
-        Scenes.setRoot("pantallaInsertCuadrilla",null);
+        Scenes.setRoot("pantallaInsertCuadrilla",null,null);
     }
     @FXML
     private void switchToDeleteCuadrilla() throws IOException {
-        Scenes.setRoot("pantallaDeleteCuadrilla",null);
+        Scenes.setRoot("pantallaDeleteCuadrilla",null,null);
     }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -56,6 +56,21 @@ public class ControllerMenuCuadrilla implements Initializable {
         tableview.setItems(this.cuadrillas);
         tableview.setEditable(true);
 
+        tableview.setRowFactory(tv -> {
+            TableRow<Cuadrilla> row = new TableRow<>();
+            row.setOnMouseClicked(event -> {
+                if (event.getClickCount() == 3 && (! row.isEmpty()) ) {
+                    Cuadrilla rowCuadrilla = row.getItem();
+                    try {
+                        Scenes.setRoot("pantallaAssignPaso", null, rowCuadrilla);
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                }
+
+            });
+            return row ;
+        });
 
         id.setCellValueFactory(cuadrilla -> new SimpleStringProperty(String.valueOf(cuadrilla.getValue().getId())));
         name.setCellValueFactory(cuadrilla -> new SimpleStringProperty(cuadrilla.getValue().getName()));

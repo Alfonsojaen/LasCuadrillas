@@ -1,20 +1,5 @@
 
-à	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(√ÍÃJ$1537c006-edd0-45c5-b12b-8a86ebeb8851
-w	java:S125"<This block of commented-out lines of code should be removed.(≥Ü®ëJ$37b8afbb-95cd-4880-a72b-6018ed440ca4
-â	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(À¢€€J$d63dd2cd-6cd0-4567-990a-a4dcd39b4999
-â	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(çÒ˘∞J$94d8308b-94a1-4d4a-8da5-33ca3491d5f2
-é	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡û≈Ë˛ˇˇˇˇJ$4f3f9f53-d1e9-4a34-8ff2-5cf6ea1f0e8b
-|	java:S125#"<This block of commented-out lines of code should be removed.(ïë›ü¸ˇˇˇˇJ$35479728-163f-4a47-b4cc-680099c7d373
-U
-java:S1128"3Remove this unused import 'github.alfonsojaen.App'.(Û¿ãñ˚ˇˇˇˇ8¶’∑¡ı1
-S
-java:S1128"6Remove this unused import 'javafx.fxml.Initializable'.(ôŒ˘∆8¶’∑¡ı1
-[
-java:S1128"9Remove this unused import 'javafx.scene.image.ImageView'.(·ˇÆ√¸ˇˇˇˇ8¶’∑¡ı1
-W
-java:S1128"5Remove this unused import 'javafx.scene.layout.VBox'.(Ì∆·¬˘ˇˇˇˇ8ß’∑¡ı1
-K
-java:S1128
-")Remove this unused import 'java.net.URL'.(ÒÏ¡Ñ¸ˇˇˇˇ8ß’∑¡ı1
-W
-java:S1128"5Remove this unused import 'java.util.ResourceBundle'.(˝∆£Ø¯ˇˇˇˇ8ß’∑¡ı1
+à	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(√ÍÃJ$bcd1e9d8-52d2-4b00-8bce-21fc1195dc1d
+â	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(À¢€€J$b063a362-0335-4678-a5b4-214412bd5707
+â	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(çÒ˘∞J$0044e4ca-12ff-4015-8f80-81cbdaea7c89
+é	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡û≈Ë˛ˇˇˇˇJ$ae3b5dc5-20a9-41e1-a37d-a94b167996a3

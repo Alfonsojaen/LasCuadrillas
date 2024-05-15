@@ -11,7 +11,7 @@ public class Cuadrilla {
     private String description;
     private boolean selected;
     private List<Costalero> costaleros;
-    private List<Paso> paso;
+    private List<Paso> pasos;
 
     public Cuadrilla( int id,String name, String overseer,String description, List<Costalero> costaleros, List<Paso> paso) {
         this.id = id;
@@ -20,7 +20,7 @@ public class Cuadrilla {
         this.description = description;
         this.selected = false;
         this.costaleros = costaleros;
-        this.paso = paso;
+        this.pasos = pasos;
     }
 
     public Cuadrilla( int id,String name, String overseer,String description) {
@@ -83,13 +83,25 @@ public class Cuadrilla {
     }
 
     public List<Paso> getPaso() {
-        return paso;
+        return pasos;
     }
 
     public void setPaso(List<Paso> paso) {
-        this.paso= paso;
+        this.pasos= paso;
     }
-
+    public void addPaso(Paso paso){
+        if(pasos==null){
+            pasos = new ArrayList<>();
+        }
+        if(!pasos.contains(paso)){
+            pasos.add(paso);
+        }
+    }
+    public void removePaso(Paso paso){
+        if(pasos!=null){
+            pasos.remove(paso);
+        }
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -113,7 +125,7 @@ public class Cuadrilla {
                 ", description='" + description + '\'' +
                 ", selected=" + selected +
                 ", costaleros=" + costaleros +
-                ", pasos=" + paso +
+                ", pasos=" + pasos +
                 '}';
     }
 }

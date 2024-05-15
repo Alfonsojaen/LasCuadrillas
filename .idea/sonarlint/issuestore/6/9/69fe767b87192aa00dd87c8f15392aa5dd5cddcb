@@ -1,19 +1,20 @@
 
+	java:S112C"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8¢çÀêõ1J$dbd488b2-ecbb-4278-93d4-275265646cc5
 ª
-java:S1192M"iDefine a constant instead of duplicating this literal "Te has pasado del limtite de caracteres!" 3 times.(Âşç”øÿÿÿÿJ$46562afe-76fd-4d82-9d4c-0c2a541a8fa7
+java:S1192\"iDefine a constant instead of duplicating this literal "Te has pasado del limtite de caracteres!" 3 times.(Âşç”øÿÿÿÿJ$8d51c45f-5738-4f98-9e29-784374478595
 w
-java:S4973D"<Strings and Boxed types should be compared using "equals()".(ûŞÏCJ$870cc815-eeeb-4a76-9712-fccf8c6d4e9c
+java:S4973S"<Strings and Boxed types should be compared using "equals()".(ûŞÏCJ$d91bf5c8-a0a0-4a78-a9e4-ec858d03a363
 w
-java:S4973S"<Strings and Boxed types should be compared using "equals()".(ûŞÏCJ$44c16090-024b-435a-89b6-a136a9406871
+java:S4973b"<Strings and Boxed types should be compared using "equals()".(ûŞÏCJ$d32cd5ae-6969-4bb4-a24a-976fac0c04f4
 w
-java:S4973b"<Strings and Boxed types should be compared using "equals()".(ûŞÏCJ$ae37c5c0-9649-4cd0-a1e7-3ad8d532e7eb
+java:S4973q"<Strings and Boxed types should be compared using "equals()".(ûŞÏCJ$c39b99cd-83e7-4742-b137-c070cc55872e
 š
-java:S1450&"YRemove the "cuadrillas" field and declare it as a local variable in the relevant methods.(àÙ‘ÖúÿÿÿÿJ$82410038-0707-42dc-8b50-f76c05ce9e85
+java:S1450&"YRemove the "cuadrillas" field and declare it as a local variable in the relevant methods.(àÙ‘ÖúÿÿÿÿJ$cef8637e-13d4-43aa-a5f8-74cf575859eb
+š
+java:S37765"RRefactor this method to reduce its Cognitive Complexity from 23 to the 15 allowed.(•‘İŸüÿÿÿÿ8ÂçÀêõ1J$91f0bd5b-5320-4c06-8184-83f9e1d5ac4c
 
-java:S11176">Rename "cuadrillas" which hides the field declared at line 38.(ŠŒÖ£şÿÿÿÿJ$be84d129-a4d3-42d5-a4a6-60847d7e763e
+java:S11176">Rename "cuadrillas" which hides the field declared at line 38.(ŠŒÖ£şÿÿÿÿJ$ea1160b5-0908-401d-9965-99c66ecfe5a2
 U
-java:S1128"3Remove this unused import 'github.alfonsojaen.App'.(óÀ‹–ûÿÿÿÿ8àÍ¹Áõ1
+java:S1128"3Remove this unused import 'github.alfonsojaen.App'.(óÀ‹–ûÿÿÿÿ8˜«“µ÷1
 b
-java:S1128"FRemove this unused import 'github.alfonsojaen.model.entity.Costalero'.(îÚÉ_8áÍ¹Áõ1
-\
-java:S1128":Remove this unused import 'javafx.scene.control.TableRow'.(ğ¼ãöúÿÿÿÿ8áÍ¹Áõ1
+java:S1128"FRemove this unused import 'github.alfonsojaen.model.entity.Costalero'.(îÚÉ_8˜«“µ÷1

@@ -57,3 +57,15 @@ g
 7src/main/java/github/alfonsojaen/model/dao/PasoDAO.java,6\2\620f69b5ac29987e71bf5039a39fa66ad860da80
 l
 <src/main/java/github/alfonsojaen/model/entity/Cuadrilla.java,d\2\d221436e761a802d3c975c297d23cb354649db3f
+o
+?src/main/java/github/alfonsojaen/view/ControllerAssignPaso.java,9\3\9329916ae825b45daad1367894a6ca2a354442e2
+h
+8src/main/java/github/alfonsojaen/test/testpertenece.java,c\7\c75b7c3c5e383da5a35baf691a1e8fc1507a33c0
+n
+>src/main/java/github/alfonsojaen/test/testInsertCuadrilla.java,5\6\56f5c0da274e0997925cf7f17df63f421c6b8540
+n
+>src/main/java/github/alfonsojaen/test/testInsertCostalero.java,3\4\34c046b0a47f2963436465cc55c939efa09145a1
+n
+>src/main/java/github/alfonsojaen/test/testDeleteCuadrilla.java,b\e\be45228ea1613eb59dccb9ff060ab41fdd46ba6c
+7
+pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec

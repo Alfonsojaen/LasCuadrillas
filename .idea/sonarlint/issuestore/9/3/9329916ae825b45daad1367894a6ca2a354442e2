@@ -1,0 +1,19 @@
+
+p
+java:S5411>"(Use a primitive boolean expression here.(¬‰‘™şÿÿÿÿ8İ¿ÕÄ÷1J$f6300a1f-353d-406b-b99f-1c852c32374a
+
+java:S2095K"EUse try-with-resources or close this "PasoDAO" in a "finally" clause.(…¼€¨şÿÿÿÿ8ÀÕÄ÷1J$35942473-2eaa-4ee0-9967-a019be5daac0
+™
+java:S1450"VRemove the "previas" field and declare it as a local variable in the relevant methods.(¢Ş®8…ÀÕÄ÷1J$7b943901-87cc-4703-a32a-0feffad5435f
+…
+java:S1126N"BReplace this if-then-else statement by a single method invocation.(ÂâÕ8í³ÿ×÷1J$2a7cd764-84bf-4151-be4c-a92c9e6d28a0
+
+java:S1128"FRemove this unused import 'github.alfonsojaen.model.dao.CostaleroDAO'.(Ù†Âşÿÿÿÿ8¢ÀÕÄ÷1J$9c562aed-cd6b-4184-ae86-8cb4817b7e9b
+ˆ
+java:S1128"FRemove this unused import 'github.alfonsojaen.model.entity.Costalero'.(îÚÉ_8¤ÀÕÄ÷1J$b2e78294-3afa-4e0b-abb9-52eb1ba0cf10
+y
+java:S1128"6Remove this unused import 'javafx.fxml.Initializable'.(™ÎùÆ8¦ÀÕÄ÷1J$23d85d35-bbe7-409e-b7ce-a2008365d843
+q
+java:S1128")Remove this unused import 'java.net.URL'.(ñìÁ„üÿÿÿÿ8§ÀÕÄ÷1J$f2aad74b-daea-4ce3-a577-e99c4db7338b
+}
+java:S1128"5Remove this unused import 'java.util.ResourceBundle'.(ıÆ£¯øÿÿÿÿ8§ÀÕÄ÷1J$e6e1a05d-f378-4fe8-aa89-7aedea70a247

@@ -1,4 +1,8 @@
 
-˜	java:S116"VRename this field "Brotherhood" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(øÅÌ8Øëäõ1J$33008d71-e7a0-4a57-973a-5708bb189a2e
-	java:S100""NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñù°8£Øëäõ1J$e73ecf74-e17f-4633-8ff0-9bf421344ad7
-	java:S100%"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„Î˜ó8¥Øëäõ1J$1f31bb86-8a65-4c32-bd4d-213864ea3317
+˜	java:S116"VRename this field "Brotherhood" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(øÅÌ8Øëäõ1J$757ebe94-54a5-4ed4-8912-f75f1d611ca0
+	java:S100'"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñù°8£Øëäõ1J$2dcf8633-edff-4ab9-8e15-7ef838451845
+	java:S100*"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„Î˜ó8¥Øëäõ1J$8d404061-a54a-43a3-b159-c1cfc7eda800
+‰
+java:S1128"FRemove this unused import 'github.alfonsojaen.model.dao.CuadrillaDAO'.(ú³ıß8µ›“Š÷1J$88768a6c-a5f6-4a76-b955-bbf546acb083
+‰
+java:S1128"FRemove this unused import 'github.alfonsojaen.model.entity.Cuadrilla'.(à º¤8µ›“Š÷1J$58f0305c-b0cf-43ca-9352-6e173685a0d5

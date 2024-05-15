@@ -22,8 +22,6 @@ public class ControllerUserLogin  {
     private TextField tGmail;
     @FXML
     private PasswordField tPass;
-    @FXML
-    private Hyperlink hyperlink;
 
     @FXML
     private void login() throws SQLException, IOException {
@@ -48,7 +46,7 @@ public class ControllerUserLogin  {
                 Alert alerta = new Alert(Alert.AlertType.INFORMATION);
                 alerta.setTitle("Login");
                 alerta.setHeaderText("Login exitoso");
-                alerta.setContentText("Se ha logeago el Matchmaker correctamente.");
+                alerta.setContentText("Se ha logeago el Usuario correctamente.");
                 alerta.showAndWait();
                 switchToUserPage();
             }else {
@@ -66,11 +64,11 @@ public class ControllerUserLogin  {
 
     @FXML
     private void switchToUserPage() throws IOException {
-       Scenes.setRoot("pantallaMenu",null);
+       Scenes.setRoot("pantallaMenu",null, null);
     }
     @FXML
     private void switchToRegister() throws IOException {
-        Scenes.setRoot("pantallaRegisterUser", null);
+        Scenes.setRoot("pantallaRegisterUser", null, null);
     }
 }
 

@@ -1,6 +1,8 @@
 package github.alfonsojaen;
 
 import github.alfonsojaen.model.entity.Costalero;
+import github.alfonsojaen.model.entity.Cuadrilla;
+import github.alfonsojaen.model.entity.Paso;
 import github.alfonsojaen.view.*;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -27,7 +29,7 @@ public class App extends Application {
         stage.show();
 
     }
-    public static Scene createScene(String fxml, double width, double height,Costalero costalero) throws IOException {
+    public static Scene createScene(String fxml, double width, double height,Costalero costalero, Cuadrilla cuadrilla) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("view/" + fxml + ".fxml"));
         Parent root = fxmlLoader.load();
         if(fxml.equals("pantallaAssignCuadrilla")){
@@ -36,6 +38,13 @@ public class App extends Application {
                 System.out.println(controller.getClass());
             }
             controller.setCostalero(costalero);
+        }
+        if(fxml.equals("pantallaAssignPaso")){
+            ControllerAssignPaso controller=fxmlLoader.getController();
+            if (controller.getClass().equals(ControllerAssignPaso.class)) {
+                System.out.println(controller.getClass());
+            }
+            controller.setCuadrilla(cuadrilla);
         }
         Scene scene = new Scene(root, width, height);
         return scene;

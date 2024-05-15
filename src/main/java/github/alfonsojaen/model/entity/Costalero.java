@@ -1,6 +1,7 @@
 package github.alfonsojaen.model.entity;
 
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -9,14 +10,14 @@ public  class Costalero {
     private String nickname;
     private int height;
     private int age;
-    private List<Cuadrilla> cuadrilla;
+    private List<Cuadrilla> cuadrillas;
 
     public Costalero(int id, String nickname, int height, int age, List<Cuadrilla> cuadrilla) {
         this.id = id;
         this.nickname = nickname;
         this.height = height;
         this.age = age;
-        this.cuadrilla = cuadrilla;
+        this.cuadrillas = cuadrilla;
     }
 
     public Costalero() {
@@ -56,13 +57,25 @@ public  class Costalero {
     }
 
     public List<Cuadrilla> getCuadrilla() {
-        return cuadrilla;
+        return cuadrillas;
     }
 
     public void setCuadrillas(List<Cuadrilla> cuadrilla) {
-        this.cuadrilla= cuadrilla;
+        this.cuadrillas= cuadrilla;
     }
-
+    public void addCuadrilla(Cuadrilla cuadrilla){
+        if(cuadrillas==null){
+            cuadrillas = new ArrayList<>();
+        }
+        if(!cuadrillas.contains(cuadrilla)){
+            cuadrillas.add(cuadrilla);
+        }
+    }
+    public void removeCuadrilla(Cuadrilla cuadrilla){
+        if(cuadrillas!=null){
+            cuadrillas.remove(cuadrilla);
+        }
+    }
     @Override
     public boolean equals(Object object) {
         if (this == object) return true;
@@ -83,7 +96,7 @@ public  class Costalero {
                 ", nickname='" + nickname + '\'' +
                 ", height=" + height +
                 ", age=" + age +
-                ", cuadrillas=" + cuadrilla +
+                ", cuadrillas=" + cuadrillas +
                 '}';
     }
 

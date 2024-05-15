@@ -1,23 +1,23 @@
 
-f
-java:S1192@"IDefine a constant instead of duplicating this literal "nickname" 3 times.(­Û¶Ò8„ÚÅõ1
-Ã
-java:S1186§"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(æÔ«÷şÿÿÿÿJ$6a8af5ad-8052-46cb-a69b-e246b5d87bd3
-€
-java:S1124"EReorder the modifiers to comply with the Java Language Specification.(³Æ*J$bd853624-6b17-49a3-b8e3-337b83825ddd
-
-java:S1124"EReorder the modifiers to comply with the Java Language Specification.(¦¦Š¤J$1a25d37a-8938-4eee-9b6a-b140241d2317
-†
-java:S1124"EReorder the modifiers to comply with the Java Language Specification.(œ¢ÆİşÿÿÿÿJ$da4b236e-5cdd-4647-8118-b020fbe205ee
-†
-java:S1124"EReorder the modifiers to comply with the Java Language Specification.(É«ÄøÿÿÿÿJ$c160e132-8cfa-4896-8af8-6fd6c5750ba9
-
-java:S1124"EReorder the modifiers to comply with the Java Language Specification.(èÔÅœJ$ce3cb634-cea7-4f36-8b6c-5f432db78c29
-
-java:S1124"EReorder the modifiers to comply with the Java Language Specification.(ìÃÌíJ$e8cfc41e-db75-4251-855d-d985dbc053d7
-€
-java:S1124"EReorder the modifiers to comply with the Java Language Specification.(Ùà¶MJ$ad903019-04c7-43e1-917b-f5478c60fb25
+Œ
+java:S1192P"IDefine a constant instead of duplicating this literal "nickname" 3 times.(­Û¶Ò8œ½ÏÚ÷1J$8e84d95a-e368-4398-a869-60f6c7303015
+Ê
+java:S1186Ï"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(æÔ«÷şÿÿÿÿ8À½ÏÚ÷1J$a6b226a3-1ad9-4f82-ab75-d3b10db7fe35
+‡
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(³Æ*8åüªö1J$5f67bd87-0a8f-4fbe-b408-966c6643eed6
+ˆ
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(¦¦Š¤8æüªö1J$87d813c3-44ad-45fe-9371-e48f7de65bad
 
-java:S1124"EReorder the modifiers to comply with the Java Language Specification.(¾ÂÉÕùÿÿÿÿ8© äõ1J$e7dbe532-2a88-458c-a3ef-c2b52b85ba97
-d	java:S108Q")Either remove or fill this block of code.(å¥‡J$581f7f33-93fd-4580-985d-7f158a7f1578
-d	java:S108]")Either remove or fill this block of code.(É®£J$bf53cc20-6886-46e7-a95e-9412486bda78
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(œ¢Æİşÿÿÿÿ8æüªö1J$7fc2662d-bced-4b58-93e9-65cac5721370
+
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(É«Äøÿÿÿÿ8æüªö1J$36df2872-1483-4d86-91b1-571ecd159c0a
+ˆ
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(èÔÅœ8æüªö1J$2148abae-50e6-446d-925e-37b8dd58c0d2
+ˆ
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(ìÃÌí8æüªö1J$bcc8f27f-2bef-4d22-85ad-f1e3e0c2a698
+‡
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(Ùà¶M8æüªö1J$5be8bb18-714c-4d9f-89c6-6c3e51d18fe8
+
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(¾ÂÉÕùÿÿÿÿ8æüªö1J$188006b7-ea2c-4673-8c95-023d02e67b98
+k	java:S108f")Either remove or fill this block of code.(å¥‡8Õ½ÏÚ÷1J$37dacee5-7468-4d5f-ad5c-deec65bf6791
+k	java:S108v")Either remove or fill this block of code.(É®£8Ø½ÏÚ÷1J$14ff4c48-39b3-4cbe-b861-0ddbb89e68db

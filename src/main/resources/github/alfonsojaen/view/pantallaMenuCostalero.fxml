@@ -48,7 +48,7 @@
       </AnchorPane>
       <AnchorPane prefHeight="400.0" prefWidth="218.0" style="-fx-background-color: BLACK;">
          <children>
-            <Text fill="WHITE" layoutX="25.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Si quieres asignar CUADRILLAS a un determinado costalero pulsa dos veces sobre su Id." textAlignment="CENTER" wrappingWidth="119.20009765624991" />
+            <Text fill="WHITE" layoutX="25.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Si quieres asignar CUADRILLAS a un determinado costalero pulsa tres veces sobre su Id." textAlignment="CENTER" wrappingWidth="119.20009765624991" />
             <Text fill="RED" layoutX="30.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INFORMACIÓN">
                <font>
                   <Font size="16.0" />

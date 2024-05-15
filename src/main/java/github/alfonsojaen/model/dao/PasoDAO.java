@@ -11,20 +11,30 @@ import java.util.List;
 
 public class PasoDAO implements DAO<Paso>{
 
+    // Consultas SQL
     private static final String FINDALL ="SELECT a.id,a.brotherhood,a.capacity FROM paso AS a";
     private static final String FINDBYID ="SELECT a.id,a.brotherhood,a.capacity FROM paso AS a WHERE a.id=?";
     private static final String INSERT ="INSERT INTO paso (brotherhood,capacity) VALUES (?,?)";
     private static final String UPDATE ="UPDATE paso SET brotherhood=?,capacity=? WHERE id=?";
     private static final String DELETE ="DELETE FROM paso WHERE id=?";
     private final static String FINDBYNAME="SELECT a.id,a.brotherhood,a.capacity FROM paso AS a WHERE a.brotherhood=?";
+    private final static String FINDBYCUADRILLA="SELECT a.id,a.brotherhood,a.capacity FROM paso AS a, esta AS b WHERE b.pasoId=a.id AND b.cuadrillaId=?";
 
 
     private Connection conn;
+    /**
+     * Constructor que inicializa la conexión a la base de datos.
+     */
     public PasoDAO(){
         conn = ConnectionMariaDB.getConnection();
     }
 
-
+    /**
+     * Guarda un paso en la base de datos.
+     * @param paso El paso que se va a guardar.
+     * @return El paso guardado, con su ID actualizado si se generó automáticamente, o null si ocurrió un error.
+     * @throws SQLException Si ocurre un error al ejecutar la operación en la base de datos.
+     */
     @Override
     public Paso save(Paso paso) throws SQLException{
         if (paso != null ) {
@@ -49,6 +59,11 @@ public class PasoDAO implements DAO<Paso>{
         }
         return paso;
     }
+
+    /**
+     * Actualiza la información de un paso en la base de datos.
+     * @param paso El paso con la información actualizada.
+     */
 public void update(Paso paso){
     try (PreparedStatement pst = conn.prepareStatement(UPDATE)) {
         if(paso!=null){
@@ -62,6 +77,12 @@ public void update(Paso paso){
         e.printStackTrace();
     }
 }
+
+    /**
+     * Elimina un paso de la base de datos.
+     * @param paso El paso que se va a eliminar.
+     * @return El paso eliminado, o null si ocurrió un error o el paso no existe.
+     */
     @Override
     public Paso delete(Paso paso)  {
         if(paso!=null){
@@ -75,6 +96,36 @@ public void update(Paso paso){
         }
         return paso;
     }
+
+    /**
+     * Busca los pasos asociados a una cuadrilla específica.
+     * @param cu La cuadrilla de la que se quieren obtener los pasos.
+     * @return Una lista de pasos asociados a la cuadrilla especificada.
+     */
+    public List<Paso> findByCuadrilla(Cuadrilla cu){
+        List<Paso> result = new ArrayList<>();
+        try(PreparedStatement pst = ConnectionMariaDB.getConnection().prepareStatement(FINDBYCUADRILLA)) {
+            pst.setInt(1, cu.getId());
+            ResultSet res = pst.executeQuery();
+            while (res.next()){
+                Paso p = new Paso();//LAZY
+                p.setId(res.getInt(1));
+                p.setBrotherhood(res.getString("brotherhood"));
+                p.setCapacity(res.getInt("capacity"));
+                result.add(p);
+            }
+            res.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return result;
+    }
+
+    /**
+     * Busca un paso por su nombre en la base de datos.
+     * @param name El nombre del paso a buscar.
+     * @return El paso encontrado, o un objeto Paso vacío si no se encuentra.
+     */
     public Paso findByName(String name) {
         Paso result = new Paso();
         if(name != null) {
@@ -92,6 +143,12 @@ public void update(Paso paso){
         }
         return result;
     }
+
+    /**
+     * Busca un paso por su ID en la base de datos.
+     * @param key El ID del paso a buscar.
+     * @return El paso encontrado, o un objeto Paso vacío si no se encuentra.
+     */
     @Override
     public Paso findById(int key) {
         Paso result = new Paso();
@@ -114,6 +171,10 @@ public void update(Paso paso){
         return result;
     }
 
+    /**
+     * Obtiene todos los pasos almacenados en la base de datos.
+     * @return Una lista de pasos almacenados en la base de datos.
+     */
     @Override
     public List<Paso> findAll() {
         List<Paso> result = new ArrayList<>();
@@ -137,6 +198,10 @@ public void update(Paso paso){
     public void close() throws IOException {
 
     }
+    /**
+     * Método estático para construir una instancia de PasoDAO.
+     * @return Una nueva instancia de PasoDAO.
+     */
     public static PasoDAO build(){
         return new PasoDAO();
     }

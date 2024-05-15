@@ -43,7 +43,7 @@ public class ControllerInsertPaso {
     @FXML
     private void switchToMenuPaso() {
         try {
-            Scenes.setRoot("pantallaMenuPaso", null);
+            Scenes.setRoot("pantallaMenuPaso", null,null);
     } catch (IOException e) {
         e.printStackTrace();
     }
