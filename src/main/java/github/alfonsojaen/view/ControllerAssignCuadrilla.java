@@ -5,6 +5,7 @@ import github.alfonsojaen.model.dao.CuadrillaDAO;
 import github.alfonsojaen.model.entity.Costalero;
 import github.alfonsojaen.model.entity.Cuadrilla;
 
+import github.alfonsojaen.utils.Utils;
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
@@ -20,11 +21,16 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Controller for assigning cuadrillas to a costalero in a JavaFX application.
+ */
 public class ControllerAssignCuadrilla {
 
     private Costalero costalero;
-    private List<Cuadrilla> previas = new ArrayList<>();
+    private List<Cuadrilla> selected = new ArrayList<>();
     private ObservableList<Cuadrilla> cuadrillas;
+    private List<Cuadrilla> Selected = new ArrayList<>(selected);
+
 
     @FXML
     private TableView<Cuadrilla> tableview;
@@ -43,11 +49,20 @@ public class ControllerAssignCuadrilla {
 
     @FXML
     TableColumn<Cuadrilla, Boolean> selectionColumn;
+
+    /**
+     * Method to switch to the costalero menu screen.
+     *
+     * @throws IOException If an error occurs while loading the screen.
+     */
     @FXML
     private void switchToMenuCostalero() throws IOException {
         Scenes.setRoot("pantallaMenuCostalero",null,null);
     }
 
+    /**
+     * Initializes the table and configures the columns.
+     */
     public void start() {
         idColumn.setCellValueFactory(cuadrilla -> new SimpleStringProperty(String.valueOf(cuadrilla.getValue().getId())));
 
@@ -75,9 +90,9 @@ public class ControllerAssignCuadrilla {
         selectionColumn.setEditable(true);
         this.cuadrillas = FXCollections.observableArrayList(CuadrillaDAO.build().findAll());
         CuadrillaDAO cdao = new CuadrillaDAO();
-        this.previas=cdao.findByCostalero(costalero);
+        this.selected=cdao.findByCostalero(costalero);
         for(Cuadrilla cuadrilla : this.cuadrillas){
-            if(this.previas.contains(cuadrilla)){
+            if(this.selected.contains(cuadrilla)){
                 cuadrilla.setSelected(true);
             }else{
                 cuadrilla.setSelected(false);
@@ -86,18 +101,45 @@ public class ControllerAssignCuadrilla {
         tableview.setItems(this.cuadrillas);
     }
 
+    /**
+     * Sets the costalero and calls the start() method.
+     *
+     * @param costalero The costalero to assign.
+     */
     public void setCostalero(Costalero costalero) {
         this.costalero = costalero;
         start();
-
-
     }
+
+    /**
+     * Assigns the selected cuadrillas to the costalero and updates the database.
+     */
     public void assign() {
         try {
+            List<Cuadrilla> cuadrillasSelected = new ArrayList<>();
+            for (Cuadrilla cuadrilla : cuadrillas) {
+                if (cuadrilla.isSelected()) {
+                    cuadrillasSelected.add(cuadrilla);
+                }
+            }
+
+            for (Cuadrilla cuadrilla : Selected) {
+                if (!cuadrillasSelected.contains(cuadrilla)) {
+                    costalero.removeCuadrilla(cuadrilla);
+                }
+            }
+
+            for (Cuadrilla cuadrilla : cuadrillasSelected) {
+                if (!Selected.contains(cuadrilla)) {
+                    costalero.addCuadrilla(cuadrilla);
+                }
+            }
             CostaleroDAO.build().setCuadrilla(this.costalero);
-       } catch (SQLException e) {
+            Utils.ShowAlert("Se ha asignado con exito");
+        } catch (SQLException e) {
             e.printStackTrace();
         }
+
     }
 }
 

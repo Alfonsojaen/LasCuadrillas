@@ -1,3 +1,7 @@
 
-‘	java:S116"VRename this field "Brotherhood" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(øÅžÌJ$dea25d4b-d1ae-4429-a701-b4cf004c4ad4
-Ž	java:S116"SRename this field "Capacity" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾ÞàîJ$ddba130a-2aca-4412-8565-013b2973a286
+˜	java:S116"VRename this field "Brotherhood" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(øÅžÌ8í¿ô‰ø1J$7eebb5a0-60f1-4ee9-a60f-836018a20957
+•	java:S116"SRename this field "Capacity" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾Þàî8î¿ô‰ø1J$993d533e-500d-4ba5-a6f9-d1c104c24d7a
+z
+java:S39723"7Move this "if" to a new line or add the missing "else".(ÒÞóÄ8õ¿ô‰ø1J$24fe19b4-e73d-461f-b8bf-c58fc51f654c
+…
+java:S63537"=Use concise character class syntax '\\D' instead of '[^0-9]'.(ôû×ýûÿÿÿÿ8÷¿ô‰ø1J$1537237a-e693-47dc-850b-15b71cf975af

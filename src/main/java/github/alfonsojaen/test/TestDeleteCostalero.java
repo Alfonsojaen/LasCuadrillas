@@ -1,11 +1,8 @@
 package github.alfonsojaen.test;
 
-import github.alfonsojaen.model.dao.CostaleroDAO;
-import github.alfonsojaen.model.entity.Costalero;
-
 import java.sql.SQLException;
 
-public class testDeleteCostalero {
+public class TestDeleteCostalero {
     public static void main(String[] args) throws SQLException {
        /* CostaleroDAO costaleroDAO = new CostaleroDAO();
         Costalero costaleroToDelete = new Costalero();

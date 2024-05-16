@@ -89,6 +89,10 @@ public class Cuadrilla {
     public void setPaso(List<Paso> paso) {
         this.pasos= paso;
     }
+    /**
+     * Adds a paso to the list if it's not already present.
+     * @param paso The paso to be added.
+     */
     public void addPaso(Paso paso){
         if(pasos==null){
             pasos = new ArrayList<>();
@@ -97,6 +101,10 @@ public class Cuadrilla {
             pasos.add(paso);
         }
     }
+    /**
+     * Removes a paso from the list if it exists.
+     * @param paso The paso to be removed.
+     */
     public void removePaso(Paso paso){
         if(pasos!=null){
             pasos.remove(paso);

@@ -1,5 +1,5 @@
 
 
-java:S11920"FDefine a constant instead of duplicating this literal "Error" 3 times.(Ú—­pJ$cb6378b8-e4e9-41cb-af34-be87da65bb18
-U
-java:S1128"3Remove this unused import 'github.alfonsojaen.App'.(óÀ‹–ûÿÿÿÿ8ˆåÎ‰÷1
+java:S11924"FDefine a constant instead of duplicating this literal "Error" 3 times.(Ú—­pJ$cbe205f6-a564-4932-a3af-44a6a13b8817
+
+java:S2095+"EUse try-with-resources or close this "UserDAO" in a "finally" clause.(¿¥½°ıÿÿÿÿ8ö‡”ø1J$fb154eeb-7bcc-47b2-9d39-61faf7e6ba8c

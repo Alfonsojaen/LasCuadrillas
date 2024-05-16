@@ -7,7 +7,7 @@ import github.alfonsojaen.model.entity.Paso;
 import java.sql.SQLException;
 
 
-public class testInsertPaso {
+public class TestInsertPaso {
     public static void main(String[] args) {
         // Crear una instancia de PasoDAO
         PasoDAO pasoDAO = new PasoDAO();

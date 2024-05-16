@@ -1,16 +1,14 @@
 
-	java:S112B"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8Ç§öêõ1J$00cc39ee-c050-4eba-aa76-32c498d8742a
-±
-java:S1192["iDefine a constant instead of duplicating this literal "Te has pasado del limtite de caracteres!" 3 times.(Âşç”øÿÿÿÿ8È§öêõ1J$1951cd7e-f17e-4ec8-a906-f56b0bab385a
+	java:S112]"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8”Şº“ø1J$b9e691bf-5c75-452a-b265-cc4f16ccf261
 ~
-java:S4973R"<Strings and Boxed types should be compared using "equals()".(ûŞÏC8Ê§öêõ1J$3ff6ef8e-794b-422f-99d3-2e62a0efb661
+java:S4973m"<Strings and Boxed types should be compared using "equals()".(ûŞÏC8—Şº“ø1J$2b7fc4aa-2edc-4624-96e1-18bbe86c5871
 ~
-java:S4973a"<Strings and Boxed types should be compared using "equals()".(ûŞÏC8Ê§öêõ1J$d8567c63-d749-4c92-a5ab-6a84fc6ea36d
-~
-java:S4973p"<Strings and Boxed types should be compared using "equals()".(ûŞÏC8Ê§öêõ1J$cd2f294e-0bb2-4b7a-82a5-e1a6af4b6205
+java:S4973z"<Strings and Boxed types should be compared using "equals()".(ûŞÏC8—Şº“ø1J$c1a2bee9-8815-461b-bfa5-900e53cab87f
+
+java:S4973‡"<Strings and Boxed types should be compared using "equals()".(ûŞÏC8˜Şº“ø1J$1c55d642-7506-4ec1-8411-ca4744570efb
 œ
-java:S1450%"YRemove the "costaleros" field and declare it as a local variable in the relevant methods.(ğª†8ß§öêõ1J$8859626d-4ef1-4f4e-b56b-1eb32c7e87cd
+java:S1450'"YRemove the "costaleros" field and declare it as a local variable in the relevant methods.(ğª†8µŞº“ø1J$2e79fb62-1ec9-459d-83ae-cd5b4c31aaa1
 š
-java:S37764"RRefactor this method to reduce its Cognitive Complexity from 23 to the 15 allowed.(•‘İŸüÿÿÿÿ8ä§öêõ1J$4ef4cf3f-c5d5-4e0c-82e7-bc963aa653a2
+java:S3776O"RRefactor this method to reduce its Cognitive Complexity from 23 to the 15 allowed.(•‘İŸüÿÿÿÿ8½Şº“ø1J$ff30541b-d977-4175-908e-510628674d69
 
-java:S11175">Rename "costaleros" which hides the field declared at line 37.(œŞë¬8å§öêõ1J$959df467-8261-4f8c-8476-6d8392dc2334
+java:S1117P">Rename "costaleros" which hides the field declared at line 39.(œŞë¬8ÀŞº“ø1J$d3d83a8c-b9f0-49e6-8ade-2562ec7fbf65

@@ -8,7 +8,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class testInsertCostalero {
+public class TestInsertCostalero {
     public static void main(String[] args) throws SQLException {
 
         CostaleroDAO costaleroDAO = new CostaleroDAO();

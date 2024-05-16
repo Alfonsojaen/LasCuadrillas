@@ -5,7 +5,7 @@ import github.alfonsojaen.model.entity.User;
 
 import java.sql.SQLException;
 
-public class testinsertUser {
+public class TestinsertUser {
     public static void main(String[] args) throws SQLException {
        User u = new User("fran4","fran14","fran14","fran14");
        UserDAO userDAO = new UserDAO();

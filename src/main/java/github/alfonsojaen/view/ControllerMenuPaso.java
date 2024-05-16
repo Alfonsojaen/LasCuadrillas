@@ -1,16 +1,13 @@
 package github.alfonsojaen.view;
 
-import github.alfonsojaen.App;
-import github.alfonsojaen.model.dao.CuadrillaDAO;
 import github.alfonsojaen.model.dao.PasoDAO;
-import github.alfonsojaen.model.entity.Cuadrilla;
 import github.alfonsojaen.model.entity.Paso;
+import github.alfonsojaen.utils.Utils;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.TextFieldTableCell;
@@ -34,18 +31,39 @@ public class ControllerMenuPaso implements Initializable {
 
     private ObservableList<Paso> pasos;
 
+    /**
+     * Handles switching back to the main menu screen.
+     * @throws IOException if an I/O error occurs
+     */
     @FXML
     private void switchToMenu() throws IOException {
         Scenes.setRoot("pantallaMenu",null, null);
     }
+
+    /**
+     * Handles switching to the screen for inserting a new Paso.
+     * @throws IOException if an I/O error occurs
+     */
     @FXML
     private void switchToInsertPaso() throws IOException {
         Scenes.setRoot("pantallaInsertPaso",null, null);
     }
+
+    /**
+     * Handles switching to the screen for deleting a Paso.
+     * @throws IOException if an I/O error occurs
+     */
     @FXML
     private void switchToDeletePaso() throws IOException {
         Scenes.setRoot("pantallaDeletePaso",null, null);
     }
+
+    /**
+     * Initializes the controller by fetching Paso data from the database,
+     * configuring the TableView with Paso data, and defining behavior for editing
+     * Paso attributes in the TableView.
+     *
+     */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         List<Paso> pasos = PasoDAO.build().findAll();
@@ -63,14 +81,12 @@ public class ControllerMenuPaso implements Initializable {
             if (event.getNewValue() == event.getOldValue()) {
                 return;
             }
-            if (event.getNewValue().length() <= 30) {
+            if (event.getNewValue().length() <= 25) {
                 Paso paso = event.getRowValue();
                 paso.setBrotherhood(event.getNewValue());
                 PasoDAO.build().update(paso);
             } else {
-                Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setContentText("Te has pasado del limtite de caracteres!");
-                alert.show();
+                Utils.ShowAlert("Te has pasado del limtite de caracteres!");
             }
         });
         capacity.setCellFactory(TextFieldTableCell.forTableColumn());
@@ -78,18 +94,14 @@ public class ControllerMenuPaso implements Initializable {
             if (event.getNewValue() == event.getOldValue()) {
                 return;
             }
-            if (event.getNewValue().length() <= 20) {
+            if (event.getNewValue().length() <= 3) {
                 Paso paso = event.getRowValue();
                 paso.setCapacity(Integer.parseInt(event.getNewValue()));
                 PasoDAO.build().update(paso);
             } else {
-                Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setContentText("Te has pasado del limtite de caracteres!");
-                alert.show();
+                Utils.ShowAlert("Te has pasado del limtite de números!");
             }
         });
     }
-
-
 }
 

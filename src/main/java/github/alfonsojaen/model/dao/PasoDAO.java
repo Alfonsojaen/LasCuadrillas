@@ -3,15 +3,16 @@ package github.alfonsojaen.model.dao;
 import github.alfonsojaen.model.connection.ConnectionMariaDB;
 import github.alfonsojaen.model.entity.Cuadrilla;
 import github.alfonsojaen.model.entity.Paso;
+import github.alfonsojaen.model.interfaces.InterfacePasoDAO;
 
 import java.io.IOException;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PasoDAO implements DAO<Paso>{
+public class PasoDAO implements InterfacePasoDAO<Paso> {
 
-    // Consultas SQL
+    // SQL Queries
     private static final String FINDALL ="SELECT a.id,a.brotherhood,a.capacity FROM paso AS a";
     private static final String FINDBYID ="SELECT a.id,a.brotherhood,a.capacity FROM paso AS a WHERE a.id=?";
     private static final String INSERT ="INSERT INTO paso (brotherhood,capacity) VALUES (?,?)";
@@ -22,18 +23,19 @@ public class PasoDAO implements DAO<Paso>{
 
 
     private Connection conn;
+
     /**
-     * Constructor que inicializa la conexión a la base de datos.
+     * Constructor that initializes the connection to the database.
      */
     public PasoDAO(){
         conn = ConnectionMariaDB.getConnection();
     }
 
     /**
-     * Guarda un paso en la base de datos.
-     * @param paso El paso que se va a guardar.
-     * @return El paso guardado, con su ID actualizado si se generó automáticamente, o null si ocurrió un error.
-     * @throws SQLException Si ocurre un error al ejecutar la operación en la base de datos.
+     * Saves a step in the database.
+     * @param paso The step to be saved.
+     * @return The saved step, with its ID updated if generated automatically, or null if an error occurred.
+     * @throws SQLException If an error occurs while executing the operation in the database.
      */
     @Override
     public Paso save(Paso paso) throws SQLException{
@@ -61,10 +63,11 @@ public class PasoDAO implements DAO<Paso>{
     }
 
     /**
-     * Actualiza la información de un paso en la base de datos.
-     * @param paso El paso con la información actualizada.
+     * Updates the information of a step in the database.
+     * @param paso The step with the updated information.
      */
-public void update(Paso paso){
+    @Override
+    public void update(Paso paso){
     try (PreparedStatement pst = conn.prepareStatement(UPDATE)) {
         if(paso!=null){
         pst.setString(1, paso.getBrotherhood());
@@ -79,9 +82,9 @@ public void update(Paso paso){
 }
 
     /**
-     * Elimina un paso de la base de datos.
-     * @param paso El paso que se va a eliminar.
-     * @return El paso eliminado, o null si ocurrió un error o el paso no existe.
+     * Deletes a step from the database.
+     * @param paso The step to be deleted.
+     * @return The deleted step, or null if an error occurred or the step does not exist.
      */
     @Override
     public Paso delete(Paso paso)  {
@@ -98,10 +101,11 @@ public void update(Paso paso){
     }
 
     /**
-     * Busca los pasos asociados a una cuadrilla específica.
-     * @param cu La cuadrilla de la que se quieren obtener los pasos.
-     * @return Una lista de pasos asociados a la cuadrilla especificada.
+     * Finds the steps associated with a specific cuadrilla.
+     * @param cu The cuadrilla for which to obtain the steps.
+     * @return A list of steps associated with the specified cuadrilla.
      */
+    @Override
     public List<Paso> findByCuadrilla(Cuadrilla cu){
         List<Paso> result = new ArrayList<>();
         try(PreparedStatement pst = ConnectionMariaDB.getConnection().prepareStatement(FINDBYCUADRILLA)) {
@@ -122,11 +126,12 @@ public void update(Paso paso){
     }
 
     /**
-     * Busca un paso por su nombre en la base de datos.
-     * @param name El nombre del paso a buscar.
-     * @return El paso encontrado, o un objeto Paso vacío si no se encuentra.
+     * Finds a step by its name in the database.
+     * @param name The name of the step to find.
+     * @return The found step, or an empty Paso object if not found.
      */
-    public Paso findByName(String name) {
+    @Override
+    public Paso findByBrotherhood(String name) {
         Paso result = new Paso();
         if(name != null) {
             try (PreparedStatement pst = ConnectionMariaDB.getConnection().prepareStatement(FINDBYNAME)) {
@@ -145,9 +150,9 @@ public void update(Paso paso){
     }
 
     /**
-     * Busca un paso por su ID en la base de datos.
-     * @param key El ID del paso a buscar.
-     * @return El paso encontrado, o un objeto Paso vacío si no se encuentra.
+     * Finds a step by its ID in the database.
+     * @param key The ID of the step to find.
+     * @return The found step, or an empty Paso object if not found.
      */
     @Override
     public Paso findById(int key) {
@@ -172,8 +177,8 @@ public void update(Paso paso){
     }
 
     /**
-     * Obtiene todos los pasos almacenados en la base de datos.
-     * @return Una lista de pasos almacenados en la base de datos.
+     * Gets all steps stored in the database.
+     * @return A list of steps stored in the database.
      */
     @Override
     public List<Paso> findAll() {
@@ -196,11 +201,11 @@ public void update(Paso paso){
 
     @Override
     public void close() throws IOException {
-
     }
+
     /**
-     * Método estático para construir una instancia de PasoDAO.
-     * @return Una nueva instancia de PasoDAO.
+     * Static method to build an instance of PasoDAO.
+     * @return A new instance of PasoDAO.
      */
     public static PasoDAO build(){
         return new PasoDAO();

@@ -1,6 +1,11 @@
 
-‰
-java:S1192#"FDefine a constant instead of duplicating this literal "ERROR" 3 times.(Ù”À8ç£Ü‰÷1J$b521332d-4cdb-4be9-b2c3-0620f382db50
-•	java:S116"SRename this field "Nickname" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¿ù¶¬8ƒ¤´‰÷1J$23fb9649-3cbd-475c-b9ab-c2fce6217413
-“	java:S116"QRename this field "Height" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(’ËÇ¦8„¤´‰÷1J$b7964ba9-593b-4fd1-96ed-a58dfa9ff5a8
-	java:S116"NRename this field "Age" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°¡»8„¤´‰÷1J$b1d1f988-b98c-4476-91d9-7432ba5a955c
+“	java:S117I"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Èí£„8ù£ƒŠø1J$4f93f5bf-8bbd-4d5f-aa78-2debccf76627
+•	java:S116"SRename this field "Nickname" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¿ù¶¬8‚æ€Šø1J$01e6c5ef-dc2f-4b69-9be8-875e0f63367a
+“	java:S116"QRename this field "Height" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(’ËÇ¦8ƒæ€Šø1J$310083cd-6273-4f54-bae9-d8e9b00b2282
+	java:S116"NRename this field "Age" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°¡»8ƒæ€Šø1J$e3d53296-c048-4559-9562-2a941dbfa8f0
+z
+java:S3972."7Move this "if" to a new line or add the missing "else".(õÁæ8‘ˆˆŠø1J$1abc46de-da4a-4a26-ad32-c32b3b0c63d5
+€
+java:S63532"=Use concise character class syntax '\\D' instead of '[^0-9]'.(ğ†·¼8öœ”Šø1J$90919b68-0456-4dcd-a3cc-c8ed8198006b
+€
+java:S63532"=Use concise character class syntax '\\D' instead of '[^0-9]'.(ğ†·¼8ùá”Šø1J$61c52df5-5da0-4a70-ab0c-6dffc3115ff0

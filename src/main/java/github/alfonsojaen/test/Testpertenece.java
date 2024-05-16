@@ -1,6 +1,6 @@
 package github.alfonsojaen.test;
 
-public class testpertenece {
+public class Testpertenece {
     public static void main(String[] args) {
     }
 }

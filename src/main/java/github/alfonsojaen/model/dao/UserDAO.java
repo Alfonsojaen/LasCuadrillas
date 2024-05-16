@@ -2,14 +2,15 @@ package github.alfonsojaen.model.dao;
 
 import github.alfonsojaen.model.connection.ConnectionMariaDB;
 import github.alfonsojaen.model.entity.User;
+import github.alfonsojaen.model.interfaces.InterfaceUserDAO;
 
 import java.io.IOException;
 import java.sql.*;
 import java.util.List;
 
-public class UserDAO implements DAO<User> {
+public class UserDAO implements InterfaceUserDAO<User> {
 
-    // Consultas SQL
+    // SQL Queries
     private final static String INSERT = "INSERT INTO user (username,password,email,name) VALUES (?,?,?,?)";
     private final static String UPDATE = "UPDATE user SET  password=?, email=?, name=? WHERE username=?";
     private final static String DELETE = "DELETE FROM user WHERE username=?";
@@ -19,17 +20,17 @@ public class UserDAO implements DAO<User> {
     private Connection conn;
 
     /**
-     * Constructor que inicializa la conexión a la base de datos.
+     * Constructor that initializes the connection to the database.
      */
     public UserDAO() {
         conn = ConnectionMariaDB.getConnection();
     }
 
     /**
-     * Guarda un usuario en la base de datos.
-     * @param user El usuario que se va a guardar.
-     * @return El usuario guardado, o null si ocurrió un error.
-     * @throws SQLException Si ocurre un error al ejecutar la operación en la base de datos.
+     * Saves a user in the database.
+     * @param user The user to be saved.
+     * @return The saved user, or null if an error occurred.
+     * @throws SQLException If an error occurs while executing the operation in the database.
      */
     @Override
     public User save(User user) throws SQLException {
@@ -67,10 +68,10 @@ public class UserDAO implements DAO<User> {
 }
 
     /**
-     * Elimina un usuario de la base de datos.
-     * @param entity El usuario que se va a eliminar.
-     * @return El usuario eliminado, o null si ocurrió un error o el usuario no existe.
-     * @throws SQLException Si ocurre un error al ejecutar la operación en la base de datos.
+     * Deletes a user from the database.
+     * @param entity The user to be deleted.
+     * @return The deleted user, or null if an error occurred or the user does not exist.
+     * @throws SQLException If an error occurs while executing the operation in the database.
      */
     @Override
     public User delete(User entity) throws SQLException {
@@ -88,11 +89,12 @@ public class UserDAO implements DAO<User> {
     }
 
     /**
-     * Busca un usuario por su nombre de usuario en la base de datos.
-     * @param username El nombre de usuario del usuario a buscar.
-     * @return El usuario encontrado, o null si no se encuentra.
-     * @throws SQLException Si ocurre un error al ejecutar la operación en la base de datos.
+     * Finds a user by their username in the database.
+     * @param username The username of the user to find.
+     * @return The found user, or null if not found.
+     * @throws SQLException If an error occurs while executing the operation in the database.
      */
+    @Override
     public User findByUserName(String username) throws SQLException {
             User result = null;
             if (username != null) {
@@ -115,12 +117,13 @@ public class UserDAO implements DAO<User> {
 
 
     /**
-     * Verifica las credenciales de inicio de sesión de un usuario.
-     * @param email El correo electrónico del usuario.
-     * @param password La contraseña del usuario.
-     * @return El nombre de usuario si las credenciales son válidas, o null si no lo son.
-     * @throws SQLException Si ocurre un error al ejecutar la operación en la base de datos.
+     * Verifies the login credentials of a user.
+     * @param email The user's email.
+     * @param password The user's password.
+     * @return The username if the credentials are valid, or null if not.
+     * @throws SQLException If an error occurs while executing the operation in the database.
      */
+    @Override
     public String checkLogin(String email, String password) throws SQLException {
     try (PreparedStatement pst = ConnectionMariaDB.getConnection().prepareStatement(QUERY)) {
         pst.setString(1, email);
@@ -134,8 +137,8 @@ public class UserDAO implements DAO<User> {
     }
 
     /**
-     * Obtiene todos los usuarios almacenados en la base de datos.
-     * @return Una lista de todos los usuarios almacenados en la base de datos.
+     * Gets all users stored in the database.
+     * @return A list of all users stored in the database.
      */
     @Override
     public List<User> findAll() {

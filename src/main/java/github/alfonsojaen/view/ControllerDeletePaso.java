@@ -1,50 +1,56 @@
 package github.alfonsojaen.view;
 
-import github.alfonsojaen.model.dao.CuadrillaDAO;
 import github.alfonsojaen.model.dao.PasoDAO;
-import github.alfonsojaen.model.entity.Cuadrilla;
 import github.alfonsojaen.model.entity.Paso;
+import github.alfonsojaen.utils.Utils;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 
 import java.io.IOException;
 
+/**
+ * Controller class for deleting a Paso.
+ */
 public class ControllerDeletePaso {
     @FXML
     private TextField Brotherhood;
 
+    /**
+     * Handles the deletion of a Paso when the delete button is clicked.
+     *
+     * @param event Action event triggered by the delete button
+     */
     @FXML
     public void handleDeletePaso(ActionEvent event) {
         PasoDAO pasoDAO = PasoDAO.build();
         String nameBrotherhood = Brotherhood.getText();
 
         if (nameBrotherhood.isEmpty()) {
-            Alert("Error", "Por favor ingrese el nombre del paso.");
+            Utils.ShowAlert("Por favor ingrese el nombre del paso.");
             return;
         }
-        Paso pasoDelete = pasoDAO.findByName(nameBrotherhood);
+        Paso pasoDelete = pasoDAO.findByBrotherhood(nameBrotherhood);
 
         if (pasoDelete != null) {
             pasoDAO.delete(pasoDelete);
-            Alert("Borrado exitoso", "El paso ha sido borrado correctamente.");
+            Utils.ShowAlert( "El paso ha sido borrado correctamente.");
         } else {
-            Alert("Error", "No se encontró ningún paso con el nombre proporcionado.");
+            Utils.ShowAlert("No se encontró ningún paso con el nombre proporcionado.");
         }
 
         Brotherhood.setText("");
     }
+
+    /**
+     * Switches to the Paso menu screen.
+     *
+     * @throws IOException If an error occurs while loading the screen
+     */
     @FXML
     private void MenuPaso() throws IOException {
         Scenes.setRoot("pantallaMenuPaso", null,null);
     }
-    private void Alert(String titulo, String mensaje) {
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle(titulo);
-        alert.setHeaderText(null);
-        alert.setContentText(mensaje);
-        alert.showAndWait();
-    }
+
 }
 

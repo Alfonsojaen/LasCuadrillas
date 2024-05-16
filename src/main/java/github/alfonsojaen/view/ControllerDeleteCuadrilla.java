@@ -2,48 +2,58 @@ package github.alfonsojaen.view;
 
 import github.alfonsojaen.model.dao.CuadrillaDAO;
 import github.alfonsojaen.model.entity.Cuadrilla;
+import github.alfonsojaen.utils.Utils;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
+/**
+ * Controller class for deleting a Cuadrilla.
+ */
 public class ControllerDeleteCuadrilla {
     @FXML
     private TextField Name;
 
+    /**
+     * Handles the deletion of a Cuadrilla when the delete button is clicked.
+     *
+     * @param event Action event triggered by the delete button
+     */
     @FXML
     public void handleDeleteCuadrilla(ActionEvent event) {
         CuadrillaDAO cuadrillaDAO = CuadrillaDAO.build();
         String nameCuadrilla = Name.getText();
 
         if (nameCuadrilla.isEmpty()) {
-            Alert("Error", "Por favor ingrese el nombre de la cuadrilla.");
+            Utils.ShowAlert("Por favor ingrese el nombre de la cuadrilla.");
             return;
         }
         Cuadrilla cuadrillaDelete = cuadrillaDAO.findByName(nameCuadrilla);
 
         if (cuadrillaDelete != null) {
             cuadrillaDAO.delete(cuadrillaDelete);
-            Alert("Borrado exitoso", "La cuadrilla ha sido borrado correctamente.");
+            Utils.ShowAlert("La cuadrilla ha sido borrado correctamente.");
         } else {
-            Alert("Error", "No se encontró ninguna cuadrilla con el nombre proporcionado.");
+            Utils.ShowAlert("No se encontró ninguna cuadrilla con el nombre proporcionado.");
         }
 
         Name.setText("");
     }
+
+    /**
+     * Switches to the Cuadrilla menu screen.
+     *
+     * @throws IOException If an error occurs while loading the screen
+     */
     @FXML
     private void MenuCuadrilla() throws IOException {
         Scenes.setRoot("pantallaMenuCuadrilla", null, null);
-    }
-    private void Alert(String titulo, String mensaje) {
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle(titulo);
-        alert.setHeaderText(null);
-        alert.setContentText(mensaje);
-        alert.showAndWait();
+
+
+
+
     }
 }
