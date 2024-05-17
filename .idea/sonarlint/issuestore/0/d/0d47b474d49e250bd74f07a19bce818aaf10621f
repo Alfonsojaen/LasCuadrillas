@@ -1,5 +1,3 @@
 
-–	java:S116"ORename this field "Name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ì’Ú÷şÿÿÿÿ8®Œùè÷1J$9e6bd933-5473-46a9-bddc-4761cd3a4a98
-	java:S1004"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÃêÌ8¶Œùè÷1J$d270ab60-c254-4e5a-be0b-7d38b2dfe4f6
-y
-java:S1128"7Remove this unused import 'javafx.scene.control.Alert'.(ÊÇê:8º˜ƒé÷1J$65747cda-2e36-4e43-a7c4-58efb3d23663
+–	java:S116"ORename this field "Name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ì’Ú÷şÿÿÿÿ8®Œùè÷1J$d4fd8b17-297d-4901-9e6b-cddc13e81d9c
+	java:S1003"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÃêÌ8¶Œùè÷1J$15b0abc9-9c6c-4575-82b0-6bcf6a75d9f1

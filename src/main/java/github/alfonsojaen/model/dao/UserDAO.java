@@ -88,6 +88,11 @@ public class UserDAO implements InterfaceUserDAO<User> {
         return null;
     }
 
+    @Override
+    public List<User> findAll() {
+        return null;
+    }
+
     /**
      * Finds a user by their username in the database.
      * @param username The username of the user to find.
@@ -140,11 +145,6 @@ public class UserDAO implements InterfaceUserDAO<User> {
      * Gets all users stored in the database.
      * @return A list of all users stored in the database.
      */
-    @Override
-    public List<User> findAll() {
-        return null;
-    }
-
     @Override
     public void close() throws IOException {
 
