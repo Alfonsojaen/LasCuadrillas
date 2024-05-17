@@ -1,10 +1,10 @@
 
 p
-java:S5411P"(Use a primitive boolean expression here.(¬‰‘™şÿÿÿÿ8êğˆø1J$62bf5d46-be88-497a-8b27-47e49027102b
+java:S5411P"(Use a primitive boolean expression here.(¬‰‘™şÿÿÿÿ8êğˆø1J$0971f255-8d75-4e26-8761-1065358ade08
 ’
-java:S2095\"JUse try-with-resources or close this "CuadrillaDAO" in a "finally" clause.(ŒÈ°Êúÿÿÿÿ8áêğˆø1J$1ae6f2b4-65f6-4aac-833b-c4aee52667a1
-š	java:S116 "SRename this field "Selected" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡£á‹şÿÿÿÿ8âêğˆø1J$a2d81af9-784f-4228-ab75-5e82c37ebb13
+java:S2095\"JUse try-with-resources or close this "CuadrillaDAO" in a "finally" clause.(ŒÈ°Êúÿÿÿÿ8áêğˆø1J$64067183-971e-42fb-9c57-0080f62b1230
+š	java:S116 "SRename this field "Selected" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡£á‹şÿÿÿÿ8âêğˆø1J$0d0b58e3-fafc-48e9-94b0-d2ecfc07d166
 œ
-java:S1845 "TRename field "Selected" to prevent any misunderstanding/clash with field "selected".(‡£á‹şÿÿÿÿ8äêğˆø1J$43a48d8e-2213-41ff-b7dd-4acad9bc5458
+java:S1845 "TRename field "Selected" to prevent any misunderstanding/clash with field "selected".(‡£á‹şÿÿÿÿ8äêğˆø1J$98ae64b0-f787-42f8-971b-5d17413ad13e
 …
-java:S1126_"BReplace this if-then-else statement by a single method invocation.(¡èı 8îêğˆø1J$58c50b68-0fb0-478b-a9dd-5ede5411ca16
+java:S1126_"BReplace this if-then-else statement by a single method invocation.(¡èı 8îêğˆø1J$79f9c3d6-1b8b-4997-8982-2f6fad0b41ee
