@@ -1,10 +1,10 @@
 
 
-java:S1192q"LDefine a constant instead of duplicating this literal "brotherhood" 4 times.(Ë‘µœ8ÍàšØ÷1J$adc773f7-eab8-49e1-a1c2-d8649db780e4
+java:S1192u"LDefine a constant instead of duplicating this literal "brotherhood" 4 times.(Ë‘µœ8ÍàšØ÷1J$4448c2ac-5c62-44b2-9433-1d7f589f5e97
 Ê
-java:S1186Æ"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(æÔ«÷şÿÿÿÿ8åàšØ÷1J$074d02eb-382e-4340-9b40-e6927fe0acee
+java:S1186Ë"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(æÔ«÷şÿÿÿÿ8åàšØ÷1J$fca78fd5-f43f-4617-b5ea-01613c49f556
 
-java:S1124"EReorder the modifiers to comply with the Java Language Specification.(øºÏÿÿÿÿÿ8êàšØ÷1J$05360946-938f-4b32-897b-e0e1a04c414b
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(øºÏÿÿÿÿÿ8êàšØ÷1J$435d0f17-7703-45b4-a6aa-c9341a30fb96
 ˆ
-java:S1124"EReorder the modifiers to comply with the Java Language Specification.(ÿ¹«8êàšØ÷1J$9d8e2d6c-9fe8-4df3-abaa-63c2e69c44cb
-k	java:S108J")Either remove or fill this block of code.(å¥‡8ñàšØ÷1J$a484d076-42f5-4465-9f0e-24dc0adcbaf0
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(ÿ¹«8êàšØ÷1J$61dc978a-fd8c-4224-909a-1a83a57b703c
+k	java:S108M")Either remove or fill this block of code.(å¥‡8ñàšØ÷1J$556a4f91-5733-479a-a3ed-4bbc1ccdb4d8

@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public  class Costalero {
+public class Costalero {
     private int id;
     private String nickname;
     private int height;
@@ -63,6 +63,10 @@ public  class Costalero {
     public void setCuadrillas(List<Cuadrilla> cuadrilla) {
         this.cuadrillas= cuadrilla;
     }
+    /**
+     * Adds a cuadrilla to the list if it's not already present.
+     * @param cuadrilla The cuadrilla to be added.
+     */
     public void addCuadrilla(Cuadrilla cuadrilla){
         if(cuadrillas==null){
             cuadrillas = new ArrayList<>();
@@ -71,6 +75,10 @@ public  class Costalero {
             cuadrillas.add(cuadrilla);
         }
     }
+    /**
+     * Removes a cuadrilla from the list if it exists.
+     * @param cuadrilla The cuadrilla to be removed.
+     */
     public void removeCuadrilla(Cuadrilla cuadrilla){
         if(cuadrillas!=null){
             cuadrillas.remove(cuadrilla);

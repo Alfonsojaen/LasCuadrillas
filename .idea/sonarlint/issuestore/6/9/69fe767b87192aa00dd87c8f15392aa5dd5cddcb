@@ -1,20 +1,16 @@
 
-	java:S112C"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8¢çÀêõ1J$dbd488b2-ecbb-4278-93d4-275265646cc5
-ª
-java:S1192\"iDefine a constant instead of duplicating this literal "Te has pasado del limtite de caracteres!" 3 times.(Âşç”øÿÿÿÿJ$8d51c45f-5738-4f98-9e29-784374478595
-w
-java:S4973S"<Strings and Boxed types should be compared using "equals()".(ûŞÏCJ$d91bf5c8-a0a0-4a78-a9e4-ec858d03a363
-w
-java:S4973b"<Strings and Boxed types should be compared using "equals()".(ûŞÏCJ$d32cd5ae-6969-4bb4-a24a-976fac0c04f4
-w
-java:S4973q"<Strings and Boxed types should be compared using "equals()".(ûŞÏCJ$c39b99cd-83e7-4742-b137-c070cc55872e
-š
-java:S1450&"YRemove the "cuadrillas" field and declare it as a local variable in the relevant methods.(àÙ‘ÖúÿÿÿÿJ$cef8637e-13d4-43aa-a5f8-74cf575859eb
-š
-java:S37765"RRefactor this method to reduce its Cognitive Complexity from 23 to the 15 allowed.(•‘İŸüÿÿÿÿ8ÂçÀêõ1J$91f0bd5b-5320-4c06-8184-83f9e1d5ac4c
+	java:S112W"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8Ã’¿‹ø1J$e6471d91-eca3-45cc-8b78-3683796fd1e2
+±
+java:S1192o"iDefine a constant instead of duplicating this literal "Te has pasado del limtite de caracteres!" 3 times.(–ü™¬øÿÿÿÿ8õÀĞ‹ø1J$04ec7940-f0a8-41a1-863f-d1c921fcb4b6
+~
+java:S4973g"<Strings and Boxed types should be compared using "equals()".(ûŞÏC8Æ’¿‹ø1J$655f36cb-21d9-4b4f-8a28-7e6b2ded541a
+~
+java:S4973t"<Strings and Boxed types should be compared using "equals()".(ûŞÏC8Ç’¿‹ø1J$811e4b71-ece0-449f-9ae1-28f15162f10d
 
-java:S11176">Rename "cuadrillas" which hides the field declared at line 38.(ŠŒÖ£şÿÿÿÿJ$ea1160b5-0908-401d-9965-99c66ecfe5a2
-U
-java:S1128"3Remove this unused import 'github.alfonsojaen.App'.(óÀ‹–ûÿÿÿÿ8˜«“µ÷1
-b
-java:S1128"FRemove this unused import 'github.alfonsojaen.model.entity.Costalero'.(îÚÉ_8˜«“µ÷1
+java:S4973"<Strings and Boxed types should be compared using "equals()".(ûŞÏC8Ç’¿‹ø1J$0dec5936-bcfb-4ed9-ba9b-aab81e264dd7
+¡
+java:S1450$"YRemove the "cuadrillas" field and declare it as a local variable in the relevant methods.(àÙ‘Öúÿÿÿÿ8Ú’¿‹ø1J$7287acbb-55f1-4aa5-b6c7-7e4dc1260721
+š
+java:S3776I"RRefactor this method to reduce its Cognitive Complexity from 23 to the 15 allowed.(•‘İŸüÿÿÿÿ8ß’¿‹ø1J$abeed8aa-14d5-4ff2-a8b8-a28f471a1884
+†
+java:S1117J">Rename "cuadrillas" which hides the field declared at line 36.(ŠŒÖ£şÿÿÿÿ8à’¿‹ø1J$e7cf6ea9-87cd-4d1f-bd89-f5fd8534b976

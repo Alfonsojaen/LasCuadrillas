@@ -3,15 +3,16 @@ package github.alfonsojaen.model.dao;
 import github.alfonsojaen.model.connection.ConnectionMariaDB;
 import github.alfonsojaen.model.entity.Costalero;
 import github.alfonsojaen.model.entity.Cuadrilla;
+import github.alfonsojaen.model.interfaces.InterfaceCostaleroDAO;
 
 import java.io.IOException;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CostaleroDAO implements DAO<Costalero> {
+public class CostaleroDAO implements InterfaceCostaleroDAO<Costalero> {
 
-    // Consultas SQL
+    // SQL Queries
     private final static String INSERT = "INSERT INTO costalero (nickname,height,age) VALUES (?,?,?)";
     private final static String INSERTCUADRILLA = "INSERT INTO pertenece (cuadrillaId,costaleroId) VALUES (?,?)";
     private final static String DELETEIDCUADRILLA = "DELETE FROM pertenece WHERE costaleroId=?";
@@ -24,36 +25,34 @@ public class CostaleroDAO implements DAO<Costalero> {
     private Connection conn;
 
     /**
-     * Constructor que inicializa la conexión a la base de datos.
+     * Constructor that initializes the connection to the database.
      */
     public CostaleroDAO() {
         conn = ConnectionMariaDB.getConnection();
     }
 
     /**
-     * Guarda un costalero en la base de datos.
-     * @param costalero El costalero que se va a guardar.
-     * @return El costalero guardado, con su ID actualizado si se generó automáticamente, o null si ocurrió un error.
-     * @throws SQLException Si ocurre un error al ejecutar la operación en la base de datos.
+     * Saves a costalero in the database.
+     * @param costalero The costalero to be saved.
+     * @return The saved costalero, with its ID updated if generated automatically, or null if an error occurred.
+     * @throws SQLException If an error occurs while executing the operation in the database.
      */
     @Override
-    public Costalero save(Costalero costalero)  throws SQLException{
+    public Costalero save(Costalero costalero) throws SQLException {
         if (costalero != null ) {
-        Costalero c = findById(costalero.getId());
-        if (c.getId() == 0) {
-            //INSERT
-            try (PreparedStatement pst = this.conn.prepareStatement(INSERT, Statement.RETURN_GENERATED_KEYS)) {
-                pst.setString(1, costalero.getNickname());
-                pst.setInt(2, costalero.getHeight());
-                pst.setInt(3, costalero.getAge());
-                pst.executeUpdate();
-                ResultSet r = pst.getGeneratedKeys();
-                if (r.next()) {
-                    int generatedId = r.getInt(1);
-                    costalero.setId(generatedId);
-                }
-
-
+            Costalero c = findById(costalero.getId());
+            if (c.getId() == 0) {
+                //INSERT
+                try (PreparedStatement pst = this.conn.prepareStatement(INSERT, Statement.RETURN_GENERATED_KEYS)) {
+                    pst.setString(1, costalero.getNickname());
+                    pst.setInt(2, costalero.getHeight());
+                    pst.setInt(3, costalero.getAge());
+                    pst.executeUpdate();
+                    ResultSet r = pst.getGeneratedKeys();
+                    if (r.next()) {
+                        int generatedId = r.getInt(1);
+                        costalero.setId(generatedId);
+                    }
                 } catch (SQLException e) {
                     e.printStackTrace();
                     costalero = null;
@@ -61,16 +60,16 @@ public class CostaleroDAO implements DAO<Costalero> {
             }
         }
         return costalero;
-
     }
 
     /**
-     * Busca un costalero por su nombre.
-     * @param name El nombre del costalero a buscar.
-     * @return El costalero encontrado o un objeto Costalero vacío si no se encuentra.
+     * Finds a costalero by its name.
+     * @param name The name of the costalero to search for.
+     * @return The found costalero or an empty Costalero object if not found.
      */
-    public Costalero findByName(String name) {
-        Costalero result = new Costalero();
+    @Override
+    public Costalero findByNickname(String name) {
+        Costalero result = new CostaleroLazy();
         if(name != null) {
             try (PreparedStatement pst = ConnectionMariaDB.getConnection().prepareStatement(FINDBYNAME)) {
                 pst.setString(1, name);
@@ -88,36 +87,37 @@ public class CostaleroDAO implements DAO<Costalero> {
     }
 
     /**
-     * Actualiza la información de un costalero en la base de datos.
-     * @param costalero El costalero con la información actualizada.
+     * Updates the information of a costalero in the database.
+     * @param costalero The costalero with the updated information.
      */
+    @Override
     public void update(Costalero costalero) {
         try (PreparedStatement pst = this.conn.prepareStatement(UPDATE)) {
             if (costalero != null) {
-            pst.setString(1, costalero.getNickname());
-            pst.setInt(2, costalero.getHeight());
-            pst.setInt(3, costalero.getAge());
-            pst.setInt(4, costalero.getId());
-            pst.executeUpdate();
-            } else {
-        }
-    } catch (SQLException e) {
+                pst.setString(1, costalero.getNickname());
+                pst.setInt(2, costalero.getHeight());
+                pst.setInt(3, costalero.getAge());
+                pst.setInt(4, costalero.getId());
+                pst.executeUpdate();
+            }
+        } catch (SQLException e) {
             e.printStackTrace();
         }
     }
 
     /**
-     * Asigna una cuadrilla al costalero en la base de datos.
-     * @param costalero El costalero al que se asigna la cuadrilla.
-     * @throws SQLException Si ocurre un error al ejecutar la operación en la base de datos.
+     * Assigns a cuadrilla to the costalero in the database.
+     * @param costalero The costalero to whom the cuadrilla is assigned.
+     * @throws SQLException If an error occurs while executing the operation in the database.
      */
-        public void setCuadrilla(Costalero costalero) throws SQLException{
+    @Override
+    public void setCuadrilla(Costalero costalero) throws SQLException {
         try (PreparedStatement pst = this.conn.prepareStatement(DELETEIDCUADRILLA)) {
             pst.setInt(1, costalero.getId());
             pst.executeUpdate();
         } catch (SQLException e) {
         }
-        for(Cuadrilla cuadrilla : costalero.getCuadrilla()){
+        for(Cuadrilla cuadrilla : costalero.getCuadrilla()) {
             try (PreparedStatement pst = this.conn.prepareStatement(INSERTCUADRILLA)) {
                 pst.setInt(1, cuadrilla.getId());
                 pst.setInt(2, costalero.getId());
@@ -126,13 +126,12 @@ public class CostaleroDAO implements DAO<Costalero> {
                 e.printStackTrace();
             }
         }
-
     }
 
     /**
-     * Elimina un costalero de la base de datos.
-     * @param costalero El costalero que se va a eliminar.
-     * @return El costalero eliminado, o null si ocurrió un error o el costalero no existe.
+     * Deletes a costalero from the database.
+     * @param costalero The costalero to be deleted.
+     * @return The deleted costalero, or null if an error occurred or the costalero does not exist.
      */
     @Override
     public Costalero delete(Costalero costalero) {
@@ -140,7 +139,6 @@ public class CostaleroDAO implements DAO<Costalero> {
             try (PreparedStatement pst = conn.prepareStatement(DELETE)) {
                 pst.setInt(1, costalero.getId());
                 pst.executeUpdate();
-
             } catch (SQLException e) {
                 e.printStackTrace();
                 costalero = null;
@@ -150,15 +148,14 @@ public class CostaleroDAO implements DAO<Costalero> {
     }
 
     /**
-     * Busca un costalero por su ID en la base de datos.
-     * @param key El ID del costalero a buscar.
-     * @return El costalero encontrado, o un objeto Costalero vacío si no se encuentra.
+     * Finds a costalero by its ID in the database.
+     * @param key The ID of the costalero to search for.
+     * @return The found costalero, or an empty Costalero object if not found.
      */
     @Override
     public Costalero findById(int key) {
-        Costalero result = new Costalero();
+        Costalero result = new CostaleroLazy();
         if (key != 0) {
-
             try (PreparedStatement pst = ConnectionMariaDB.getConnection().prepareStatement(FINDBYID)) {
                 pst.setInt(1, key);
                 ResultSet res = pst.executeQuery();
@@ -177,29 +174,27 @@ public class CostaleroDAO implements DAO<Costalero> {
     }
 
     /**
-     * Obtiene todos los costaleros almacenados en la base de datos.
-     * @return Una lista de costaleros almacenados en la base de datos.
+     * Retrieves all costaleros stored in the database.
+     * @return A list of costaleros stored in the database.
      */
-        @Override
+    @Override
     public List<Costalero> findAll() {
-            List<Costalero> result = new ArrayList<>();
-
-            try(PreparedStatement pst = ConnectionMariaDB.getConnection().prepareStatement(FINDALL)) {
-
-                ResultSet res = pst.executeQuery();
-                while (res.next()){
-                    Costalero c = new Costalero();//LAZY
-                    c.setId(res.getInt(1));
-                    c.setNickname(res.getString("nickname"));
-                    c.setHeight(res.getInt(3));
-                    c.setAge(res.getInt(4));
-                    result.add(c);
-                }
-                res.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
+        List<Costalero> result = new ArrayList<>();
+        try (PreparedStatement pst = ConnectionMariaDB.getConnection().prepareStatement(FINDALL)) {
+            ResultSet res = pst.executeQuery();
+            while (res.next()) {
+                Costalero c = new CostaleroLazy();
+                c.setId(res.getInt(1));
+                c.setNickname(res.getString("nickname"));
+                c.setHeight(res.getInt(3));
+                c.setAge(res.getInt(4));
+                result.add(c);
             }
-            return result;
+            res.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return result;
         }
 
 
@@ -209,11 +204,23 @@ public class CostaleroDAO implements DAO<Costalero> {
     }
 
     /**
-     * Construye una nueva instancia de CostaleroDAO.
-     * @return Una nueva instancia de CostaleroDAO.
+     * Constructs a new instance of CostaleroDAO.
+     * @return A new instance of CostaleroDAO.
      */
+
     public static CostaleroDAO build() {
         return new CostaleroDAO();
     }
+    class CostaleroLazy extends Costalero{
+        @Override
+        public List<Cuadrilla> getCuadrilla(){
+            if(super.getCuadrilla()== null){
+                setCuadrillas(CuadrillaDAO.build().findByCostalero(this));
+            }
+            return super.getCuadrilla();
+        }
 
-}
+        }
+    }
+
+

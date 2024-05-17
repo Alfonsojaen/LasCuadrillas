@@ -1,6 +1,5 @@
 package github.alfonsojaen.view;
 
-import github.alfonsojaen.App;
 import github.alfonsojaen.model.dao.UserDAO;
 import github.alfonsojaen.model.entity.User;
 import github.alfonsojaen.utils.Utils;
@@ -26,17 +25,22 @@ public class ControllerUserRegister {
     private ImageView button;
 
 
-    UserDAO userDAO = new UserDAO();
-
-
-
+    /**
+     * Handles the registration process when the register button is clicked.
+     */
     @FXML
     public void btRegistrar() {
         addUsuario();
     }
 
+    /**
+     * Adds a new user to the system based on entered data.
+     * Encrypts the password using SHA-256 before storing.
+     * Displays appropriate alerts for successful or failed registration.
+     */
     @FXML
     private void addUsuario() {
+        UserDAO userDAO = new UserDAO();
         String username = tusername.getText();
         String gmail = tgmail.getText();
         String name = tname.getText();
@@ -64,14 +68,26 @@ public class ControllerUserRegister {
             }
         }
     }
+
+    /**
+     * Changes the opacity of the registration button when the mouse hovers over it.
+     */
     @FXML
     private void overButton(){
         button.setOpacity(0.5);
     }
+
+    /**
+     * Resets the opacity of the registration button when the mouse moves away from it.
+     */
     @FXML
     private void offButton(){
         button.setOpacity(1.0);
     }
+
+    /**
+     * Switches to the login screen when the corresponding button is clicked.
+     */
     @FXML
     private void switchToLoginUser() {
         try {

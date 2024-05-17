@@ -1,19 +1,14 @@
 package github.alfonsojaen.view;
 
-import github.alfonsojaen.App;
 import github.alfonsojaen.model.dao.UserDAO;
 import github.alfonsojaen.model.singleton.UserSession;
 import github.alfonsojaen.utils.Utils;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
-import javafx.scene.control.Hyperlink;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
 import java.io.IOException;
-import java.net.URI;
-import java.net.URISyntaxException;
 import java.sql.SQLException;
 
 public class ControllerUserLogin  {
@@ -23,6 +18,13 @@ public class ControllerUserLogin  {
     @FXML
     private PasswordField tPass;
 
+    /**
+     * Handles the user login process.
+     * Retrieves the entered Gmail and password, validates them,
+     * and logs the user in if the credentials are correct.
+     * Displays appropriate alerts for successful or failed login attempts.
+     *
+     */
     @FXML
     private void login() throws SQLException, IOException {
 
@@ -32,40 +34,38 @@ public class ControllerUserLogin  {
 
 
         if(gmail.equals("") || password.equals("")) {
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setHeaderText(null);
-            alert.setTitle("ERROR");
-            alert.setContentText("Falta algun campo por introducir");
-            alert.showAndWait();
+            Utils.ShowAlert("Falta algun campo por introducir");
         }else {
             UserDAO mDAO = new UserDAO();
             String nameUser;
             if((nameUser=mDAO.checkLogin(gmail, password))!=null) {
                 UserSession.login(gmail, password);
-                //Logged
-                Alert alerta = new Alert(Alert.AlertType.INFORMATION);
-                alerta.setTitle("Login");
-                alerta.setHeaderText("Login exitoso");
-                alerta.setContentText("Se ha logeago el Usuario correctamente.");
-                alerta.showAndWait();
+                Utils.ShowAlert("Login exitoso, Se ha logeago el Usuario correctamente.");
                 switchToUserPage();
             }else {
                 UserSession.logout();
-                Alert alerta = new Alert(Alert.AlertType.INFORMATION);
-                alerta.setTitle("Login");
-                alerta.setHeaderText("No se ha podido logear");
-                alerta.setContentText("Intentelo de nuevo.");
-                alerta.showAndWait();
+                Utils.ShowAlert("No se ha podido logear, Intentelo de nuevo.");
             }
 
         }
 
     }
 
+    /**
+     * Switches to the user page upon successful login.
+     *
+     * @throws IOException if an I/O error occurs during scene transition
+     */
     @FXML
     private void switchToUserPage() throws IOException {
        Scenes.setRoot("pantallaMenu",null, null);
     }
+
+    /**
+     * Switches to the user registration page.
+     *
+     * @throws IOException if an I/O error occurs during scene transition
+     */
     @FXML
     private void switchToRegister() throws IOException {
         Scenes.setRoot("pantallaRegisterUser", null, null);

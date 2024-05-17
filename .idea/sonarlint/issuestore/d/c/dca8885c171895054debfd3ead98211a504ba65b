@@ -1,18 +1,9 @@
 
-†
-java:S2095)"EUse try-with-resources or close this "UserDAO" in a "finally" clause.(áô úÿÿÿÿJ$ea50b230-a0fd-4b7d-83e1-08b910543e0a
-}
-java:S1854+"<Remove this useless assignment to local variable "nameUser".(­„­­ûÿÿÿÿJ$ace70cf3-df8d-40a1-ac44-0a9e081a8ce7
-n
-java:S1481*"-Remove this unused "nameUser" local variable.(Á­ ÀûÿÿÿÿJ$ae90fea7-c004-4303-aae8-7c27840f55d8
-{
-java:S1128"3Remove this unused import 'github.alfonsojaen.App'.(óÀ‹–ûÿÿÿÿ8×‰÷1J$c231331b-d0ba-44e1-b1d6-1bdc4243da06
-}
-java:S1128"5Remove this unused import 'javafx.event.ActionEvent'.(î•¯¼ıÿÿÿÿ8×‰÷1J$fbe74a7b-f655-49ea-905f-004de39dabda
-ƒ
-java:S1128
-";Remove this unused import 'javafx.scene.control.Hyperlink'.(ÍçüÃúÿÿÿÿ8†ÔÍ‰÷1J$9c098e7d-ec41-4b65-9b94-30f823c7312e
-l
-java:S1128")Remove this unused import 'java.net.URI'.(Ö¦¨°8×‰÷1J$0a7f2e7d-db7d-41fa-85c4-5d105faf19be
-€
-java:S1128"8Remove this unused import 'java.net.URISyntaxException'.(Ä®íÿÿÿÿÿ8×‰÷1J$db75ca8f-0041-4eda-af9a-17f3adba5b4b
+
+java:S2095'"EUse try-with-resources or close this "UserDAO" in a "finally" clause.(áô úÿÿÿÿ8şíÁ”ø1J$8eb1151e-2b21-4706-867f-edc4a62b9936
+„
+java:S1854)"<Remove this useless assignment to local variable "nameUser".(­„­­ûÿÿÿÿ8æ¶ş“ø1J$faed8491-fc61-496d-8d89-39301d25db92
+u
+java:S1481("-Remove this unused "nameUser" local variable.(Á­ Àûÿÿÿÿ8é¶ş“ø1J$0bceed1a-6166-4f01-8093-3cda89ed01b1
+y
+java:S1128"7Remove this unused import 'javafx.scene.control.Alert'.(ÊÇê:8…îÁ”ø1J$8a2fb29c-253d-435a-99dd-b1c4347ba9aa

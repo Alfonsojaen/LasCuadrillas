@@ -6,7 +6,7 @@ import github.alfonsojaen.model.entity.Cuadrilla;
 import java.sql.SQLException;
 
 
-public class testInsertCuadrilla {
+public class TestInsertCuadrilla {
     public static void main(String[] args) throws SQLException {
         CuadrillaDAO cuadrillaDAO = new CuadrillaDAO();
 

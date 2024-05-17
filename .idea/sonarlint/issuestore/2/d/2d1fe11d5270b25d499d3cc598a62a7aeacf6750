@@ -1,4 +1,6 @@
 
-–	java:S116"ORename this field "Name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ì’Ú÷şÿÿÿÿ8³ÙÄÆõ1J$07fe53d6-298a-4454-a5c3-092806fb86df
-š	java:S116"SRename this field "Overseer" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÏÅ¦ºúÿÿÿÿ8´ÙÄÆõ1J$2a3f9c1a-01e0-4a79-a30a-facc490a88b7
-˜	java:S116"VRename this field "Description" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦¾ô½8´ÙÄÆõ1J$af27475a-a793-4a52-8cf6-56cc7ac30f25
+
+java:S11925"MDefine a constant instead of duplicating this literal "[a-zA-Z\\s]+" 3 times.(Ú±”‰8ÕÀ‡Ş÷1J$46acaf23-5a60-44ab-bfe8-d5ca9a55c856
+–	java:S116"ORename this field "Name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ì’Ú÷şÿÿÿÿ8äÀ‡Ş÷1J$40b37bc1-eb43-4152-9497-8d2c53c5e3ef
+š	java:S116"SRename this field "Overseer" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÏÅ¦ºúÿÿÿÿ8åÀ‡Ş÷1J$1eee3a47-fb17-4dac-858a-8bd75af1ffe6
+˜	java:S116"VRename this field "Description" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦¾ô½8åÀ‡Ş÷1J$6755dd07-bff8-46b4-b2f3-248d359f19e3

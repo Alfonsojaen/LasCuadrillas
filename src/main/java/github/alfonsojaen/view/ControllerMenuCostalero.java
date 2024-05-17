@@ -1,14 +1,13 @@
 package github.alfonsojaen.view;
 
-import github.alfonsojaen.App;
 import github.alfonsojaen.model.dao.CostaleroDAO;
 import github.alfonsojaen.model.entity.Costalero;
+import github.alfonsojaen.utils.Utils;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableRow;
 import javafx.scene.control.TableView;
@@ -19,6 +18,9 @@ import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
 
+/**
+ * Controller class for managing the Costalero menu.
+ */
 public class ControllerMenuCostalero  implements Initializable {
     @FXML
     private TableView<Costalero> tableview;
@@ -36,18 +38,43 @@ public class ControllerMenuCostalero  implements Initializable {
 
     private ObservableList<Costalero> costaleros;
 
+    /**
+     * Switches to the main menu screen.
+     *
+     * @throws IOException If an error occurs while loading the screen
+     */
     @FXML
     private void switchToMenu() throws IOException {
         Scenes.setRoot("pantallaMenu", null, null);
     }
+
+    /**
+     * Switches to the screen for inserting a new Costalero.
+     *
+     * @throws IOException If an error occurs while loading the screen
+     */
     @FXML
     private void switchToInsertCostalero() throws IOException {
         Scenes.setRoot("pantallaInsertCostalero", null,null);
     }
+
+    /**
+     * Switches to the screen for deleting a Costalero.
+     *
+     * @throws IOException If an error occurs while loading the screen
+     */
     @FXML
     private void switchToDeleteCostalero() throws IOException {
         Scenes.setRoot("pantallaDeleteCostalero", null,null);
     }
+
+    /**
+     * Initializes the controller by retrieving Costalero data from the database,
+     * setting up TableView with Costalero data, defining custom behavior for double-clicking rows,
+     * setting cell value factories for displaying Costalero attributes,
+     * and defining behavior for editing Costalero attributes in the TableView.
+     *
+     */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         List<Costalero> costaleros = CostaleroDAO.build().findAll();
@@ -82,14 +109,12 @@ public class ControllerMenuCostalero  implements Initializable {
             if (event.getNewValue() == event.getOldValue()) {
                 return;
             }
-            if (event.getNewValue().length() <= 30) {
+            if (event.getNewValue().length() <= 20) {
                 Costalero costalero = event.getRowValue();
                 costalero.setNickname(event.getNewValue());
                 CostaleroDAO.build().update(costalero);
             } else {
-                Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setContentText("Te has pasado del limtite de caracteres!");
-                alert.show();
+                Utils.ShowAlert("Te has pasado del limtite de caracteres!");
             }
         });
         height.setCellFactory(TextFieldTableCell.forTableColumn());
@@ -97,14 +122,12 @@ public class ControllerMenuCostalero  implements Initializable {
             if (event.getNewValue() == event.getOldValue()) {
                 return;
             }
-            if (event.getNewValue().length() <= 20) {
+            if (event.getNewValue().length() <= 3) {
                 Costalero costalero = event.getRowValue();
                 costalero.setHeight(Integer.parseInt(event.getNewValue()));
                 CostaleroDAO.build().update(costalero);
             } else {
-                Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setContentText("Te has pasado del limtite de caracteres!");
-                alert.show();
+                Utils.ShowAlert("Te has pasado del limtite de números!");
             }
         });
         age.setCellFactory(TextFieldTableCell.forTableColumn());
@@ -112,14 +135,12 @@ public class ControllerMenuCostalero  implements Initializable {
             if (event.getNewValue() == event.getOldValue()) {
                 return;
             }
-            if (event.getNewValue().length() <= 60) {
+            if (event.getNewValue().length() <= 3) {
                 Costalero costalero = event.getRowValue();
                 costalero.setAge(Integer.parseInt(event.getNewValue()));
                 CostaleroDAO.build().update(costalero);
             } else {
-                Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setContentText("Te has pasado del limtite de caracteres!");
-                alert.show();
+                Utils.ShowAlert("Te has pasado del limtite de números!");
             }
         });
     }

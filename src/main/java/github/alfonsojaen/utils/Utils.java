@@ -1,6 +1,7 @@
 package github.alfonsojaen.utils;
 
 import javafx.scene.control.Alert;
+import javafx.scene.layout.Region;
 import javafx.stage.Stage;
 
 import java.security.MessageDigest;
@@ -37,6 +38,16 @@ public class Utils {
         s.toFront();
 
         return alertDialog;
+    }
+
+
+    public static void ShowAlert(String message) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Información");
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.getDialogPane().setMinHeight(Region.USE_PREF_SIZE);
+        alert.showAndWait();
     }
 }
 

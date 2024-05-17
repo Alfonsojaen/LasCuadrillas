@@ -3,7 +3,7 @@ package github.alfonsojaen.test;
 import github.alfonsojaen.model.dao.PasoDAO;
 import github.alfonsojaen.model.entity.Paso;
 
-public class testDeletePaso {
+public class TestDeletePaso {
     public static void main(String[] args) {
         // Crear una instancia de PasoDAO
         PasoDAO pasoDAO = new PasoDAO();

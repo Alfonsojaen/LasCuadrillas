@@ -1,15 +1,13 @@
 package github.alfonsojaen.view;
 
-import github.alfonsojaen.App;
 import github.alfonsojaen.model.dao.CuadrillaDAO;
-import github.alfonsojaen.model.entity.Costalero;
 import github.alfonsojaen.model.entity.Cuadrilla;
+import github.alfonsojaen.utils.Utils;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableRow;
 import javafx.scene.control.TableView;
@@ -37,18 +35,40 @@ public class ControllerMenuCuadrilla implements Initializable {
 
     private ObservableList<Cuadrilla> cuadrillas;
 
+    /**
+     * Handles switching back to the main menu screen.
+     * @throws IOException if an I/O error occurs
+     */
     @FXML
     private void switchToMenu() throws IOException {
         Scenes.setRoot("pantallaMenu",null,null);
     }
+
+    /**
+     * Handles switching to the screen for inserting a new Cuadrilla.
+     * @throws IOException if an I/O error occurs
+     */
     @FXML
     private void switchToInsertCuadrilla() throws IOException {
         Scenes.setRoot("pantallaInsertCuadrilla",null,null);
     }
+
+    /**
+     * Handles switching to the screen for deleting a Cuadrilla.
+     * @throws IOException if an I/O error occurs
+     */
     @FXML
     private void switchToDeleteCuadrilla() throws IOException {
         Scenes.setRoot("pantallaDeleteCuadrilla",null,null);
     }
+
+    /**
+     * Initializes the controller by fetching Cuadrilla data from the database,
+     * configuring the TableView with Cuadrilla data, defining custom behavior for row double-clicks,
+     * setting cell value factories to display Cuadrilla attributes,
+     * and defining behavior for editing Cuadrilla attributes in the TableView.
+     *
+     */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         List<Cuadrilla> cuadrillas = CuadrillaDAO.build().findAll();
@@ -88,9 +108,7 @@ public class ControllerMenuCuadrilla implements Initializable {
                 cuadrilla.setName(event.getNewValue());
                 CuadrillaDAO.build().update(cuadrilla);
             } else {
-                Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setContentText("Te has pasado del limtite de caracteres!");
-                alert.show();
+                Utils.ShowAlert("Te has pasado del limtite de caracteres!");
             }
         });
         overseer.setCellFactory(TextFieldTableCell.forTableColumn());
@@ -103,9 +121,7 @@ public class ControllerMenuCuadrilla implements Initializable {
                 cuadrilla.setOverseer(event.getNewValue());
                 CuadrillaDAO.build().update(cuadrilla);
             } else {
-                Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setContentText("Te has pasado del limtite de caracteres!");
-                alert.show();
+                Utils.ShowAlert("Te has pasado del limtite de caracteres!");
             }
         });
         description.setCellFactory(TextFieldTableCell.forTableColumn());
@@ -118,9 +134,7 @@ public class ControllerMenuCuadrilla implements Initializable {
                 cuadrilla.setDescription(event.getNewValue());
                 CuadrillaDAO.build().update(cuadrilla);
             } else {
-                Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setContentText("Te has pasado del limtite de caracteres!");
-                alert.show();
+                Utils.ShowAlert("Te has pasado del limtite de caracteres!");
             }
         });
     }
