@@ -10,13 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="af7f30ad-2f81-4f53-b035-ccfdeef794b2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/d/0d47b474d49e250bd74f07a19bce818aaf10621f" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/d/0d47b474d49e250bd74f07a19bce818aaf10621f" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/b/1bf82adf23d1478c55d173261c51561b7d5e9591" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/b/1bf82adf23d1478c55d173261c51561b7d5e9591" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/d/6d0331cc547605c69b0fc5eff4fdf5aba2885106" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/d/6d0331cc547605c69b0fc5eff4fdf5aba2885106" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/f/df1bddc9302a216e211c3c282991b599e940cc5e" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/f/df1bddc9302a216e211c3c282991b599e940cc5e" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Document/LasCuadrillas-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,10 +70,11 @@
       <recent name="C:\Users\alfon\IdeaProjects\LasCuadrillas\src\main\java\github\alfonsojaen" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\alfon\IdeaProjects\LasCuadrillas\Document" />
+      <recent name="C:\Users\alfon\IdeaProjects\LasCuadrillas\target" />
       <recent name="C:\Users\alfon\IdeaProjects\LasCuadrillas\src\main\resources\icons" />
       <recent name="C:\Users\alfon\IdeaProjects\LasCuadrillas\src\main\resources\github\alfonsojaen\view" />
       <recent name="C:\Users\alfon\IdeaProjects\LasCuadrillas\src\main\resources\github\alfonsojaen" />
-      <recent name="C:\Users\alfon\IdeaProjects\LasCuadrillas" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="github.alfonsojaen" />
@@ -200,7 +196,7 @@
       <workItem from="1715929036983" duration="56000" />
       <workItem from="1715929560175" duration="2849000" />
       <workItem from="1715932482125" duration="5418000" />
-      <workItem from="1715940098463" duration="746000" />
+      <workItem from="1715940098463" duration="2944000" />
     </task>
     <servers />
   </component>
