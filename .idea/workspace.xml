@@ -10,10 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="af7f30ad-2f81-4f53-b035-ccfdeef794b2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/b/1bf82adf23d1478c55d173261c51561b7d5e9591" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/b/1bf82adf23d1478c55d173261c51561b7d5e9591" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Document/LasCuadrillas-1.0-SNAPSHOT-jar-with-dependencies.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Document/LasCuadrillas-1.0-SNAPSHOT.jar" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -210,7 +207,10 @@
       <workItem from="1716130503674" duration="712000" />
       <workItem from="1716187129800" duration="7000" />
       <workItem from="1716187176904" duration="30000" />
-      <workItem from="1716193841106" duration="410000" />
+      <workItem from="1716193841106" duration="774000" />
+      <workItem from="1716194906504" duration="1139000" />
+      <workItem from="1716200368099" duration="1611000" />
+      <workItem from="1716204715452" duration="29000" />
     </task>
     <servers />
   </component>

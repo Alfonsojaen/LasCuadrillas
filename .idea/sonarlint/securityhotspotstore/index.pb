@@ -85,3 +85,5 @@ J
 Document/MiBaseDeDatos.sql,0\e\0e39523c49fad5c76704fc3c088bb032d0d13d9c
 `
 0src/main/java/github/alfonsojaen/Executable.java,e\3\e3bb8da47b16c2a6a0f7d62acf9062e9b75aea6a
+x
+Hsrc/main/java/github/alfonsojaen/model/connection/ConnectionMariaDB.java,8\5\85d7c9bff8fb2394f5a50183c2177d09c213e9dc
