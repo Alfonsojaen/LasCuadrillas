@@ -10,8 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="af7f30ad-2f81-4f53-b035-ccfdeef794b2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Document/LasCuadrillas-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/b/1bf82adf23d1478c55d173261c51561b7d5e9591" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/b/1bf82adf23d1478c55d173261c51561b7d5e9591" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Document/LasCuadrillas-1.0-SNAPSHOT-jar-with-dependencies.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Document/LasCuadrillas-1.0-SNAPSHOT.jar" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,11 +72,11 @@
       <recent name="C:\Users\alfon\IdeaProjects\LasCuadrillas\src\main\java\github\alfonsojaen" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\alfon\IdeaProjects\LasCuadrillas\Document" />
+      <recent name="C:\Users\alfon\IdeaProjects\LasCuadrillas" />
       <recent name="C:\Users\alfon\IdeaProjects\LasCuadrillas\target" />
+      <recent name="C:\Users\alfon\IdeaProjects\LasCuadrillas\Document" />
       <recent name="C:\Users\alfon\IdeaProjects\LasCuadrillas\src\main\resources\icons" />
       <recent name="C:\Users\alfon\IdeaProjects\LasCuadrillas\src\main\resources\github\alfonsojaen\view" />
-      <recent name="C:\Users\alfon\IdeaProjects\LasCuadrillas\src\main\resources\github\alfonsojaen" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="github.alfonsojaen" />
@@ -84,13 +86,18 @@
       <recent name="github.alfonsojaen.view" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JAR Application.LasCuadrillas-1.0-SNAPSHOT-jar-with-dependencies.jar (1)">
+    <configuration name="LasCuadrillas-1.0-SNAPSHOT-jar-with-dependencies.jar (1)" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/LasCuadrillas-1.0-SNAPSHOT-jar-with-dependencies.jar" />
+      <method v="2" />
+    </configuration>
     <configuration name="LasCuadrillas-1.0-SNAPSHOT-jar-with-dependencies.jar" type="JarApplication" temporary="true">
       <option name="JAR_PATH" value="$PROJECT_DIR$/target/LasCuadrillas-1.0-SNAPSHOT-jar-with-dependencies.jar" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JAR Application.LasCuadrillas-1.0-SNAPSHOT-jar-with-dependencies.jar (1)" />
         <item itemvalue="JAR Application.LasCuadrillas-1.0-SNAPSHOT-jar-with-dependencies.jar" />
       </list>
     </recent_temporary>
@@ -196,7 +203,14 @@
       <workItem from="1715929036983" duration="56000" />
       <workItem from="1715929560175" duration="2849000" />
       <workItem from="1715932482125" duration="5418000" />
-      <workItem from="1715940098463" duration="2944000" />
+      <workItem from="1715940098463" duration="3826000" />
+      <workItem from="1715946791675" duration="625000" />
+      <workItem from="1715955123851" duration="1896000" />
+      <workItem from="1715957761390" duration="741000" />
+      <workItem from="1716130503674" duration="712000" />
+      <workItem from="1716187129800" duration="7000" />
+      <workItem from="1716187176904" duration="30000" />
+      <workItem from="1716193841106" duration="410000" />
     </task>
     <servers />
   </component>
